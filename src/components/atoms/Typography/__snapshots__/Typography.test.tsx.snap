@@ -1,0 +1,105 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Typography > matches snapshot for body1 variant 1`] = `
+<p
+  class="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
+>
+  Sample text
+</p>
+`;
+
+exports[`Typography > matches snapshot for body2 variant 1`] = `
+<p
+  class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+>
+  Sample text
+</p>
+`;
+
+exports[`Typography > matches snapshot for button variant 1`] = `
+<span
+  class="MuiTypography-root MuiTypography-button css-14t7pgs-MuiTypography-root"
+>
+  Sample text
+</span>
+`;
+
+exports[`Typography > matches snapshot for caption variant 1`] = `
+<span
+  class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+>
+  Sample text
+</span>
+`;
+
+exports[`Typography > matches snapshot for h1 variant 1`] = `
+<h1
+  class="MuiTypography-root MuiTypography-h1 css-10l7o3s-MuiTypography-root"
+>
+  Sample text
+</h1>
+`;
+
+exports[`Typography > matches snapshot for h2 variant 1`] = `
+<h2
+  class="MuiTypography-root MuiTypography-h2 css-o2za6n-MuiTypography-root"
+>
+  Sample text
+</h2>
+`;
+
+exports[`Typography > matches snapshot for h3 variant 1`] = `
+<h3
+  class="MuiTypography-root MuiTypography-h3 css-13msox4-MuiTypography-root"
+>
+  Sample text
+</h3>
+`;
+
+exports[`Typography > matches snapshot for h4 variant 1`] = `
+<h4
+  class="MuiTypography-root MuiTypography-h4 css-f84ov1-MuiTypography-root"
+>
+  Sample text
+</h4>
+`;
+
+exports[`Typography > matches snapshot for h5 variant 1`] = `
+<h5
+  class="MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root"
+>
+  Sample text
+</h5>
+`;
+
+exports[`Typography > matches snapshot for h6 variant 1`] = `
+<h6
+  class="MuiTypography-root MuiTypography-h6 css-1miy0lu-MuiTypography-root"
+>
+  Sample text
+</h6>
+`;
+
+exports[`Typography > matches snapshot for overline variant 1`] = `
+<span
+  class="MuiTypography-root MuiTypography-overline css-1c7xfgu-MuiTypography-root"
+>
+  Sample text
+</span>
+`;
+
+exports[`Typography > matches snapshot for subtitle1 variant 1`] = `
+<h6
+  class="MuiTypography-root MuiTypography-subtitle1 css-1i3tsf3-MuiTypography-root"
+>
+  Sample text
+</h6>
+`;
+
+exports[`Typography > matches snapshot for subtitle2 variant 1`] = `
+<h6
+  class="MuiTypography-root MuiTypography-subtitle2 css-1ypmsg6-MuiTypography-root"
+>
+  Sample text
+</h6>
+`;
