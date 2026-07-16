@@ -15,6 +15,7 @@ export default defineConfig([
     "storybook-static",
     "playwright-report",
     "test-results",
+    "lighthouse-reports",
   ]),
   {
     files: ["**/*.{ts,tsx}"],
