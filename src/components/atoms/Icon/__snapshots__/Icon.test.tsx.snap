@@ -1,0 +1,127 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Icon > matches snapshot for csv icon 1`] = `
+<svg
+  aria-hidden="true"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  data-testid="TableChartIcon"
+  focusable="false"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M10 10.02h5V21h-5zM17 21h3c1.1 0 2-.9 2-2v-9h-5zm3-18H5c-1.1 0-2 .9-2 2v3h19V5c0-1.1-.9-2-2-2M3 19c0 1.1.9 2 2 2h3V10H3z"
+  />
+</svg>
+`;
+
+exports[`Icon > matches snapshot for doc icon 1`] = `
+<svg
+  aria-hidden="true"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  data-testid="DescriptionIcon"
+  focusable="false"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"
+  />
+</svg>
+`;
+
+exports[`Icon > matches snapshot for downArrow icon 1`] = `
+<svg
+  aria-hidden="true"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  data-testid="ArrowDownwardIcon"
+  focusable="false"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8z"
+  />
+</svg>
+`;
+
+exports[`Icon > matches snapshot for leftChevron icon 1`] = `
+<svg
+  aria-hidden="true"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  data-testid="ChevronLeftIcon"
+  focusable="false"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+  />
+</svg>
+`;
+
+exports[`Icon > matches snapshot for mov icon 1`] = `
+<svg
+  aria-hidden="true"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  data-testid="MovieIcon"
+  focusable="false"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="m18 4 2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4z"
+  />
+</svg>
+`;
+
+exports[`Icon > matches snapshot for pdf icon 1`] = `
+<svg
+  aria-hidden="true"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  data-testid="PictureAsPdfIcon"
+  focusable="false"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5zm4-3H19v1h1.5V11H19v2h-1.5V7h3zM9 9.5h1v-1H9zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm10 5.5h1v-3h-1z"
+  />
+</svg>
+`;
+
+exports[`Icon > matches snapshot for rightChevron icon 1`] = `
+<svg
+  aria-hidden="true"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  data-testid="ChevronRightIcon"
+  focusable="false"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+  />
+</svg>
+`;
+
+exports[`Icon > matches snapshot for upArrow icon 1`] = `
+<svg
+  aria-hidden="true"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  data-testid="ArrowUpwardIcon"
+  focusable="false"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"
+  />
+</svg>
+`;
+
+exports[`Icon > matches snapshot for xlsx icon 1`] = `
+<svg
+  aria-hidden="true"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  data-testid="TableViewIcon"
+  focusable="false"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M19 7H9c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2m0 2v2H9V9zm-6 6v-2h2v2zm2 2v2h-2v-2zm-4-2H9v-2h2zm6-2h2v2h-2zm-8 4h2v2H9zm8 2v-2h2v2zM6 17H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v1h-2V5H5v10h1z"
+  />
+</svg>
+`;
