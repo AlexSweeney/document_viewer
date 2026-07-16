@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BreadCrumb > matches snapshot 1`] = `
+<p
+  class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+>
+  Expenses
+</p>
+`;
