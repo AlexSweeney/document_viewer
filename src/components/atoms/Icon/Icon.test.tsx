@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { Icon, type IconName } from "./Icon";
+import { Icon, type IconName } from ".";
 
 const names: IconName[] = [
   "leftChevron",

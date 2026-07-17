@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Icon, type IconName } from "./Icon";
+import { Icon, type IconName } from ".";
 
 const names: IconName[] = [
   "leftChevron",

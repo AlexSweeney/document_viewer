@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { BreadCrumb } from "./BreadCrumb";
+import { BreadCrumb } from ".";
 
 describe("BreadCrumb", () => {
   it("renders the label", () => {

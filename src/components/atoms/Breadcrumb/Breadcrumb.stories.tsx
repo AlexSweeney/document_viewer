@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { BreadCrumb } from "./BreadCrumb";
+import { BreadCrumb } from ".";
 
 const meta = {
   title: "Atoms/BreadCrumb",
