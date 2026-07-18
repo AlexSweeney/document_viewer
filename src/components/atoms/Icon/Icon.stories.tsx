@@ -11,6 +11,7 @@ const names: IconName[] = [
   "csv",
   "mov",
   "xlsx",
+  "folder",
 ];
 
 const meta = {

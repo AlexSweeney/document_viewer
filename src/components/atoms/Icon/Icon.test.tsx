@@ -12,6 +12,7 @@ const names: IconName[] = [
   "csv",
   "mov",
   "xlsx",
+  "folder",
 ];
 
 describe("Icon", () => {
