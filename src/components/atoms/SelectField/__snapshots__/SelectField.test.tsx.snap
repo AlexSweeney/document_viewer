@@ -2,24 +2,24 @@
 
 exports[`SelectField > matches snapshot for large size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-1byfezt-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-1k07txu-MuiFormControl-root-MuiTextField-root"
   style="width: 32rem;"
 >
   <div
-    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
     id="_r_k_-label"
   >
     Sort by
   </div>
   <div
-    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
   >
     <div
       aria-expanded="false"
       aria-haspopup="listbox"
       aria-labelledby="_r_k_-label"
-      class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+      class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1y2qbti-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
       id="_r_k_"
       role="combobox"
       tabindex="0"
@@ -49,42 +49,30 @@ exports[`SelectField > matches snapshot for large size 1`] = `
         d="M7 10l5 5 5-5z"
       />
     </svg>
-    <fieldset
-      aria-hidden="true"
-      class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
-    >
-      <legend
-        class="css-1n64csd-MuiNotchedOutlined-root"
-      >
-        <span>
-          Sort by
-        </span>
-      </legend>
-    </fieldset>
   </div>
 </div>
 `;
 
 exports[`SelectField > matches snapshot for medium size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-1byfezt-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-1k07txu-MuiFormControl-root-MuiTextField-root"
   style="width: 20rem;"
 >
   <div
-    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
     id="_r_g_-label"
   >
     Sort by
   </div>
   <div
-    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
   >
     <div
       aria-expanded="false"
       aria-haspopup="listbox"
       aria-labelledby="_r_g_-label"
-      class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+      class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1y2qbti-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
       id="_r_g_"
       role="combobox"
       tabindex="0"
@@ -114,42 +102,30 @@ exports[`SelectField > matches snapshot for medium size 1`] = `
         d="M7 10l5 5 5-5z"
       />
     </svg>
-    <fieldset
-      aria-hidden="true"
-      class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
-    >
-      <legend
-        class="css-1n64csd-MuiNotchedOutlined-root"
-      >
-        <span>
-          Sort by
-        </span>
-      </legend>
-    </fieldset>
   </div>
 </div>
 `;
 
 exports[`SelectField > matches snapshot for small size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-1byfezt-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-1k07txu-MuiFormControl-root-MuiTextField-root"
   style="width: 12rem;"
 >
   <div
-    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
     id="_r_c_-label"
   >
     Sort by
   </div>
   <div
-    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
   >
     <div
       aria-expanded="false"
       aria-haspopup="listbox"
       aria-labelledby="_r_c_-label"
-      class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+      class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1y2qbti-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
       id="_r_c_"
       role="combobox"
       tabindex="0"
@@ -179,18 +155,6 @@ exports[`SelectField > matches snapshot for small size 1`] = `
         d="M7 10l5 5 5-5z"
       />
     </svg>
-    <fieldset
-      aria-hidden="true"
-      class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
-    >
-      <legend
-        class="css-1n64csd-MuiNotchedOutlined-root"
-      >
-        <span>
-          Sort by
-        </span>
-      </legend>
-    </fieldset>
   </div>
 </div>
 `;

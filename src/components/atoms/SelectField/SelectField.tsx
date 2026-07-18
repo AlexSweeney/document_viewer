@@ -25,6 +25,7 @@ export const SelectField = ({
     <MuiTextField
       select
       label={label}
+      variant="filled"
       sx={selectFieldStyles}
       style={getSelectFieldStyles(size)}
       onChange={(event) => onChange?.(event.target.value)}

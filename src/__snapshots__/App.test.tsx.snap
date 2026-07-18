@@ -157,11 +157,11 @@ exports[`App > matches snapshot 1`] = `
               </svg>
             </button>
             <div
-              class="MuiFormControl-root MuiTextField-root css-ra185g-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-7mopvj-MuiFormControl-root-MuiTextField-root"
               style="width: 12rem;"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 for="_r_j_"
                 id="_r_j_-label"
@@ -169,47 +169,35 @@ exports[`App > matches snapshot 1`] = `
                 filter by name
               </label>
               <div
-                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+                class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
               >
                 <input
                   aria-invalid="false"
-                  class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
+                  class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
                   id="_r_j_"
                   type="text"
                 />
-                <fieldset
-                  aria-hidden="true"
-                  class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
-                >
-                  <legend
-                    class="css-1n64csd-MuiNotchedOutlined-root"
-                  >
-                    <span>
-                      filter by name
-                    </span>
-                  </legend>
-                </fieldset>
               </div>
             </div>
             <div
-              class="MuiFormControl-root MuiTextField-root css-1byfezt-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-1k07txu-MuiFormControl-root-MuiTextField-root"
               style="width: 12rem;"
             >
               <div
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 id="_r_k_-label"
               >
                 sort by
               </div>
               <div
-                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+                class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
               >
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="_r_k_-label"
-                  class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                  class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1y2qbti-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
                   id="_r_k_"
                   role="combobox"
                   tabindex="0"
@@ -239,18 +227,6 @@ exports[`App > matches snapshot 1`] = `
                     d="M7 10l5 5 5-5z"
                   />
                 </svg>
-                <fieldset
-                  aria-hidden="true"
-                  class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
-                >
-                  <legend
-                    class="css-1n64csd-MuiNotchedOutlined-root"
-                  >
-                    <span>
-                      sort by
-                    </span>
-                  </legend>
-                </fieldset>
               </div>
             </div>
             <button

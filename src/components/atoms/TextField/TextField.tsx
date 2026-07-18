@@ -19,6 +19,7 @@ export const TextField = ({
     <MuiTextField
       label={label}
       value={value}
+      variant="filled"
       sx={textFieldStyles}
       style={getTextFieldStyles(size)}
       onChange={(event) => onChange?.(event.target.value)}

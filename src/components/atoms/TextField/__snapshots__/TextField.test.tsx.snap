@@ -2,11 +2,11 @@
 
 exports[`TextField > matches snapshot for large size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-ra185g-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-7mopvj-MuiFormControl-root-MuiTextField-root"
   style="width: 32rem;"
 >
   <label
-    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
     for="_r_9_"
     id="_r_9_-label"
@@ -14,37 +14,25 @@ exports[`TextField > matches snapshot for large size 1`] = `
     Search documents
   </label>
   <div
-    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
   >
     <input
       aria-invalid="false"
-      class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
+      class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
       id="_r_9_"
       type="text"
     />
-    <fieldset
-      aria-hidden="true"
-      class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
-    >
-      <legend
-        class="css-1n64csd-MuiNotchedOutlined-root"
-      >
-        <span>
-          Search documents
-        </span>
-      </legend>
-    </fieldset>
   </div>
 </div>
 `;
 
 exports[`TextField > matches snapshot for medium size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-ra185g-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-7mopvj-MuiFormControl-root-MuiTextField-root"
   style="width: 20rem;"
 >
   <label
-    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
     for="_r_7_"
     id="_r_7_-label"
@@ -52,37 +40,25 @@ exports[`TextField > matches snapshot for medium size 1`] = `
     Search documents
   </label>
   <div
-    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
   >
     <input
       aria-invalid="false"
-      class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
+      class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
       id="_r_7_"
       type="text"
     />
-    <fieldset
-      aria-hidden="true"
-      class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
-    >
-      <legend
-        class="css-1n64csd-MuiNotchedOutlined-root"
-      >
-        <span>
-          Search documents
-        </span>
-      </legend>
-    </fieldset>
   </div>
 </div>
 `;
 
 exports[`TextField > matches snapshot for small size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-ra185g-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-7mopvj-MuiFormControl-root-MuiTextField-root"
   style="width: 12rem;"
 >
   <label
-    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
     for="_r_5_"
     id="_r_5_-label"
@@ -90,26 +66,14 @@ exports[`TextField > matches snapshot for small size 1`] = `
     Search documents
   </label>
   <div
-    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
   >
     <input
       aria-invalid="false"
-      class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
+      class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
       id="_r_5_"
       type="text"
     />
-    <fieldset
-      aria-hidden="true"
-      class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
-    >
-      <legend
-        class="css-1n64csd-MuiNotchedOutlined-root"
-      >
-        <span>
-          Search documents
-        </span>
-      </legend>
-    </fieldset>
   </div>
 </div>
 `;
