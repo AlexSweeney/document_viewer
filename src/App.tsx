@@ -1,5 +1,7 @@
 import { DocumentPanel } from "./components/organisms/DocumentPanel";
+import { DocumentItem } from "./components/molecules/DocumentItem";
 import { Header } from "./components/organisms/Header";
+import { useDocuments } from "./hooks/useDocuments";
 import {
   appStyles,
   panelContentStyles,
@@ -18,15 +20,11 @@ const sortOptions = [
   { value: "name", label: "Name" },
   { value: "date", label: "Date created" },
   { value: "type", label: "File type" },
-];
-
-const items = [
-  { name: "Employee Handbook", type: "pdf", dateCreated: "2017-01-06" },
-  { name: "Q4 Report", type: "xlsx", dateCreated: "2018-03-12" },
-  { name: "Documents", type: "folder", dateCreated: "2016-11-02" },
 ] as const;
 
 const App = () => {
+  const { data: documentItems, isLoading } = useDocuments();
+
   return (
     <div style={appStyles}>
       <Header
@@ -36,7 +34,11 @@ const App = () => {
       />
       <div style={panelWrapperStyles}>
         <div style={panelContentStyles}>
-          <DocumentPanel items={items} sortOptions={sortOptions} />
+          <DocumentPanel sortOptions={sortOptions} isLoading={isLoading}>
+            {documentItems?.map((item, index) => (
+              <DocumentItem key={`${item.name}-${index}`} item={item} />
+            ))}
+          </DocumentPanel>
         </div>
       </div>
     </div>

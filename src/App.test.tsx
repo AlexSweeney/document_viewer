@@ -1,3 +1,4 @@
+import { waitFor } from "@testing-library/react";
 import { cleanup, render, screen } from "./test/testUtils";
 import { afterEach, describe, expect, it } from "vitest";
 import App from "./App";
@@ -7,7 +8,7 @@ afterEach(() => {
 });
 
 describe("App", () => {
-  it("renders the header", () => {
+  it("renders the header", async () => {
     render(<App />);
 
     expect(
@@ -18,18 +19,33 @@ describe("App", () => {
     expect(screen.getByText("Travel")).toBeInTheDocument();
   });
 
-  it("renders the document panel", () => {
+  it("renders the document panel", async () => {
     render(<App />);
+
+    await waitFor(
+      () => {
+        expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
 
     expect(screen.getByRole("button", { name: "Go back" })).toBeInTheDocument();
     expect(screen.getByLabelText("filter by name")).toBeInTheDocument();
-    expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
-    expect(screen.getByText("Q4 Report")).toBeInTheDocument();
-    expect(screen.getByText("Documents")).toBeInTheDocument();
+    expect(screen.getByText("Public Holiday policy")).toBeInTheDocument();
+    expect(screen.getByText("Cost centres")).toBeInTheDocument();
+    expect(screen.getByText("Misc")).toBeInTheDocument();
+    expect(screen.getByText("HR")).toBeInTheDocument();
   });
 
-  it("matches snapshot", () => {
+  it("matches snapshot", async () => {
     const { container } = render(<App />);
+
+    await waitFor(
+      () => {
+        expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
 
     expect(container.firstChild).toMatchSnapshot();
   });

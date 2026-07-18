@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   cleanup,
   render,
@@ -9,12 +10,27 @@ import userEvent from "@testing-library/user-event";
 import type { ReactElement } from "react";
 import { AppThemeProvider } from "../theme";
 
+const createTestQueryClient = () =>
+  new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+  });
+
 export function renderWithTheme(
   ui: ReactElement,
   options?: Omit<RenderOptions, "wrapper">,
 ) {
+  const queryClient = createTestQueryClient();
+
   return render(ui, {
-    wrapper: ({ children }) => <AppThemeProvider>{children}</AppThemeProvider>,
+    wrapper: ({ children }) => (
+      <QueryClientProvider client={queryClient}>
+        <AppThemeProvider>{children}</AppThemeProvider>
+      </QueryClientProvider>
+    ),
     ...options,
   });
 }
