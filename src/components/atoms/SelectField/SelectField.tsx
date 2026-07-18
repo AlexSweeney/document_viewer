@@ -1,6 +1,7 @@
 import MenuItem from "@mui/material/MenuItem";
 import MuiTextField from "@mui/material/TextField";
 import type { SelectFieldSize } from "./selectFieldSizes";
+import { getSelectFieldStyles } from "./SelectField.styles";
 
 type SelectFieldOption = {
   value: string;
@@ -14,12 +15,6 @@ type SelectFieldProps = {
   onChange?: (value: string) => void;
 };
 
-const widthMap: Record<SelectFieldSize, string> = {
-  small: "12rem",
-  medium: "20rem",
-  large: "32rem",
-};
-
 export const SelectField = ({
   label,
   options,
@@ -30,7 +25,7 @@ export const SelectField = ({
     <MuiTextField
       select
       label={label}
-      style={{ width: widthMap[size] }}
+      style={getSelectFieldStyles(size)}
       onChange={(event) => onChange?.(event.target.value)}
     >
       {options.map((option) => (
