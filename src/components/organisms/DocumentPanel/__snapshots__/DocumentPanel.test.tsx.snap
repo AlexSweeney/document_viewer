@@ -53,8 +53,8 @@ exports[`DocumentPanel > matches snapshot 1`] = `
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          for="_r_1b_"
-          id="_r_1b_-label"
+          for="_r_13_"
+          id="_r_13_-label"
         >
           filter by name
         </label>
@@ -64,7 +64,7 @@ exports[`DocumentPanel > matches snapshot 1`] = `
           <input
             aria-invalid="false"
             class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
-            id="_r_1b_"
+            id="_r_13_"
             type="text"
           />
           <fieldset
@@ -88,7 +88,7 @@ exports[`DocumentPanel > matches snapshot 1`] = `
         <div
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          id="_r_1c_-label"
+          id="_r_14_-label"
         >
           sort by
         </div>
@@ -98,9 +98,9 @@ exports[`DocumentPanel > matches snapshot 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="_r_1c_-label"
+            aria-labelledby="_r_14_-label"
             class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-            id="_r_1c_"
+            id="_r_14_"
             role="combobox"
             tabindex="0"
           >
@@ -115,7 +115,7 @@ exports[`DocumentPanel > matches snapshot 1`] = `
             aria-hidden="true"
             aria-invalid="false"
             class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-            id="_r_1e_"
+            id="_r_16_"
             tabindex="-1"
           />
           <svg
@@ -168,13 +168,13 @@ exports[`DocumentPanel > matches snapshot 1`] = `
   >
     <button
       aria-label="Open Employee Handbook"
-      class="MuiButtonBase-root css-17vsbwb-MuiButtonBase-root"
+      class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
       tabindex="0"
       type="button"
     >
       <div
         class="document-item-icon"
-        style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; transition: color 0.2s;"
+        style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
       >
         <svg
           aria-hidden="true"
@@ -190,7 +190,7 @@ exports[`DocumentPanel > matches snapshot 1`] = `
       </div>
       <div
         class="document-item-text"
-        style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; transition: color 0.2s;"
+        style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
       >
         <p
           class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
@@ -213,13 +213,13 @@ exports[`DocumentPanel > matches snapshot 1`] = `
     </button>
     <button
       aria-label="Open Q4 Report"
-      class="MuiButtonBase-root css-17vsbwb-MuiButtonBase-root"
+      class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
       tabindex="0"
       type="button"
     >
       <div
         class="document-item-icon"
-        style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; transition: color 0.2s;"
+        style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
       >
         <svg
           aria-hidden="true"
@@ -235,7 +235,7 @@ exports[`DocumentPanel > matches snapshot 1`] = `
       </div>
       <div
         class="document-item-text"
-        style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; transition: color 0.2s;"
+        style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
       >
         <p
           class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
@@ -258,13 +258,13 @@ exports[`DocumentPanel > matches snapshot 1`] = `
     </button>
     <button
       aria-label="Open Documents"
-      class="MuiButtonBase-root css-17vsbwb-MuiButtonBase-root"
+      class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
       tabindex="0"
       type="button"
     >
       <div
         class="document-item-icon"
-        style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; transition: color 0.2s;"
+        style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
       >
         <svg
           aria-hidden="true"
@@ -280,7 +280,7 @@ exports[`DocumentPanel > matches snapshot 1`] = `
       </div>
       <div
         class="document-item-text"
-        style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; transition: color 0.2s;"
+        style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
       >
         <p
           class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"

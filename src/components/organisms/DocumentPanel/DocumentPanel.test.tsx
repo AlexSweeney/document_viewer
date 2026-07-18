@@ -1,5 +1,6 @@
 import { cleanup, render, screen, userEvent } from "../../../test/testUtils";
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { DocumentItem } from "../../molecules/DocumentItem";
 import { DocumentPanel } from ".";
 
 const items = [
@@ -11,6 +12,10 @@ const items = [
   { name: "Q4 Report", type: "xlsx" as const, added: "2018-03-12" },
   { name: "Documents", type: "folder" as const, files: [] },
 ];
+
+const panelChildren = items.map((item, index) => (
+  <DocumentItem key={`${item.name}-${index}`} item={item} />
+));
 
 afterEach(() => {
   cleanup();
@@ -24,7 +29,9 @@ const sortOptions = [
 
 describe("DocumentPanel", () => {
   it("renders toolbar controls", () => {
-    render(<DocumentPanel items={items} sortOptions={sortOptions} />);
+    render(
+      <DocumentPanel sortOptions={sortOptions}>{panelChildren}</DocumentPanel>,
+    );
 
     expect(screen.getByRole("button", { name: "Go back" })).toBeInTheDocument();
     expect(
@@ -39,29 +46,14 @@ describe("DocumentPanel", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders document items", () => {
-    render(<DocumentPanel items={items} sortOptions={sortOptions} />);
+  it("renders children", () => {
+    render(
+      <DocumentPanel sortOptions={sortOptions}>{panelChildren}</DocumentPanel>,
+    );
 
     expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
     expect(screen.getByText("Q4 Report")).toBeInTheDocument();
     expect(screen.getByText("Documents")).toBeInTheDocument();
-  });
-
-  it("calls onItemClick with the item index and item when a document is clicked", async () => {
-    const user = userEvent.setup();
-    const onItemClick = vi.fn();
-    render(
-      <DocumentPanel
-        items={items}
-        sortOptions={sortOptions}
-        onItemClick={onItemClick}
-      />,
-    );
-
-    await user.click(screen.getByRole("button", { name: "Open Q4 Report" }));
-
-    expect(onItemClick).toHaveBeenCalledOnce();
-    expect(onItemClick).toHaveBeenCalledWith(1, items[1]);
   });
 
   it("calls toolbar handlers when clicked", async () => {
@@ -71,12 +63,13 @@ describe("DocumentPanel", () => {
     const onSortDirectionClick = vi.fn();
     render(
       <DocumentPanel
-        items={items}
         sortOptions={sortOptions}
         onBackClick={onBackClick}
         onForwardClick={onForwardClick}
         onSortDirectionClick={onSortDirectionClick}
-      />,
+      >
+        {panelChildren}
+      </DocumentPanel>,
     );
 
     await user.click(screen.getByRole("button", { name: "Go back" }));
@@ -91,7 +84,11 @@ describe("DocumentPanel", () => {
   });
 
   it("shows a spinner when loading", () => {
-    render(<DocumentPanel items={items} sortOptions={sortOptions} isLoading />);
+    render(
+      <DocumentPanel sortOptions={sortOptions} isLoading>
+        {panelChildren}
+      </DocumentPanel>,
+    );
 
     expect(screen.getByRole("progressbar")).toBeInTheDocument();
     expect(screen.queryByText("Employee Handbook")).not.toBeInTheDocument();
@@ -99,7 +96,7 @@ describe("DocumentPanel", () => {
 
   it("matches snapshot", () => {
     const { container } = render(
-      <DocumentPanel items={items} sortOptions={sortOptions} />,
+      <DocumentPanel sortOptions={sortOptions}>{panelChildren}</DocumentPanel>,
     );
 
     expect(container.firstChild).toMatchSnapshot();

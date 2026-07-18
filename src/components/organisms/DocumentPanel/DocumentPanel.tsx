@@ -1,6 +1,6 @@
+import type { ReactNode } from "react";
 import { useTheme } from "@mui/material/styles";
 import CircularProgress from "@mui/material/CircularProgress";
-import type { DocumentItem as DocumentItemData } from "../../../types/document";
 import { IconButton } from "../../atoms/IconButton";
 import { SelectField, type SelectFieldOption } from "../../atoms/SelectField";
 import {
@@ -8,7 +8,6 @@ import {
   type SortDirection,
 } from "../../atoms/SortDirectionButton";
 import { TextField } from "../../atoms/TextField";
-import { DocumentItem } from "../../molecules/DocumentItem";
 import {
   containerStyles,
   getContentStyles,
@@ -18,7 +17,7 @@ import {
 } from "./DocumentPanel.styles";
 
 type DocumentPanelProps = {
-  items: readonly DocumentItemData[];
+  children?: ReactNode;
   filterValue?: string;
   sortOptions: readonly SelectFieldOption[];
   onBackClick?: () => void;
@@ -26,12 +25,11 @@ type DocumentPanelProps = {
   onFilterChange?: (value: string) => void;
   onSortChange?: (value: string) => void;
   onSortDirectionClick?: (direction: SortDirection) => void;
-  onItemClick?: (index: number, item: DocumentItemData) => void;
   isLoading?: boolean;
 };
 
 export const DocumentPanel = ({
-  items,
+  children,
   filterValue,
   sortOptions,
   onBackClick,
@@ -39,7 +37,6 @@ export const DocumentPanel = ({
   onFilterChange,
   onSortChange,
   onSortDirectionClick,
-  onItemClick,
   isLoading = false,
 }: DocumentPanelProps) => {
   const theme = useTheme();
@@ -84,13 +81,7 @@ export const DocumentPanel = ({
         {isLoading ? (
           <CircularProgress aria-label="Loading documents" />
         ) : (
-          items.map((item, index) => (
-            <DocumentItem
-              key={`${item.name}-${index}`}
-              item={item}
-              onClick={onItemClick ? () => onItemClick(index, item) : undefined}
-            />
-          ))
+          children
         )}
       </div>
     </section>
