@@ -1,24 +1,42 @@
+import fs from "node:fs";
+import path from "node:path";
 import react from "@vitejs/plugin-react";
 import type { Plugin } from "vite";
 import { defineConfig } from "vitest/config";
 
 const latinFontFiles = [
-  "roboto-latin-400-normal.woff2",
-  "roboto-latin-500-normal.woff2",
-  "roboto-latin-700-normal.woff2",
+  { weight: 400, file: "roboto-latin-400-normal.woff2" },
+  { weight: 500, file: "roboto-latin-500-normal.woff2" },
+  { weight: 700, file: "roboto-latin-700-normal.woff2" },
 ] as const;
 
-const preloadLatinFonts = (): Plugin => ({
-  name: "preload-latin-fonts",
+const robotoFontSourceDir = path.resolve(
+  "node_modules/@fontsource/roboto/files",
+);
+
+const buildInlineFontFace = (weight: number, url: string) =>
+  `@font-face{font-family:'Roboto';font-style:normal;font-display:swap;font-weight:${weight};src:url('${url}') format('woff2')}`;
+
+const inlineRobotoFonts = (): Plugin => ({
+  name: "inline-roboto-fonts",
+  generateBundle() {
+    for (const { file } of latinFontFiles) {
+      this.emitFile({
+        type: "asset",
+        name: file,
+        source: fs.readFileSync(path.join(robotoFontSourceDir, file)),
+      });
+    }
+  },
   transformIndexHtml: {
     order: "post",
     handler(html, ctx) {
-      const preloads =
+      const faces =
         ctx.bundle === undefined
-          ? latinFontFiles.map(
-              (file) =>
-                `<link rel="preload" href="/node_modules/@fontsource/roboto/files/${file}" as="font" type="font/woff2" crossorigin>`,
-            )
+          ? latinFontFiles.map(({ weight, file }) => ({
+              weight,
+              url: `/node_modules/@fontsource/roboto/files/${file}`,
+            }))
           : Object.values(ctx.bundle)
               .filter(
                 (chunk) =>
@@ -27,18 +45,36 @@ const preloadLatinFonts = (): Plugin => ({
                   chunk.fileName.includes("latin") &&
                   !chunk.fileName.includes("italic"),
               )
-              .map(
-                (chunk) =>
-                  `<link rel="preload" href="/${chunk.fileName}" as="font" type="font/woff2" crossorigin>`,
-              );
+              .flatMap((chunk) => {
+                const match = chunk.fileName.match(/latin-(\d+)-normal/);
+                if (!match) {
+                  return [];
+                }
 
-      if (preloads.length === 0) {
+                return [
+                  {
+                    weight: Number(match[1]),
+                    url: `/${chunk.fileName}`,
+                  },
+                ];
+              })
+              .sort((a, b) => a.weight - b.weight);
+
+      if (faces.length === 0) {
         return html;
       }
 
+      const preloads = faces
+        .map(
+          ({ url }) =>
+            `<link rel="preload" href="${url}" as="font" type="font/woff2" crossorigin>`,
+        )
+        .join("\n    ");
+      const style = `<style>${faces.map(({ weight, url }) => buildInlineFontFace(weight, url)).join("")}</style>`;
+
       return html.replace(
         "</head>",
-        `    ${preloads.join("\n    ")}\n  </head>`,
+        `    ${preloads}\n    ${style}\n  </head>`,
       );
     },
   },
@@ -46,7 +82,7 @@ const preloadLatinFonts = (): Plugin => ({
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), preloadLatinFonts()],
+  plugins: [react(), inlineRobotoFonts()],
   optimizeDeps: {
     include: [
       "@mui/material/TextField",
