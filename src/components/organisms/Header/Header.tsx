@@ -1,7 +1,8 @@
 import { useTheme } from "@mui/material/styles";
 import MuiTypography from "@mui/material/Typography";
+import { ThemeModeToggle } from "../../atoms/ThemeModeToggle";
 import { BreadCrumbs } from "../../molecules/BreadCrumbs";
-import { getContainerStyles, textStyles } from "./Header.styles";
+import { getContainerStyles, titleAreaStyles } from "./Header.styles";
 
 type BreadCrumbItem = {
   label: string;
@@ -27,10 +28,11 @@ export const Header = ({
   return (
     <header style={getContainerStyles(theme)}>
       <BreadCrumbs items={clickableBreadcrumbItems} />
-      <div style={textStyles}>
+      <div style={titleAreaStyles}>
         <MuiTypography variant="h3" component="h1" color="inherit">
           {title}
         </MuiTypography>
+        <ThemeModeToggle />
       </div>
     </header>
   );

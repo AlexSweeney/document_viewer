@@ -9,6 +9,7 @@ export type ColorTokens = {
     contrastText: string;
   };
   background: {
+    default: string;
     panel: string;
   };
   action: {
@@ -25,6 +26,7 @@ export const lightColors: ColorTokens = {
     contrastText: "#ffffff",
   },
   background: {
+    default: "#ffffff",
     panel: "#f5f5f5",
   },
   action: {
@@ -34,14 +36,15 @@ export const lightColors: ColorTokens = {
 
 export const darkColors: ColorTokens = {
   primary: {
-    main: "#90caf9",
-    dark: "#42a5f5",
-    darker: "#1976d2",
-    light: "#e3f2fd",
-    contrastText: "#000000",
+    main: "#1565c0",
+    dark: "#64b5f6",
+    darker: "#42a5f5",
+    light: "#1976d2",
+    contrastText: "#ffffff",
   },
   background: {
-    panel: "#121212",
+    default: "#121212",
+    panel: "#1e2433",
   },
   action: {
     active: "rgba(255, 255, 255, 0.56)",

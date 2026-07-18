@@ -15,7 +15,12 @@ export const IconButton = ({
   onClick,
 }: IconButtonProps) => {
   return (
-    <MuiIconButton aria-label={ariaLabel} disabled={disabled} onClick={onClick}>
+    <MuiIconButton
+      aria-label={ariaLabel}
+      color="inherit"
+      disabled={disabled}
+      onClick={onClick}
+    >
       <Icon name={icon} />
     </MuiIconButton>
   );

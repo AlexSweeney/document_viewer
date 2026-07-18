@@ -39,6 +39,9 @@ describe("Header", () => {
     expect(
       screen.getByRole("heading", { level: 1, name: "12 documents" }),
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: "Switch to dark mode" }),
+    ).toBeInTheDocument();
   });
 
   it("calls onClickBreadCrumb with the item index and item when a breadcrumb is clicked", async () => {

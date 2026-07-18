@@ -13,7 +13,7 @@ exports[`DocumentItem > matches snapshot 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
       data-testid="PictureAsPdfIcon"
       focusable="false"
       viewBox="0 0 24 24"

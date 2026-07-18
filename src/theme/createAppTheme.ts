@@ -35,6 +35,10 @@ export const createAppTheme = (mode: ThemeMode) => {
       action: {
         active: colors.action.active,
       },
+      background: {
+        default: colors.background.default,
+        paper: colors.background.panel,
+      },
       panel: colors.background.panel,
     },
   });

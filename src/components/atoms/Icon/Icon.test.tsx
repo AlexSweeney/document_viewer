@@ -7,6 +7,8 @@ const names: IconName[] = [
   "rightChevron",
   "upArrow",
   "downArrow",
+  "darkMode",
+  "lightMode",
   "pdf",
   "doc",
   "csv",

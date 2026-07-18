@@ -3,13 +3,13 @@
 exports[`SortDirectionButton > matches snapshot for asc defaultDirection 1`] = `
 <button
   aria-label="Sort by name"
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-53g0n7-MuiButtonBase-root-MuiIconButton-root"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
   tabindex="0"
   type="button"
 >
   <svg
     aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
     data-testid="ArrowUpwardIcon"
     focusable="false"
     viewBox="0 0 24 24"
@@ -24,13 +24,13 @@ exports[`SortDirectionButton > matches snapshot for asc defaultDirection 1`] = `
 exports[`SortDirectionButton > matches snapshot for desc defaultDirection 1`] = `
 <button
   aria-label="Sort by name"
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-53g0n7-MuiButtonBase-root-MuiIconButton-root"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
   tabindex="0"
   type="button"
 >
   <svg
     aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
     data-testid="ArrowDownwardIcon"
     focusable="false"
     viewBox="0 0 24 24"

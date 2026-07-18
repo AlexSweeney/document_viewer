@@ -28,7 +28,7 @@ export const SortDirectionButton = ({
   };
 
   return (
-    <IconButton aria-label={ariaLabel} onClick={handleClick}>
+    <IconButton aria-label={ariaLabel} color="inherit" onClick={handleClick}>
       <Icon name={iconMap[direction]} />
     </IconButton>
   );

@@ -25,6 +25,9 @@ describe("App", () => {
       screen.getByRole("button", { name: "Navigate to Home" }),
     ).toBeInTheDocument();
     expect(
+      screen.getByRole("button", { name: "Switch to dark mode" }),
+    ).toBeInTheDocument();
+    expect(
       screen.queryByRole("button", { name: "Navigate to Expenses" }),
     ).not.toBeInTheDocument();
   });

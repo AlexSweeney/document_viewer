@@ -15,6 +15,7 @@ export const getToolbarStyles = (theme: Theme): CSSProperties => ({
   alignItems: "center",
   justifyContent: "flex-start",
   backgroundColor: theme.palette.primary.light,
+  color: theme.palette.primary.contrastText,
   padding: "0.5rem 1rem",
 });
 

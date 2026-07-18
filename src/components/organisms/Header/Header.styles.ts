@@ -11,6 +11,9 @@ export const getContainerStyles = (theme: Theme): CSSProperties => ({
   padding: "0.75rem 1rem",
 });
 
-export const textStyles: CSSProperties = {
+export const titleAreaStyles: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: "0.25rem",
   whiteSpace: "nowrap",
 };

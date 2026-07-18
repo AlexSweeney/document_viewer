@@ -13,7 +13,10 @@ type BreadCrumbsProps = {
 
 export const BreadCrumbs = ({ items }: BreadCrumbsProps) => {
   return (
-    <MuiBreadcrumbs separator={<Icon name="rightChevron" />}>
+    <MuiBreadcrumbs
+      separator={<Icon name="rightChevron" />}
+      sx={{ color: "inherit" }}
+    >
       {items.map((item, index) => (
         <BreadCrumb
           key={`${item.label}-${index}`}

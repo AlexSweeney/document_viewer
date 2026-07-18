@@ -2,8 +2,10 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import DescriptionIcon from "@mui/icons-material/Description";
 import FolderIcon from "@mui/icons-material/Folder";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import MovieIcon from "@mui/icons-material/Movie";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import TableChartIcon from "@mui/icons-material/TableChart";
@@ -14,13 +16,21 @@ import type { DocumentItemType } from "../../../types/document";
 import { iconSizeMap, type IconSize } from "./iconSizes";
 
 export type IconName =
-  "leftChevron" | "rightChevron" | "upArrow" | "downArrow" | DocumentItemType;
+  | "leftChevron"
+  | "rightChevron"
+  | "upArrow"
+  | "downArrow"
+  | "darkMode"
+  | "lightMode"
+  | DocumentItemType;
 
 const iconMap: Record<IconName, ElementType<SvgIconProps>> = {
   leftChevron: ChevronLeftIcon,
   rightChevron: ChevronRightIcon,
   upArrow: ArrowUpwardIcon,
   downArrow: ArrowDownwardIcon,
+  darkMode: DarkModeIcon,
+  lightMode: LightModeIcon,
   pdf: PictureAsPdfIcon,
   doc: DescriptionIcon,
   csv: TableChartIcon,
@@ -37,5 +47,7 @@ export type IconProps = {
 export const Icon = ({ name, size = "medium" }: IconProps) => {
   const IconComponent = iconMap[name];
 
-  return <IconComponent sx={{ fontSize: iconSizeMap[size] }} />;
+  return (
+    <IconComponent sx={{ fontSize: iconSizeMap[size], color: "inherit" }} />
+  );
 };
