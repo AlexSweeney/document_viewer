@@ -1,0 +1,75 @@
+import { cleanup, render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { Header } from ".";
+
+const breadcrumbItems = [
+  { label: "Home" },
+  { label: "Expenses" },
+  { label: "Travel" },
+];
+
+afterEach(() => {
+  cleanup();
+});
+
+describe("Header", () => {
+  it("renders breadcrumb labels", () => {
+    render(
+      <Header
+        breadcrumbItems={breadcrumbItems}
+        onClickBreadCrumb={vi.fn()}
+        title="12 documents"
+      />,
+    );
+
+    expect(screen.getByText("Home")).toBeInTheDocument();
+    expect(screen.getByText("Expenses")).toBeInTheDocument();
+    expect(screen.getByText("Travel")).toBeInTheDocument();
+  });
+
+  it("renders title", () => {
+    render(
+      <Header
+        breadcrumbItems={breadcrumbItems}
+        onClickBreadCrumb={vi.fn()}
+        title="12 documents"
+      />,
+    );
+
+    expect(
+      screen.getByRole("heading", { level: 1, name: "12 documents" }),
+    ).toBeInTheDocument();
+  });
+
+  it("calls onClickBreadCrumb with the item index and item when a breadcrumb is clicked", async () => {
+    const user = userEvent.setup();
+    const onClickBreadCrumb = vi.fn();
+    render(
+      <Header
+        breadcrumbItems={breadcrumbItems}
+        onClickBreadCrumb={onClickBreadCrumb}
+        title="12 documents"
+      />,
+    );
+
+    await user.click(
+      screen.getByRole("button", { name: "Navigate to Expenses" }),
+    );
+
+    expect(onClickBreadCrumb).toHaveBeenCalledOnce();
+    expect(onClickBreadCrumb).toHaveBeenCalledWith(1, { label: "Expenses" });
+  });
+
+  it("matches snapshot", () => {
+    const { container } = render(
+      <Header
+        breadcrumbItems={breadcrumbItems}
+        onClickBreadCrumb={vi.fn()}
+        title="12 documents"
+      />,
+    );
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

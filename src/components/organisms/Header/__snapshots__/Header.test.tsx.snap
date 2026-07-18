@@ -1,0 +1,105 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header > matches snapshot 1`] = `
+<header
+  style="display: flex; align-items: center; justify-content: space-between; width: 100%; background-color: rgb(25, 118, 210); color: rgb(255, 255, 255); padding: 0.75rem 1rem;"
+>
+  <nav
+    class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-5cvx94-MuiTypography-root-MuiBreadcrumbs-root"
+  >
+    <ol
+      class="MuiBreadcrumbs-ol css-1uwp4ue-MuiBreadcrumbs-ol"
+    >
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <button
+          aria-label="Navigate to Home"
+          class="MuiButtonBase-root css-1a04c1h-MuiButtonBase-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+          >
+            Home
+          </span>
+        </button>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
+          data-testid="ChevronRightIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <button
+          aria-label="Navigate to Expenses"
+          class="MuiButtonBase-root css-1a04c1h-MuiButtonBase-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+          >
+            Expenses
+          </span>
+        </button>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
+          data-testid="ChevronRightIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <button
+          aria-label="Navigate to Travel"
+          class="MuiButtonBase-root css-1a04c1h-MuiButtonBase-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+          >
+            Travel
+          </span>
+        </button>
+      </li>
+    </ol>
+  </nav>
+  <div
+    style="white-space: nowrap;"
+  >
+    <h1
+      class="MuiTypography-root MuiTypography-h3 css-13msox4-MuiTypography-root"
+    >
+      12 documents
+    </h1>
+  </div>
+</header>
+`;
