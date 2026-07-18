@@ -12,11 +12,7 @@ import {
   sortDocumentItems,
   type SortField,
 } from "../utils/documents";
-import {
-  appStyles,
-  panelContentStyles,
-  panelWrapperStyles,
-} from "../App/App.styles";
+import { appStyles, panelWrapperStyles } from "../App/App.styles";
 
 const title = "Document viewer";
 
@@ -66,20 +62,22 @@ const App = () => {
     [filteredDocumentItems, sortBy, sortDirection],
   );
 
-  const handleItemClick = (item: DocumentItemData) => {
-    if (item.type === "folder") {
-      setFolderNavigation(({ history, index }) => {
-        // Path after opening the clicked folder.
-        const nextFolderPath = [...history[index], item.name];
-        // Drop any forward history and append the new path.
-        const nextHistory = [...history.slice(0, index + 1), nextFolderPath];
-
-        return {
-          history: nextHistory,
-          index: index + 1,
-        };
-      });
+  const handleDocumentItemClick = (item: DocumentItemData) => {
+    if (item.type !== "folder") {
+      return;
     }
+
+    setFolderNavigation(({ history, index }) => {
+      // Path after opening the clicked folder.
+      const nextFolderPath = [...history[index], item.name];
+      // Drop any forward history and append the new path.
+      const nextHistory = [...history.slice(0, index + 1), nextFolderPath];
+
+      return {
+        history: nextHistory,
+        index: index + 1,
+      };
+    });
   };
 
   const handleBackClick = () => {
@@ -129,33 +127,27 @@ const App = () => {
         onClickBreadCrumb={handleBreadCrumbClick}
       />
       <main style={panelWrapperStyles}>
-        <div style={panelContentStyles}>
-          <DocumentPanel
-            sortOptions={sortOptions}
-            sortValue={sortBy}
-            isLoading={isLoading}
-            filterValue={filterValue}
-            onFilterChange={setFilterValue}
-            onSortChange={(value) => setSortBy(value as SortField)}
-            onSortDirectionClick={setSortDirection}
-            onBackClick={handleBackClick}
-            onForwardClick={handleForwardClick}
-            isBackDisabled={isBackDisabled}
-            isForwardDisabled={isForwardDisabled}
-          >
-            {sortedDocuments.map((item, index) => (
-              <DocumentItem
-                key={`${item.name}-${index}`}
-                item={item}
-                onClick={
-                  item.type === "folder"
-                    ? () => handleItemClick(item)
-                    : undefined
-                }
-              />
-            ))}
-          </DocumentPanel>
-        </div>
+        <DocumentPanel
+          sortOptions={sortOptions}
+          sortValue={sortBy}
+          isLoading={isLoading}
+          filterValue={filterValue}
+          onFilterChange={setFilterValue}
+          onSortChange={(value) => setSortBy(value as SortField)}
+          onSortDirectionClick={setSortDirection}
+          onBackClick={handleBackClick}
+          onForwardClick={handleForwardClick}
+          isBackDisabled={isBackDisabled}
+          isForwardDisabled={isForwardDisabled}
+        >
+          {sortedDocuments.map((item, index) => (
+            <DocumentItem
+              key={`${item.name}-${index}`}
+              item={item}
+              onClick={() => handleDocumentItemClick(item)}
+            />
+          ))}
+        </DocumentPanel>
       </main>
     </div>
   );
