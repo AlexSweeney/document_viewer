@@ -2,7 +2,7 @@
 
 exports[`TextField > matches snapshot for large size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-ra185g-MuiFormControl-root-MuiTextField-root"
   style="width: 32rem;"
 >
   <label
@@ -40,7 +40,7 @@ exports[`TextField > matches snapshot for large size 1`] = `
 
 exports[`TextField > matches snapshot for medium size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-ra185g-MuiFormControl-root-MuiTextField-root"
   style="width: 20rem;"
 >
   <label
@@ -78,7 +78,7 @@ exports[`TextField > matches snapshot for medium size 1`] = `
 
 exports[`TextField > matches snapshot for small size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-ra185g-MuiFormControl-root-MuiTextField-root"
   style="width: 12rem;"
 >
   <label

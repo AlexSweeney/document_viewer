@@ -1,6 +1,6 @@
 import MuiTextField from "@mui/material/TextField";
 import type { TextFieldSize } from "./textFieldSizes";
-import { getTextFieldStyles } from "./TextField.styles";
+import { getTextFieldStyles, textFieldStyles } from "./TextField.styles";
 
 type TextFieldProps = {
   label: string;
@@ -19,6 +19,7 @@ export const TextField = ({
     <MuiTextField
       label={label}
       value={value}
+      sx={textFieldStyles}
       style={getTextFieldStyles(size)}
       onChange={(event) => onChange?.(event.target.value)}
     />
