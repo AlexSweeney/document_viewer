@@ -294,11 +294,6 @@ exports[`DocumentPanel > matches snapshot 1`] = `
         >
           folder
         </span>
-        <span
-          class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-        >
-          2016-11-02
-        </span>
       </div>
     </button>
   </div>

@@ -6,10 +6,10 @@ const items = [
   {
     name: "Employee Handbook",
     type: "pdf" as const,
-    dateCreated: "2017-01-06",
+    added: "2017-01-06",
   },
-  { name: "Q4 Report", type: "xlsx" as const, dateCreated: "2018-03-12" },
-  { name: "Documents", type: "folder" as const, dateCreated: "2016-11-02" },
+  { name: "Q4 Report", type: "xlsx" as const, added: "2018-03-12" },
+  { name: "Documents", type: "folder" as const, files: [] },
 ];
 
 afterEach(() => {

@@ -1,5 +1,5 @@
 import ButtonBase from "@mui/material/ButtonBase";
-import type { DocumentItemType } from "../../../types/document";
+import type { DocumentItem as DocumentItemData } from "../../../types/document";
 import { Icon } from "../../atoms/Icon";
 import { Typography } from "../../atoms/Typography";
 import {
@@ -10,34 +10,29 @@ import {
 } from "./DocumentItem.styles";
 
 type DocumentItemProps = {
-  name: string;
-  type: DocumentItemType;
-  dateCreated: string;
+  item: DocumentItemData;
   onClick?: () => void;
 };
 
-export const DocumentItem = ({
-  name,
-  type,
-  dateCreated,
-  onClick,
-}: DocumentItemProps) => {
+export const DocumentItem = ({ item, onClick }: DocumentItemProps) => {
+  const added = item.type === "folder" ? undefined : item.added;
+
   return (
     <ButtonBase
-      aria-label={`Open ${name}`}
+      aria-label={`Open ${item.name}`}
       disableRipple
       onClick={onClick}
       sx={containerStyles}
     >
       <div className="document-item-icon" style={iconStyles}>
-        <Icon name={type} size={ICON_SIZE} />
+        <Icon name={item.type} size={ICON_SIZE} />
       </div>
       <div className="document-item-text" style={textContainerStyles}>
         <Typography variant="body2">
-          <strong>{name}</strong>
+          <strong>{item.name}</strong>
         </Typography>
-        <Typography variant="caption">{type}</Typography>
-        <Typography variant="caption">{dateCreated}</Typography>
+        <Typography variant="caption">{item.type}</Typography>
+        {added ? <Typography variant="caption">{added}</Typography> : null}
       </div>
     </ButtonBase>
   );

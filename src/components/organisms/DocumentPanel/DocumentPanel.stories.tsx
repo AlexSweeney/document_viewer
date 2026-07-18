@@ -21,9 +21,9 @@ const meta = {
   ],
   args: {
     items: [
-      { name: "Employee Handbook", type: "pdf", dateCreated: "2017-01-06" },
-      { name: "Q4 Report", type: "xlsx", dateCreated: "2018-03-12" },
-      { name: "Documents", type: "folder", dateCreated: "2016-11-02" },
+      { name: "Employee Handbook", type: "pdf", added: "2017-01-06" },
+      { name: "Q4 Report", type: "xlsx", added: "2018-03-12" },
+      { name: "Documents", type: "folder", files: [] },
     ],
     filterValue: "",
     sortOptions,

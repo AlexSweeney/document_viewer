@@ -1,6 +1,6 @@
 import { useTheme } from "@mui/material/styles";
 import CircularProgress from "@mui/material/CircularProgress";
-import type { DocumentItemType } from "../../../types/document";
+import type { DocumentItem as DocumentItemData } from "../../../types/document";
 import { IconButton } from "../../atoms/IconButton";
 import { SelectField, type SelectFieldOption } from "../../atoms/SelectField";
 import {
@@ -17,14 +17,8 @@ import {
   toolbarControlsStyles,
 } from "./DocumentPanel.styles";
 
-type DocumentPanelItem = {
-  name: string;
-  type: DocumentItemType;
-  dateCreated: string;
-};
-
 type DocumentPanelProps = {
-  items: readonly DocumentPanelItem[];
+  items: readonly DocumentItemData[];
   filterValue?: string;
   sortOptions: readonly SelectFieldOption[];
   onBackClick?: () => void;
@@ -32,7 +26,7 @@ type DocumentPanelProps = {
   onFilterChange?: (value: string) => void;
   onSortChange?: (value: string) => void;
   onSortDirectionClick?: (direction: SortDirection) => void;
-  onItemClick?: (index: number, item: DocumentPanelItem) => void;
+  onItemClick?: (index: number, item: DocumentItemData) => void;
   isLoading?: boolean;
 };
 
@@ -93,9 +87,7 @@ export const DocumentPanel = ({
           items.map((item, index) => (
             <DocumentItem
               key={`${item.name}-${index}`}
-              name={item.name}
-              type={item.type}
-              dateCreated={item.dateCreated}
+              item={item}
               onClick={onItemClick ? () => onItemClick(index, item) : undefined}
             />
           ))
