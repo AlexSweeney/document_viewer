@@ -13,7 +13,7 @@ const sampleItems = [
 ] satisfies DocumentItemData[];
 
 const meta = {
-  title: "Organisms/DocumentPanel/Body",
+  title: "Organisms/DocumentPanel/parts/Body",
   component: DocumentPanelBody,
   tags: ["autodocs"],
   decorators: [

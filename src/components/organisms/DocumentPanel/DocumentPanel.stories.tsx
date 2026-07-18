@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { fn } from "storybook/test";
+import type { DocumentItem as DocumentItemData } from "../../../types/document";
 import { DocumentItem } from "../../molecules/DocumentItem";
 import { DocumentPanel } from ".";
 
@@ -13,15 +14,31 @@ const sampleItems = [
   { name: "Employee Handbook", type: "pdf", added: "2017-01-06" },
   { name: "Q4 Report", type: "xlsx", added: "2018-03-12" },
   { name: "Documents", type: "folder", files: [] },
-] as const;
+  { name: "Cost centres", type: "csv", added: "2016-03-22" },
+  { name: "Public Holiday policy", type: "pdf", added: "2016-12-06" },
+  { name: "Expenses", type: "folder", files: [] },
+  { name: "Expenses claim form", type: "doc", added: "2017-05-02" },
+  { name: "HR", type: "folder", files: [] },
+] satisfies DocumentItemData[];
 
 const meta = {
   title: "Organisms/DocumentPanel",
   component: DocumentPanel,
   tags: ["autodocs"],
+  parameters: {
+    layout: "fullscreen",
+  },
   decorators: [
     (Story) => (
-      <div style={{ height: "24rem" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh",
+          width: "100%",
+          padding: 40,
+        }}
+      >
         <Story />
       </div>
     ),

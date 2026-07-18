@@ -9,7 +9,7 @@ const sortOptions = [
 ];
 
 const meta = {
-  title: "Organisms/DocumentPanel/Controls",
+  title: "Organisms/DocumentPanel/parts/Controls",
   component: DocumentPanelControls,
   tags: ["autodocs"],
   args: {

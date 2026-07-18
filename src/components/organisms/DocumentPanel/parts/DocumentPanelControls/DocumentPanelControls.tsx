@@ -9,10 +9,7 @@ import {
   type SortDirection,
 } from "../../../../atoms/SortDirectionButton";
 import { TextField } from "../../../../atoms/TextField";
-import {
-  getToolbarStyles,
-  toolbarControlsStyles,
-} from "./DocumentPanelControls.styles";
+import { getControlsStyles } from "./DocumentPanelControls.styles";
 
 type DocumentPanelControlsProps = {
   filterValue?: string;
@@ -42,38 +39,36 @@ export const DocumentPanelControls = ({
   const theme = useTheme();
 
   return (
-    <div style={getToolbarStyles(theme)}>
-      <div style={toolbarControlsStyles}>
-        <IconButton
-          ariaLabel="Go back"
-          icon="leftChevron"
-          disabled={isBackDisabled}
-          onClick={onBackClick}
-        />
-        <IconButton
-          ariaLabel="Go forward"
-          icon="rightChevron"
-          disabled={isForwardDisabled}
-          onClick={onForwardClick}
-        />
-        <TextField
-          label="filter by name"
-          size="small"
-          value={filterValue}
-          onChange={onFilterChange}
-        />
-        <SelectField
-          label="sort by"
-          size="small"
-          value={sortValue}
-          options={sortOptions}
-          onChange={onSortChange}
-        />
-        <SortDirectionButton
-          ariaLabel="Toggle sort direction"
-          onClick={onSortDirectionClick}
-        />
-      </div>
+    <div style={getControlsStyles(theme)}>
+      <IconButton
+        ariaLabel="Go back"
+        icon="leftChevron"
+        disabled={isBackDisabled}
+        onClick={onBackClick}
+      />
+      <IconButton
+        ariaLabel="Go forward"
+        icon="rightChevron"
+        disabled={isForwardDisabled}
+        onClick={onForwardClick}
+      />
+      <TextField
+        label="filter by name"
+        size="small"
+        value={filterValue}
+        onChange={onFilterChange}
+      />
+      <SelectField
+        label="sort by"
+        size="small"
+        value={sortValue}
+        options={sortOptions}
+        onChange={onSortChange}
+      />
+      <SortDirectionButton
+        ariaLabel="Toggle sort direction"
+        onClick={onSortDirectionClick}
+      />
     </div>
   );
 };
