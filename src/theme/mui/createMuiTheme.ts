@@ -1,4 +1,6 @@
 import { createTheme } from "@mui/material/styles";
+import { muiComponentOverrides } from "./components";
+import { muiPalette } from "./palette";
 
 declare module "@mui/material/styles" {
   interface PaletteColor {
@@ -10,13 +12,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-export const theme = createTheme({
-  palette: {
-    mode: "light",
-    primary: {
-      main: "#1976d2",
-      dark: "#1565c0",
-      darker: "#0d47a1",
-    },
-  },
+export const muiTheme = createTheme({
+  palette: muiPalette,
+  components: muiComponentOverrides,
 });
