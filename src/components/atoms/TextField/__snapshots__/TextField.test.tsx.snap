@@ -8,8 +8,8 @@ exports[`TextField > matches snapshot for large size 1`] = `
   <label
     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
-    for="_r_4_"
-    id="_r_4_-label"
+    for="_r_9_"
+    id="_r_9_-label"
   >
     Search documents
   </label>
@@ -19,7 +19,7 @@ exports[`TextField > matches snapshot for large size 1`] = `
     <input
       aria-invalid="false"
       class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
-      id="_r_4_"
+      id="_r_9_"
       type="text"
     />
     <fieldset
@@ -46,8 +46,8 @@ exports[`TextField > matches snapshot for medium size 1`] = `
   <label
     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
-    for="_r_3_"
-    id="_r_3_-label"
+    for="_r_7_"
+    id="_r_7_-label"
   >
     Search documents
   </label>
@@ -57,7 +57,7 @@ exports[`TextField > matches snapshot for medium size 1`] = `
     <input
       aria-invalid="false"
       class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
-      id="_r_3_"
+      id="_r_7_"
       type="text"
     />
     <fieldset
@@ -84,8 +84,8 @@ exports[`TextField > matches snapshot for small size 1`] = `
   <label
     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
-    for="_r_2_"
-    id="_r_2_-label"
+    for="_r_5_"
+    id="_r_5_-label"
   >
     Search documents
   </label>
@@ -95,7 +95,7 @@ exports[`TextField > matches snapshot for small size 1`] = `
     <input
       aria-invalid="false"
       class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
-      id="_r_2_"
+      id="_r_5_"
       type="text"
     />
     <fieldset

@@ -1,18 +1,15 @@
-import CssBaseline from "@mui/material/CssBaseline";
-import { ThemeProvider } from "@mui/material/styles";
-import { QueryClientProvider } from "@tanstack/react-query";
 import type { Preview } from "@storybook/react-vite";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "../src/queryClient";
-import { muiTheme } from "../src/theme";
+import { AppThemeProvider } from "../src/theme";
 
 const preview: Preview = {
   decorators: [
     (Story) => (
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={muiTheme}>
-          <CssBaseline />
+        <AppThemeProvider>
           <Story />
-        </ThemeProvider>
+        </AppThemeProvider>
       </QueryClientProvider>
     ),
   ],

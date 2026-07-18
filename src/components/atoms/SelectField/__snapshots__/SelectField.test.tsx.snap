@@ -8,7 +8,7 @@ exports[`SelectField > matches snapshot for large size 1`] = `
   <div
     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
-    id="_r_f_-label"
+    id="_r_k_-label"
   >
     Sort by
   </div>
@@ -18,9 +18,9 @@ exports[`SelectField > matches snapshot for large size 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="listbox"
-      aria-labelledby="_r_f_-label"
+      aria-labelledby="_r_k_-label"
       class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-      id="_r_f_"
+      id="_r_k_"
       role="combobox"
       tabindex="0"
     >
@@ -35,7 +35,7 @@ exports[`SelectField > matches snapshot for large size 1`] = `
       aria-hidden="true"
       aria-invalid="false"
       class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-      id="_r_h_"
+      id="_r_m_"
       tabindex="-1"
     />
     <svg
@@ -73,7 +73,7 @@ exports[`SelectField > matches snapshot for medium size 1`] = `
   <div
     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
-    id="_r_c_-label"
+    id="_r_g_-label"
   >
     Sort by
   </div>
@@ -83,9 +83,9 @@ exports[`SelectField > matches snapshot for medium size 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="listbox"
-      aria-labelledby="_r_c_-label"
+      aria-labelledby="_r_g_-label"
       class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-      id="_r_c_"
+      id="_r_g_"
       role="combobox"
       tabindex="0"
     >
@@ -100,7 +100,7 @@ exports[`SelectField > matches snapshot for medium size 1`] = `
       aria-hidden="true"
       aria-invalid="false"
       class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-      id="_r_e_"
+      id="_r_i_"
       tabindex="-1"
     />
     <svg
@@ -138,7 +138,7 @@ exports[`SelectField > matches snapshot for small size 1`] = `
   <div
     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
-    id="_r_9_-label"
+    id="_r_c_-label"
   >
     Sort by
   </div>
@@ -148,9 +148,9 @@ exports[`SelectField > matches snapshot for small size 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="listbox"
-      aria-labelledby="_r_9_-label"
+      aria-labelledby="_r_c_-label"
       class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-      id="_r_9_"
+      id="_r_c_"
       role="combobox"
       tabindex="0"
     >
@@ -165,7 +165,7 @@ exports[`SelectField > matches snapshot for small size 1`] = `
       aria-hidden="true"
       aria-invalid="false"
       class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-      id="_r_b_"
+      id="_r_e_"
       tabindex="-1"
     />
     <svg

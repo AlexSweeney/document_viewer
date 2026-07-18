@@ -1,3 +1,4 @@
+import { useTheme } from "@mui/material/styles";
 import CircularProgress from "@mui/material/CircularProgress";
 import type { DocumentItemType } from "../../../types/document";
 import { IconButton } from "../../atoms/IconButton";
@@ -10,10 +11,10 @@ import { TextField } from "../../atoms/TextField";
 import { DocumentItem } from "../../molecules/DocumentItem";
 import {
   containerStyles,
-  contentStyles,
-  loadingContentStyles,
+  getContentStyles,
+  getLoadingContentStyles,
+  getToolbarStyles,
   toolbarControlsStyles,
-  toolbarStyles,
 } from "./DocumentPanel.styles";
 
 type DocumentPanelItem = {
@@ -47,9 +48,11 @@ export const DocumentPanel = ({
   onItemClick,
   isLoading = false,
 }: DocumentPanelProps) => {
+  const theme = useTheme();
+
   return (
     <section style={containerStyles}>
-      <div style={toolbarStyles}>
+      <div style={getToolbarStyles(theme)}>
         <div style={toolbarControlsStyles}>
           <IconButton
             ariaLabel="Go back"
@@ -79,7 +82,11 @@ export const DocumentPanel = ({
           />
         </div>
       </div>
-      <div style={isLoading ? loadingContentStyles : contentStyles}>
+      <div
+        style={
+          isLoading ? getLoadingContentStyles(theme) : getContentStyles(theme)
+        }
+      >
         {isLoading ? (
           <CircularProgress aria-label="Loading documents" />
         ) : (

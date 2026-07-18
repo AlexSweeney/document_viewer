@@ -1,5 +1,5 @@
+import type { Theme } from "@mui/material/styles";
 import type { CSSProperties } from "react";
-import { theme } from "../../../theme";
 
 export const containerStyles: CSSProperties = {
   display: "flex",
@@ -10,13 +10,13 @@ export const containerStyles: CSSProperties = {
   overflow: "hidden",
 };
 
-export const toolbarStyles: CSSProperties = {
+export const getToolbarStyles = (theme: Theme): CSSProperties => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
   backgroundColor: theme.palette.primary.light,
   padding: "0.5rem 1rem",
-};
+});
 
 export const toolbarControlsStyles: CSSProperties = {
   display: "flex",
@@ -24,7 +24,7 @@ export const toolbarControlsStyles: CSSProperties = {
   gap: "0.5rem",
 };
 
-export const contentStyles: CSSProperties = {
+export const getContentStyles = (theme: Theme): CSSProperties => ({
   display: "flex",
   flex: 1,
   flexWrap: "wrap",
@@ -32,12 +32,12 @@ export const contentStyles: CSSProperties = {
   alignContent: "flex-start",
   gap: "2rem",
   padding: "1.5rem 1rem",
-  backgroundColor: "#f5f5f5",
-};
+  backgroundColor: theme.palette.panel,
+});
 
-export const loadingContentStyles: CSSProperties = {
-  ...contentStyles,
+export const getLoadingContentStyles = (theme: Theme): CSSProperties => ({
+  ...getContentStyles(theme),
   flexWrap: "nowrap",
   alignItems: "center",
   justifyContent: "center",
-};
+});

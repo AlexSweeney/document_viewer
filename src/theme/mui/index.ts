@@ -1,1 +1,0 @@
-export { muiTheme } from "./createMuiTheme";

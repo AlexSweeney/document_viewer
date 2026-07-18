@@ -1,6 +1,5 @@
 import type { SxProps, Theme } from "@mui/material/styles";
 import type { CSSProperties } from "react";
-import { theme } from "../../../theme";
 import type { SelectFieldSize } from "./selectFieldSizes";
 
 const widthMap: Record<SelectFieldSize, string> = {
@@ -9,7 +8,7 @@ const widthMap: Record<SelectFieldSize, string> = {
   large: "32rem",
 };
 
-export const selectFieldStyles: SxProps<Theme> = {
+export const selectFieldStyles: SxProps<Theme> = (theme) => ({
   "& .MuiInputLabel-root.Mui-focused": {
     color: theme.palette.action.active,
   },
@@ -19,7 +18,7 @@ export const selectFieldStyles: SxProps<Theme> = {
   "& .MuiOutlinedInput-root.Mui-focused .MuiSelect-icon": {
     color: theme.palette.action.active,
   },
-};
+});
 
 export const getSelectFieldStyles = (size: SelectFieldSize): CSSProperties => ({
   width: widthMap[size],

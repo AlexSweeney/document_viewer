@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render } from "../../../test/testUtils";
 import { describe, expect, it } from "vitest";
 import { Typography, typographyVariants } from ".";
 

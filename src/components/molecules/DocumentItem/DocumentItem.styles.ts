@@ -1,10 +1,9 @@
 import type { SxProps, Theme } from "@mui/material/styles";
 import type { CSSProperties } from "react";
-import { theme } from "../../../theme";
 import type { IconSize } from "../../atoms/Icon";
 import { iconSizeMap } from "../../atoms/Icon/iconSizes";
 
-export const containerStyles: SxProps<Theme> = {
+export const containerStyles: SxProps<Theme> = (theme) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -34,7 +33,7 @@ export const containerStyles: SxProps<Theme> = {
   "&:active .document-item-icon, &:active .document-item-text": {
     color: theme.palette.primary.darker,
   },
-};
+});
 
 export const ICON_SIZE: IconSize = "medium";
 

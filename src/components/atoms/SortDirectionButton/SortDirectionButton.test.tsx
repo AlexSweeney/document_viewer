@@ -1,5 +1,10 @@
-import { cleanup, render, screen, within } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import {
+  cleanup,
+  render,
+  screen,
+  userEvent,
+  within,
+} from "../../../test/testUtils";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { SortDirectionButton, sortDirections } from ".";
 
