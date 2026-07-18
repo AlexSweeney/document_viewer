@@ -13,3 +13,5 @@ export type DocumentFolder = {
 };
 
 export type DocumentItem = DocumentFile | DocumentFolder;
+
+export type DocumentItemType = DocumentFile["type"] | DocumentFolder["type"];
