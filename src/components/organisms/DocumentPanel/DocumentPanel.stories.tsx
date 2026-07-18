@@ -29,6 +29,7 @@ const meta = {
   args: {
     filterValue: "",
     sortOptions,
+    sortValue: "name",
     onBackClick: fn(),
     onForwardClick: fn(),
     onSortDirectionClick: fn(),
