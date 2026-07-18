@@ -1,0 +1,7 @@
+# Document Viewer
+
+> Browse, filter, and sort company documents and folders in a simple web-based document viewer.
+
+## Application
+
+- [Document viewer](/): Main interface for browsing documents and folders
