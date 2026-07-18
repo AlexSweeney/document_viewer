@@ -7,6 +7,7 @@ import { useDocuments } from "./hooks/useDocuments";
 import type { DocumentItem as DocumentItemData } from "./types/document";
 import {
   filterDocumentItemsByName,
+  getBreadcrumbItems,
   getDocumentItemsAtPath,
   sortDocumentItems,
   type SortField,
@@ -18,8 +19,6 @@ import {
 } from "./App.styles";
 
 const title = "Document viewer";
-
-const breadcrumbItems = [{ label: "Home" }];
 
 const sortOptions = [
   { value: "name", label: "Name" },
@@ -46,6 +45,11 @@ const App = () => {
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
 
   const folderPath = folderNavigation.history[folderNavigation.index];
+
+  const breadcrumbItems = useMemo(
+    () => getBreadcrumbItems(folderPath),
+    [folderPath],
+  );
 
   const currentDocumentItems = useMemo(
     () => getDocumentItemsAtPath(documentItems ?? [], folderPath),
@@ -92,6 +96,27 @@ const App = () => {
     }));
   };
 
+  const handleBreadcrumbClick = (index: number) => {
+    setFolderNavigation(({ history, index: currentIndex }) => {
+      const currentPath = history[currentIndex];
+      // Breadcrumb index 0 is Home; each later index adds one folder segment.
+      const targetPath = currentPath.slice(0, index);
+
+      // Already at this breadcrumb — nothing to do.
+      if (targetPath.length === currentPath.length) {
+        return { history, index: currentIndex };
+      }
+
+      // Drop any forward history and append the target path.
+      const nextHistory = [...history.slice(0, currentIndex + 1), targetPath];
+
+      return {
+        history: nextHistory,
+        index: currentIndex + 1,
+      };
+    });
+  };
+
   const isBackDisabled = folderNavigation.index === 0;
   const isForwardDisabled =
     folderNavigation.index === folderNavigation.history.length - 1;
@@ -101,7 +126,7 @@ const App = () => {
       <Header
         breadcrumbItems={breadcrumbItems}
         title={title}
-        onClickBreadCrumb={() => {}}
+        onClickBreadCrumb={handleBreadcrumbClick}
       />
       <div style={panelWrapperStyles}>
         <div style={panelContentStyles}>

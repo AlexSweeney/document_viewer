@@ -3,6 +3,15 @@ import type { DocumentFolder, DocumentItem } from "../types/document";
 
 export type SortField = "name" | "date" | "type";
 
+export type BreadcrumbItem = {
+  label: string;
+};
+
+export const getBreadcrumbItems = (folderPath: string[]): BreadcrumbItem[] => [
+  { label: "Home" },
+  ...folderPath.map((label) => ({ label })),
+];
+
 export const getDocumentItemsAtPath = (
   items: DocumentItem[],
   folderPath: string[],

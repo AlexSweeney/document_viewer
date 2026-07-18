@@ -143,6 +143,9 @@ describe("App", () => {
 
     await user.click(screen.getByRole("button", { name: "Open Expenses" }));
 
+    expect(
+      screen.getByRole("button", { name: "Navigate to Expenses" }),
+    ).toBeInTheDocument();
     expect(screen.getByText("Expenses claim form")).toBeInTheDocument();
     expect(screen.getByText("Fuel allowances")).toBeInTheDocument();
     expect(screen.getByText("Travel")).toBeInTheDocument();
@@ -165,6 +168,9 @@ describe("App", () => {
     await user.click(screen.getByRole("button", { name: "Open Expenses" }));
     await user.click(screen.getByRole("button", { name: "Open Travel" }));
 
+    expect(
+      screen.getByRole("button", { name: "Navigate to Travel" }),
+    ).toBeInTheDocument();
     expect(screen.getByText("International travel policy")).toBeInTheDocument();
     expect(screen.getByText("Mileage log template")).toBeInTheDocument();
     expect(screen.getByText("2024")).toBeInTheDocument();
@@ -239,6 +245,59 @@ describe("App", () => {
     expect(screen.getByText("Policies")).toBeInTheDocument();
     expect(screen.getByText("Onboarding")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Go forward" })).toBeDisabled();
+  });
+
+  it("navigates via breadcrumb click", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(
+          screen.getByRole("button", { name: "Open Expenses" }),
+        ).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
+
+    await user.click(screen.getByRole("button", { name: "Open Expenses" }));
+    await user.click(screen.getByRole("button", { name: "Open Travel" }));
+    await user.click(screen.getByRole("button", { name: "Navigate to Home" }));
+
+    expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: "Navigate to Expenses" }),
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Go back" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "Go forward" })).toBeDisabled();
+  });
+
+  it("navigates to a parent folder via breadcrumb click", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(
+          screen.getByRole("button", { name: "Open Expenses" }),
+        ).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
+
+    await user.click(screen.getByRole("button", { name: "Open Expenses" }));
+    await user.click(screen.getByRole("button", { name: "Open Travel" }));
+    await user.click(
+      screen.getByRole("button", { name: "Navigate to Expenses" }),
+    );
+
+    expect(screen.getByText("Expenses claim form")).toBeInTheDocument();
+    expect(
+      screen.queryByText("International travel policy"),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: "Navigate to Travel" }),
+    ).not.toBeInTheDocument();
   });
 
   it("reverses sort direction when toggled", async () => {
