@@ -9,6 +9,7 @@ import {
 import userEvent from "@testing-library/user-event";
 import type { ReactElement } from "react";
 import { AppThemeProvider } from "../theme";
+import type { ThemeMode } from "../theme/colors";
 
 const createTestQueryClient = () =>
   new QueryClient({
@@ -21,17 +22,18 @@ const createTestQueryClient = () =>
 
 export function renderWithTheme(
   ui: ReactElement,
-  options?: Omit<RenderOptions, "wrapper">,
+  options?: Omit<RenderOptions, "wrapper"> & { themeMode?: ThemeMode },
 ) {
+  const { themeMode = "light", ...renderOptions } = options ?? {};
   const queryClient = createTestQueryClient();
 
   return render(ui, {
     wrapper: ({ children }) => (
       <QueryClientProvider client={queryClient}>
-        <AppThemeProvider>{children}</AppThemeProvider>
+        <AppThemeProvider defaultMode={themeMode}>{children}</AppThemeProvider>
       </QueryClientProvider>
     ),
-    ...options,
+    ...renderOptions,
   });
 }
 
