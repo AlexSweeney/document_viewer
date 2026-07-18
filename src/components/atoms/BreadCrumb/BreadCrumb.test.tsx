@@ -25,6 +25,25 @@ describe("BreadCrumb", () => {
     expect(onClick).toHaveBeenCalledOnce();
   });
 
+  it("is reachable via Tab and activates with Enter", async () => {
+    const user = userEvent.setup();
+    const onClick = vi.fn();
+    render(<BreadCrumb label="Expenses" onClick={onClick} />);
+
+    await user.tab();
+
+    expect(
+      screen.getByRole("button", { name: "Navigate to Expenses" }),
+    ).toHaveFocus();
+    expect(
+      screen.getByRole("button", { name: "Navigate to Expenses" }),
+    ).toHaveAttribute("tabindex", "0");
+
+    await user.keyboard("{Enter}");
+
+    expect(onClick).toHaveBeenCalledOnce();
+  });
+
   it("matches snapshot", () => {
     const { container } = render(
       <BreadCrumb label="Expenses" onClick={vi.fn()} />,

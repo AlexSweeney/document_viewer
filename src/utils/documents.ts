@@ -1,13 +1,10 @@
+import type { BreadCrumbItem } from "../components/atoms/BreadCrumb";
 import type { SortDirection } from "../components/atoms/SortDirectionButton";
 import type { DocumentFolder, DocumentItem } from "../types/document";
 
 export type SortField = "name" | "date" | "type";
 
-export type BreadcrumbItem = {
-  label: string;
-};
-
-export const getBreadcrumbItems = (folderPath: string[]): BreadcrumbItem[] => [
+export const getBreadCrumbItems = (folderPath: string[]): BreadCrumbItem[] => [
   { label: "Home" },
   ...folderPath.map((label) => ({ label })),
 ];

@@ -7,7 +7,7 @@ const meta = {
   component: Header,
   tags: ["autodocs"],
   args: {
-    breadcrumbItems: [
+    breadCrumbItems: [
       { label: "Home" },
       { label: "Expenses" },
       { label: "Travel" },
@@ -23,16 +23,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const SingleBreadcrumb: Story = {
+export const SingleBreadCrumb: Story = {
   args: {
-    breadcrumbItems: [{ label: "Home" }],
+    breadCrumbItems: [{ label: "Home" }],
     title: "Document viewer",
   },
 };
 
 export const DeepPath: Story = {
   args: {
-    breadcrumbItems: [
+    breadCrumbItems: [
       { label: "Home" },
       { label: "Misc" },
       { label: "Archive" },

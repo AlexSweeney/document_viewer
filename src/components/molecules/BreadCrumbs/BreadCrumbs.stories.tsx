@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { fn } from "storybook/test";
 import { BreadCrumbs } from ".";
 
-const breadcrumbItem = (label: string) => ({
+const breadCrumbItem = (label: string) => ({
   label,
   onClick: fn(),
 });
@@ -13,10 +13,10 @@ const meta = {
   tags: ["autodocs"],
   args: {
     items: [
-      breadcrumbItem("Home"),
-      breadcrumbItem("Expenses"),
-      breadcrumbItem("Travel"),
-      breadcrumbItem("2024"),
+      breadCrumbItem("Home"),
+      breadCrumbItem("Expenses"),
+      breadCrumbItem("Travel"),
+      breadCrumbItem("2024"),
     ],
   },
 } satisfies Meta<typeof BreadCrumbs>;
@@ -29,18 +29,18 @@ export const Default: Story = {};
 
 export const SingleItem: Story = {
   args: {
-    items: [breadcrumbItem("Home")],
+    items: [breadCrumbItem("Home")],
   },
 };
 
 export const DeepPath: Story = {
   args: {
     items: [
-      breadcrumbItem("Home"),
-      breadcrumbItem("Misc"),
-      breadcrumbItem("Archive"),
-      breadcrumbItem("Legacy policies"),
-      breadcrumbItem("Dress code 2014"),
+      breadCrumbItem("Home"),
+      breadCrumbItem("Misc"),
+      breadCrumbItem("Archive"),
+      breadCrumbItem("Legacy policies"),
+      breadCrumbItem("Dress code 2014"),
     ],
   },
 };

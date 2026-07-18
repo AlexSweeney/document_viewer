@@ -7,7 +7,7 @@ import { useDocuments } from "../hooks/useDocuments";
 import type { DocumentItem as DocumentItemData } from "../types/document";
 import {
   filterDocumentItemsByName,
-  getBreadcrumbItems,
+  getBreadCrumbItems,
   getDocumentItemsAtPath,
   sortDocumentItems,
   type SortField,
@@ -46,8 +46,8 @@ const App = () => {
 
   const folderPath = folderNavigation.history[folderNavigation.index];
 
-  const breadcrumbItems = useMemo(
-    () => getBreadcrumbItems(folderPath),
+  const breadCrumbItems = useMemo(
+    () => getBreadCrumbItems(folderPath),
     [folderPath],
   );
 
@@ -96,13 +96,13 @@ const App = () => {
     }));
   };
 
-  const handleBreadcrumbClick = (index: number) => {
+  const handleBreadCrumbClick = (index: number) => {
     setFolderNavigation(({ history, index: currentIndex }) => {
       const currentPath = history[currentIndex];
-      // Breadcrumb index 0 is Home; each later index adds one folder segment.
+      // BreadCrumb index 0 is Home; each later index adds one folder segment.
       const targetPath = currentPath.slice(0, index);
 
-      // Already at this breadcrumb — nothing to do.
+      // Already at this BreadCrumb — nothing to do.
       if (targetPath.length === currentPath.length) {
         return { history, index: currentIndex };
       }
@@ -124,9 +124,9 @@ const App = () => {
   return (
     <div style={appStyles}>
       <Header
-        breadcrumbItems={breadcrumbItems}
+        breadCrumbItems={breadCrumbItems}
         title={title}
-        onClickBreadCrumb={handleBreadcrumbClick}
+        onClickBreadCrumb={handleBreadCrumbClick}
       />
       <div style={panelWrapperStyles}>
         <div style={panelContentStyles}>

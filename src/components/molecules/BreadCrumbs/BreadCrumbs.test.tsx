@@ -39,6 +39,39 @@ describe("BreadCrumbs", () => {
     expect(onHomeClick).toHaveBeenCalledOnce();
   });
 
+  it("allows tabbing between breadcrumb items", async () => {
+    const user = userEvent.setup();
+    const onTravelClick = vi.fn();
+    render(
+      <BreadCrumbs
+        items={[
+          { label: "Home", onClick: vi.fn() },
+          { label: "Expenses", onClick: vi.fn() },
+          { label: "Travel", onClick: onTravelClick },
+        ]}
+      />,
+    );
+
+    await user.tab();
+    expect(
+      screen.getByRole("button", { name: "Navigate to Home" }),
+    ).toHaveFocus();
+
+    await user.tab();
+    expect(
+      screen.getByRole("button", { name: "Navigate to Expenses" }),
+    ).toHaveFocus();
+
+    await user.tab();
+    expect(
+      screen.getByRole("button", { name: "Navigate to Travel" }),
+    ).toHaveFocus();
+
+    await user.keyboard("{Enter}");
+
+    expect(onTravelClick).toHaveBeenCalledOnce();
+  });
+
   it("matches snapshot", () => {
     const items = [
       { label: "Home", onClick: vi.fn() },

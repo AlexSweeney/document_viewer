@@ -250,6 +250,42 @@ describe("App", () => {
     expect(screen.getByRole("button", { name: "Go forward" })).toBeDisabled();
   });
 
+  it("navigates via keyboard tab and enter on BreadCrumbs", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
+
+    await user.tab();
+    expect(
+      screen.getByRole("button", { name: "Navigate to Home" }),
+    ).toHaveFocus();
+
+    await user.click(screen.getByRole("button", { name: "Open Expenses" }));
+    await waitFor(() => {
+      expect(
+        screen.getByRole("button", { name: "Navigate to Expenses" }),
+      ).toBeInTheDocument();
+    });
+
+    await user.tab();
+    expect(
+      screen.getByRole("button", { name: "Navigate to Home" }),
+    ).toHaveFocus();
+
+    await user.keyboard("{Enter}");
+
+    expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: "Navigate to Expenses" }),
+    ).not.toBeInTheDocument();
+  });
+
   it("navigates via breadcrumb click", async () => {
     const user = userEvent.setup();
     render(<App />);

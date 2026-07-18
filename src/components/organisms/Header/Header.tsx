@@ -1,33 +1,37 @@
 import { useTheme } from "@mui/material/styles";
 import MuiTypography from "@mui/material/Typography";
+import type { BreadCrumbItem } from "../../atoms/BreadCrumb";
 import { ThemeModeToggle } from "../../atoms/ThemeModeToggle";
 import { BreadCrumbs } from "../../molecules/BreadCrumbs";
-import { getContainerStyles, titleAreaStyles } from "./Header.styles";
-
-type BreadCrumbItem = {
-  label: string;
-};
+import {
+  getContainerStyles,
+  headerBreadCrumbsStyles,
+  titleAreaStyles,
+} from "./Header.styles";
 
 type HeaderProps = {
-  breadcrumbItems: readonly BreadCrumbItem[];
+  breadCrumbItems: readonly BreadCrumbItem[];
   onClickBreadCrumb: (index: number, item: BreadCrumbItem) => void;
   title: string;
 };
 
 export const Header = ({
-  breadcrumbItems,
+  breadCrumbItems,
   onClickBreadCrumb,
   title,
 }: HeaderProps) => {
   const theme = useTheme();
-  const clickableBreadcrumbItems = breadcrumbItems.map((item, index) => ({
+  const clickableBreadCrumbItems = breadCrumbItems.map((item, index) => ({
     label: item.label,
     onClick: () => onClickBreadCrumb(index, item),
   }));
 
   return (
     <header style={getContainerStyles(theme)}>
-      <BreadCrumbs items={clickableBreadcrumbItems} />
+      <BreadCrumbs
+        items={clickableBreadCrumbItems}
+        sx={headerBreadCrumbsStyles}
+      />
       <div style={titleAreaStyles}>
         <MuiTypography variant="h3" component="h1" color="inherit">
           {title}

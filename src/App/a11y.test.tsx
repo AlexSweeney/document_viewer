@@ -13,7 +13,7 @@ afterEach(() => {
   cleanup();
 });
 
-const breadcrumbItems = [
+const breadCrumbItems = [
   { label: "Home" },
   { label: "Expenses" },
   { label: "Travel" },
@@ -44,7 +44,7 @@ const renderApp = (themeMode: ThemeMode) => render(<App />, { themeMode });
 const renderHeader = (themeMode: ThemeMode) =>
   render(
     <Header
-      breadcrumbItems={breadcrumbItems}
+      breadCrumbItems={breadCrumbItems}
       onClickBreadCrumb={vi.fn()}
       title="Document viewer"
     />,

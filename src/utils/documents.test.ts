@@ -3,7 +3,7 @@ import type { DocumentItem } from "../types/document";
 import {
   compareDocumentItems,
   filterDocumentItemsByName,
-  getBreadcrumbItems,
+  getBreadCrumbItems,
   getDocumentItemsAtPath,
   normalizeForFilter,
   sortDocumentItems,
@@ -33,13 +33,13 @@ const items: DocumentItem[] = [
   { name: "Cost centres", type: "csv", added: "2016-08-12" },
 ];
 
-describe("getBreadcrumbItems", () => {
+describe("getBreadCrumbItems", () => {
   it("returns Home for an empty folder path", () => {
-    expect(getBreadcrumbItems([])).toEqual([{ label: "Home" }]);
+    expect(getBreadCrumbItems([])).toEqual([{ label: "Home" }]);
   });
 
   it("returns Home followed by folder names", () => {
-    expect(getBreadcrumbItems(["Expenses", "Travel"])).toEqual([
+    expect(getBreadCrumbItems(["Expenses", "Travel"])).toEqual([
       { label: "Home" },
       { label: "Expenses" },
       { label: "Travel" },

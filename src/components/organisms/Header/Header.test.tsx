@@ -2,7 +2,7 @@ import { cleanup, render, screen, userEvent } from "../../../test/testUtils";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { Header } from ".";
 
-const breadcrumbItems = [
+const breadCrumbItems = [
   { label: "Home" },
   { label: "Expenses" },
   { label: "Travel" },
@@ -16,7 +16,7 @@ describe("Header", () => {
   it("renders breadcrumb labels", () => {
     render(
       <Header
-        breadcrumbItems={breadcrumbItems}
+        breadCrumbItems={breadCrumbItems}
         onClickBreadCrumb={vi.fn()}
         title="12 documents"
       />,
@@ -30,7 +30,7 @@ describe("Header", () => {
   it("renders title", () => {
     render(
       <Header
-        breadcrumbItems={breadcrumbItems}
+        breadCrumbItems={breadCrumbItems}
         onClickBreadCrumb={vi.fn()}
         title="12 documents"
       />,
@@ -49,7 +49,7 @@ describe("Header", () => {
     const onClickBreadCrumb = vi.fn();
     render(
       <Header
-        breadcrumbItems={breadcrumbItems}
+        breadCrumbItems={breadCrumbItems}
         onClickBreadCrumb={onClickBreadCrumb}
         title="12 documents"
       />,
@@ -66,7 +66,7 @@ describe("Header", () => {
   it("matches snapshot", () => {
     const { container } = render(
       <Header
-        breadcrumbItems={breadcrumbItems}
+        breadCrumbItems={breadCrumbItems}
         onClickBreadCrumb={vi.fn()}
         title="12 documents"
       />,

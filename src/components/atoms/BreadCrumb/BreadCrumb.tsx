@@ -1,7 +1,12 @@
 import ButtonBase from "@mui/material/ButtonBase";
-import MuiTypography from "@mui/material/Typography";
+import { Typography } from "../Typography";
+import { breadCrumbStyles } from "./BreadCrumb.styles";
 
-type BreadCrumbProps = {
+export type BreadCrumbItem = {
+  label: string;
+};
+
+export type BreadCrumbProps = {
   label: string;
   onClick: () => void;
 };
@@ -11,11 +16,12 @@ export const BreadCrumb = ({ label, onClick }: BreadCrumbProps) => {
     <ButtonBase
       aria-label={`Navigate to ${label}`}
       onClick={onClick}
-      sx={{ color: "inherit", verticalAlign: "inherit" }}
+      sx={breadCrumbStyles}
+      tabIndex={0}
     >
-      <MuiTypography variant="body2" color="inherit" component="span">
+      <Typography variant="h6" component="span">
         {label}
-      </MuiTypography>
+      </Typography>
     </ButtonBase>
   );
 };
