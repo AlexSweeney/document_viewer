@@ -17,6 +17,7 @@ export const containerStyles: SxProps<Theme> = (theme) => ({
   cursor: "pointer",
   "&:hover": {
     backgroundColor: "transparent",
+    cursor: "pointer",
   },
   "&:active": {
     backgroundColor: "transparent",
@@ -26,6 +27,10 @@ export const containerStyles: SxProps<Theme> = (theme) => ({
   },
   "& .document-item-icon": {
     color: theme.palette.primary.dark,
+    cursor: "pointer",
+  },
+  "& .document-item-text": {
+    cursor: "pointer",
   },
   "&:hover .document-item-icon, &:hover .document-item-text": {
     color: theme.palette.primary.main,
@@ -44,6 +49,7 @@ export const iconStyles: CSSProperties = {
   height: iconSizeMap[ICON_SIZE],
   width: "100%",
   flexShrink: 0,
+  cursor: "pointer",
   transition: "color 0.2s",
 };
 
@@ -55,5 +61,6 @@ export const textContainerStyles: CSSProperties = {
   textAlign: "center",
   gap: 0,
   lineHeight: 1.2,
+  cursor: "pointer",
   transition: "color 0.2s",
 };
