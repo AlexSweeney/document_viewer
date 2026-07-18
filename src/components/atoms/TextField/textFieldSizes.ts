@@ -1,3 +1,3 @@
-export const textFieldSizes = ["small", "medium", "large"] as const;
+export type TextFieldSize = "small" | "medium" | "large";
 
-export type TextFieldSize = (typeof textFieldSizes)[number];
+export const textFieldSizes: TextFieldSize[] = ["small", "medium", "large"];

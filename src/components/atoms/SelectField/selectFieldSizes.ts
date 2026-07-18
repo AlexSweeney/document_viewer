@@ -1,3 +1,3 @@
-export const selectFieldSizes = ["small", "medium", "large"] as const;
+export type SelectFieldSize = "small" | "medium" | "large";
 
-export type SelectFieldSize = (typeof selectFieldSizes)[number];
+export const selectFieldSizes: SelectFieldSize[] = ["small", "medium", "large"];

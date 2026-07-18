@@ -7,11 +7,11 @@ type TextFieldProps = {
   onChange?: (value: string) => void;
 };
 
-const widthMap = {
+const widthMap: Record<TextFieldSize, string> = {
   small: "12rem",
   medium: "20rem",
   large: "32rem",
-} as const satisfies Record<TextFieldSize, string>;
+};
 
 export const TextField = ({
   label,

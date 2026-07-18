@@ -1,6 +1,6 @@
 import IconButton from "@mui/material/IconButton";
 import { useState } from "react";
-import { Icon } from "../Icon";
+import { Icon, type IconName } from "../Icon";
 import type { SortDirection } from "./sortDirections";
 
 type SortDirectionButtonProps = {
@@ -9,10 +9,10 @@ type SortDirectionButtonProps = {
   onClick?: (direction: SortDirection) => void;
 };
 
-const iconMap = {
+const iconMap: Record<SortDirection, IconName> = {
   asc: "upArrow",
   desc: "downArrow",
-} as const satisfies Record<SortDirection, "upArrow" | "downArrow">;
+};
 
 export const SortDirectionButton = ({
   defaultDirection = "asc",

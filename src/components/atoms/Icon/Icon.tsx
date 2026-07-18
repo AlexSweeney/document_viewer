@@ -8,6 +8,7 @@ import MovieIcon from "@mui/icons-material/Movie";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import TableChartIcon from "@mui/icons-material/TableChart";
 import TableViewIcon from "@mui/icons-material/TableView";
+import type { ElementType } from "react";
 import type { SvgIconProps } from "@mui/material/SvgIcon";
 import type { DocumentItemType } from "../../../types/document";
 import { iconSizeMap, type IconSize } from "./iconSizes";
@@ -15,7 +16,7 @@ import { iconSizeMap, type IconSize } from "./iconSizes";
 export type IconName =
   "leftChevron" | "rightChevron" | "upArrow" | "downArrow" | DocumentItemType;
 
-const iconMap = {
+const iconMap: Record<IconName, ElementType<SvgIconProps>> = {
   leftChevron: ChevronLeftIcon,
   rightChevron: ChevronRightIcon,
   upArrow: ArrowUpwardIcon,
@@ -26,7 +27,7 @@ const iconMap = {
   mov: MovieIcon,
   xlsx: TableViewIcon,
   folder: FolderIcon,
-} as const satisfies Record<IconName, React.ElementType<SvgIconProps>>;
+};
 
 export type IconProps = {
   name: IconName;

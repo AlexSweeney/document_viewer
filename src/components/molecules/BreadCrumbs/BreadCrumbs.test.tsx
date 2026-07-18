@@ -2,11 +2,11 @@ import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { BreadCrumbs } from ".";
 
-const items = [
+const items: { label: string }[] = [
   { label: "Home" },
   { label: "Expenses" },
   { label: "Travel" },
-] as const;
+];
 
 describe("BreadCrumbs", () => {
   it("renders BreadCrumb labels", () => {

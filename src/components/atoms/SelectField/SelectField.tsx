@@ -14,11 +14,11 @@ type SelectFieldProps = {
   onChange?: (value: string) => void;
 };
 
-const widthMap = {
+const widthMap: Record<SelectFieldSize, string> = {
   small: "12rem",
   medium: "20rem",
   large: "32rem",
-} as const satisfies Record<SelectFieldSize, string>;
+};
 
 export const SelectField = ({
   label,
