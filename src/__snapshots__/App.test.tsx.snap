@@ -163,8 +163,8 @@ exports[`App > matches snapshot 1`] = `
               <label
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
-                for="_r_13_"
-                id="_r_13_-label"
+                for="_r_1u_"
+                id="_r_1u_-label"
               >
                 filter by name
               </label>
@@ -174,7 +174,7 @@ exports[`App > matches snapshot 1`] = `
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
-                  id="_r_13_"
+                  id="_r_1u_"
                   type="text"
                   value=""
                 />
@@ -185,9 +185,9 @@ exports[`App > matches snapshot 1`] = `
               style="width: 12rem;"
             >
               <div
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
-                data-shrink="false"
-                id="_r_14_-label"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled css-eok8s2-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                id="_r_1v_-label"
               >
                 sort by
               </div>
@@ -197,25 +197,21 @@ exports[`App > matches snapshot 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-labelledby="_r_14_-label"
+                  aria-labelledby="_r_1v_-label"
                   class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1y2qbti-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
-                  id="_r_14_"
+                  id="_r_1v_"
                   role="combobox"
                   tabindex="0"
                 >
-                  <span
-                    aria-hidden="true"
-                    class="notranslate"
-                  >
-                    ​
-                  </span>
+                  Name
                 </div>
                 <input
                   aria-hidden="true"
                   aria-invalid="false"
                   class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                  id="_r_16_"
+                  id="_r_21_"
                   tabindex="-1"
+                  value="name"
                 />
                 <svg
                   aria-hidden="true"
@@ -253,136 +249,6 @@ exports[`App > matches snapshot 1`] = `
         <div
           style="display: flex; flex: 1 1 0%; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 2rem; padding: 1.5rem 1rem; background-color: rgb(245, 245, 245);"
         >
-          <button
-            aria-label="Open Employee Handbook"
-            class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
-          >
-            <div
-              class="document-item-icon"
-              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
-                data-testid="PictureAsPdfIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5zm4-3H19v1h1.5V11H19v2h-1.5V7h3zM9 9.5h1v-1H9zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm10 5.5h1v-3h-1z"
-                />
-              </svg>
-            </div>
-            <div
-              class="document-item-text"
-              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-              >
-                <strong>
-                  Employee Handbook
-                </strong>
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                pdf
-              </span>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                2017-01-06
-              </span>
-            </div>
-          </button>
-          <button
-            aria-label="Open Public Holiday policy"
-            class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
-          >
-            <div
-              class="document-item-icon"
-              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
-                data-testid="PictureAsPdfIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5zm4-3H19v1h1.5V11H19v2h-1.5V7h3zM9 9.5h1v-1H9zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm10 5.5h1v-3h-1z"
-                />
-              </svg>
-            </div>
-            <div
-              class="document-item-text"
-              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-              >
-                <strong>
-                  Public Holiday policy
-                </strong>
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                pdf
-              </span>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                2016-12-06
-              </span>
-            </div>
-          </button>
-          <button
-            aria-label="Open Expenses"
-            class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
-          >
-            <div
-              class="document-item-icon"
-              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
-                data-testid="FolderIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8z"
-                />
-              </svg>
-            </div>
-            <div
-              class="document-item-text"
-              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-              >
-                <strong>
-                  Expenses
-                </strong>
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                folder
-              </span>
-            </div>
-          </button>
           <button
             aria-label="Open Cost centres"
             class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
@@ -429,7 +295,52 @@ exports[`App > matches snapshot 1`] = `
             </div>
           </button>
           <button
-            aria-label="Open Misc"
+            aria-label="Open Employee Handbook"
+            class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="document-item-icon"
+              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
+                data-testid="PictureAsPdfIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5zm4-3H19v1h1.5V11H19v2h-1.5V7h3zM9 9.5h1v-1H9zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm10 5.5h1v-3h-1z"
+                />
+              </svg>
+            </div>
+            <div
+              class="document-item-text"
+              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+              >
+                <strong>
+                  Employee Handbook
+                </strong>
+              </p>
+              <span
+                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+              >
+                pdf
+              </span>
+              <span
+                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+              >
+                2017-01-06
+              </span>
+            </div>
+          </button>
+          <button
+            aria-label="Open Expenses"
             class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
             tabindex="0"
             type="button"
@@ -458,7 +369,7 @@ exports[`App > matches snapshot 1`] = `
                 class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
               >
                 <strong>
-                  Misc
+                  Expenses
                 </strong>
               </p>
               <span
@@ -505,6 +416,91 @@ exports[`App > matches snapshot 1`] = `
                 class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
               >
                 folder
+              </span>
+            </div>
+          </button>
+          <button
+            aria-label="Open Misc"
+            class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="document-item-icon"
+              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
+                data-testid="FolderIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8z"
+                />
+              </svg>
+            </div>
+            <div
+              class="document-item-text"
+              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+              >
+                <strong>
+                  Misc
+                </strong>
+              </p>
+              <span
+                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+              >
+                folder
+              </span>
+            </div>
+          </button>
+          <button
+            aria-label="Open Public Holiday policy"
+            class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="document-item-icon"
+              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
+                data-testid="PictureAsPdfIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5zm4-3H19v1h1.5V11H19v2h-1.5V7h3zM9 9.5h1v-1H9zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm10 5.5h1v-3h-1z"
+                />
+              </svg>
+            </div>
+            <div
+              class="document-item-text"
+              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+              >
+                <strong>
+                  Public Holiday policy
+                </strong>
+              </p>
+              <span
+                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+              >
+                pdf
+              </span>
+              <span
+                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+              >
+                2016-12-06
               </span>
             </div>
           </button>

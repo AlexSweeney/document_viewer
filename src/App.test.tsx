@@ -7,6 +7,13 @@ afterEach(() => {
   cleanup();
 });
 
+const getDocumentNames = () =>
+  screen
+    .getAllByRole("button")
+    .map((button) => button.getAttribute("aria-label"))
+    .filter((label): label is string => label?.startsWith("Open ") ?? false)
+    .map((label) => label.replace("Open ", ""));
+
 describe("App", () => {
   it("renders the header", async () => {
     render(<App />);
@@ -70,6 +77,69 @@ describe("App", () => {
 
     expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
     expect(screen.queryByText("Public Holiday policy")).not.toBeInTheDocument();
+  });
+
+  it("sorts documents by name ascending by default", async () => {
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(getDocumentNames()[0]).toBe("Cost centres");
+      },
+      { timeout: 3000 },
+    );
+
+    expect(getDocumentNames()).toEqual([
+      "Cost centres",
+      "Employee Handbook",
+      "Expenses",
+      "HR",
+      "Misc",
+      "Public Holiday policy",
+    ]);
+  });
+
+  it("sorts documents by date created", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
+
+    await user.click(screen.getByRole("combobox", { name: "sort by" }));
+    await user.click(screen.getByRole("option", { name: "Date created" }));
+
+    expect(getDocumentNames()).toEqual([
+      "Cost centres",
+      "Public Holiday policy",
+      "Employee Handbook",
+      "Expenses",
+      "Misc",
+      "HR",
+    ]);
+  });
+
+  it("reverses sort direction when toggled", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(getDocumentNames()[0]).toBe("Cost centres");
+      },
+      { timeout: 3000 },
+    );
+
+    await user.click(
+      screen.getByRole("button", { name: "Toggle sort direction" }),
+    );
+
+    expect(getDocumentNames()[0]).toBe("Public Holiday policy");
+    expect(getDocumentNames().at(-1)).toBe("Cost centres");
   });
 
   it("matches snapshot", async () => {

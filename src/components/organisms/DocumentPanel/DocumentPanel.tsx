@@ -20,6 +20,7 @@ type DocumentPanelProps = {
   children?: ReactNode;
   filterValue?: string;
   sortOptions: readonly SelectFieldOption[];
+  sortValue?: string;
   onBackClick?: () => void;
   onForwardClick?: () => void;
   onFilterChange?: (value: string) => void;
@@ -32,6 +33,7 @@ export const DocumentPanel = ({
   children,
   filterValue,
   sortOptions,
+  sortValue,
   onBackClick,
   onForwardClick,
   onFilterChange,
@@ -64,6 +66,7 @@ export const DocumentPanel = ({
           <SelectField
             label="sort by"
             size="small"
+            value={sortValue}
             options={sortOptions}
             onChange={onSortChange}
           />

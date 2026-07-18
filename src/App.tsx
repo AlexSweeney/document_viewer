@@ -2,7 +2,13 @@ import { useMemo, useState } from "react";
 import { DocumentPanel } from "./components/organisms/DocumentPanel";
 import { DocumentItem } from "./components/molecules/DocumentItem";
 import { Header } from "./components/organisms/Header";
+import type { SortDirection } from "./components/atoms/SortDirectionButton";
 import { useDocuments } from "./hooks/useDocuments";
+import {
+  filterDocumentItemsByName,
+  sortDocumentItems,
+  type SortField,
+} from "./utils/documents";
 import {
   appStyles,
   panelContentStyles,
@@ -23,27 +29,21 @@ const sortOptions = [
   { value: "type", label: "File type" },
 ] as const;
 
-const normalizeForFilter = (value: string) =>
-  value.toLowerCase().replace(/\s+/g, "");
-
 const App = () => {
   const { data: documentItems, isLoading } = useDocuments();
   const [filterValue, setFilterValue] = useState("");
+  const [sortBy, setSortBy] = useState<SortField>("name");
+  const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
 
-  const filteredDocumentItems = useMemo(() => {
-    if (!documentItems) {
-      return [];
-    }
+  const filteredDocumentItems = useMemo(
+    () => filterDocumentItemsByName(documentItems ?? [], filterValue),
+    [documentItems, filterValue],
+  );
 
-    const query = normalizeForFilter(filterValue);
-    if (!query) {
-      return documentItems;
-    }
-
-    return documentItems.filter((item) =>
-      normalizeForFilter(item.name).includes(query),
-    );
-  }, [documentItems, filterValue]);
+  const sortedDocuments = useMemo(
+    () => sortDocumentItems(filteredDocumentItems, sortBy, sortDirection),
+    [filteredDocumentItems, sortBy, sortDirection],
+  );
 
   return (
     <div style={appStyles}>
@@ -56,11 +56,14 @@ const App = () => {
         <div style={panelContentStyles}>
           <DocumentPanel
             sortOptions={sortOptions}
+            sortValue={sortBy}
             isLoading={isLoading}
             filterValue={filterValue}
             onFilterChange={setFilterValue}
+            onSortChange={(value) => setSortBy(value as SortField)}
+            onSortDirectionClick={setSortDirection}
           >
-            {filteredDocumentItems.map((item, index) => (
+            {sortedDocuments.map((item, index) => (
               <DocumentItem key={`${item.name}-${index}`} item={item} />
             ))}
           </DocumentPanel>

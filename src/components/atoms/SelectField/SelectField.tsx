@@ -11,6 +11,7 @@ type SelectFieldOption = {
 type SelectFieldProps = {
   label: string;
   options: readonly SelectFieldOption[];
+  value?: string;
   size?: SelectFieldSize;
   onChange?: (value: string) => void;
 };
@@ -18,6 +19,7 @@ type SelectFieldProps = {
 export const SelectField = ({
   label,
   options,
+  value,
   size = "medium",
   onChange,
 }: SelectFieldProps) => {
@@ -25,6 +27,7 @@ export const SelectField = ({
     <MuiTextField
       select
       label={label}
+      value={value}
       variant="filled"
       sx={selectFieldStyles}
       style={getSelectFieldStyles(size)}
