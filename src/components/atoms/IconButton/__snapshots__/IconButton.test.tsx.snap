@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`IconButton > matches snapshot 1`] = `
+<button
+  aria-label="Go back"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-53g0n7-MuiButtonBase-root-MuiIconButton-root"
+  tabindex="0"
+  type="button"
+>
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
+    data-testid="ChevronLeftIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+    />
+  </svg>
+</button>
+`;
