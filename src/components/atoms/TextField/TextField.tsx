@@ -1,9 +1,9 @@
 import MuiTextField from "@mui/material/TextField";
-import type { TextInputSize } from "./textInputSizes";
+import type { TextFieldSize } from "./textFieldSizes";
 
-type TextInputProps = {
+type TextFieldProps = {
   label: string;
-  size?: TextInputSize;
+  size?: TextFieldSize;
   onChange?: (value: string) => void;
 };
 
@@ -11,13 +11,13 @@ const widthMap = {
   small: "12rem",
   medium: "20rem",
   large: "32rem",
-} as const satisfies Record<TextInputSize, string>;
+} as const satisfies Record<TextFieldSize, string>;
 
-export const TextInput = ({
+export const TextField = ({
   label,
   size = "medium",
   onChange,
-}: TextInputProps) => {
+}: TextFieldProps) => {
   return (
     <MuiTextField
       label={label}

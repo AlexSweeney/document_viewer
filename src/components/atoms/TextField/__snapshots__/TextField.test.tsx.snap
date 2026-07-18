@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TextInput > matches snapshot for large size 1`] = `
+exports[`TextField > matches snapshot for large size 1`] = `
 <div
   class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
   style="width: 32rem;"
@@ -38,7 +38,7 @@ exports[`TextInput > matches snapshot for large size 1`] = `
 </div>
 `;
 
-exports[`TextInput > matches snapshot for medium size 1`] = `
+exports[`TextField > matches snapshot for medium size 1`] = `
 <div
   class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
   style="width: 20rem;"
@@ -76,7 +76,7 @@ exports[`TextInput > matches snapshot for medium size 1`] = `
 </div>
 `;
 
-exports[`TextInput > matches snapshot for small size 1`] = `
+exports[`TextField > matches snapshot for small size 1`] = `
 <div
   class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
   style="width: 12rem;"

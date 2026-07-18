@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { TextInput, textInputSizes } from ".";
+import { TextField, textFieldSizes } from ".";
 
 const meta = {
-  title: "Atoms/TextInput",
-  component: TextInput,
+  title: "Atoms/TextField",
+  component: TextField,
   tags: ["autodocs"],
   argTypes: {
     size: {
       control: "select",
-      options: textInputSizes,
+      options: textFieldSizes,
     },
   },
   args: {
     label: "Search documents",
     size: "medium",
   },
-} satisfies Meta<typeof TextInput>;
+} satisfies Meta<typeof TextField>;
 
 export default meta;
 
@@ -26,8 +26,8 @@ export const Default: Story = {};
 export const AllSizes: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-      {textInputSizes.map((size) => (
-        <TextInput key={size} label={`${size} TextInput`} size={size} />
+      {textFieldSizes.map((size) => (
+        <TextField key={size} label={`${size} TextField`} size={size} />
       ))}
     </div>
   ),

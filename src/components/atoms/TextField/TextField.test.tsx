@@ -1,15 +1,15 @@
 import { cleanup, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { TextInput, textInputSizes } from ".";
+import { TextField, textFieldSizes } from ".";
 
 afterEach(() => {
   cleanup();
 });
 
-describe("TextInput", () => {
+describe("TextField", () => {
   it("renders the label", () => {
-    render(<TextInput label="Search documents" />);
+    render(<TextField label="Search documents" />);
 
     expect(screen.getByLabelText("Search documents")).toBeInTheDocument();
   });
@@ -18,7 +18,7 @@ describe("TextInput", () => {
     const user = userEvent.setup();
     const onChange = vi.fn();
     const { container } = render(
-      <TextInput label="Search documents" onChange={onChange} />,
+      <TextField label="Search documents" onChange={onChange} />,
     );
 
     await user.type(
@@ -29,9 +29,9 @@ describe("TextInput", () => {
     expect(onChange).toHaveBeenLastCalledWith("pdf");
   });
 
-  it.each(textInputSizes)("matches snapshot for %s size", (size) => {
+  it.each(textFieldSizes)("matches snapshot for %s size", (size) => {
     const { container } = render(
-      <TextInput label="Search documents" size={size} />,
+      <TextField label="Search documents" size={size} />,
     );
 
     expect(container.firstChild).toMatchSnapshot();
