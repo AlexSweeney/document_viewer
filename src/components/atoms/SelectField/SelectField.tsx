@@ -1,9 +1,6 @@
 import MenuItem from "@mui/material/MenuItem";
 import MuiTextField from "@mui/material/TextField";
-import {
-  muiSelectFieldSizeMap,
-  type SelectFieldSize,
-} from "./selectFieldSizes";
+import type { SelectFieldSize } from "./selectFieldSizes";
 import { getSelectFieldStyles, selectFieldStyles } from "./SelectField.styles";
 
 type SelectFieldOption = {
@@ -28,7 +25,6 @@ export const SelectField = ({
     <MuiTextField
       select
       label={label}
-      size={muiSelectFieldSizeMap[size]}
       sx={selectFieldStyles}
       style={getSelectFieldStyles(size)}
       onChange={(event) => onChange?.(event.target.value)}
