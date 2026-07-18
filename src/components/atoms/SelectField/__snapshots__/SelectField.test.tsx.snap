@@ -2,7 +2,7 @@
 
 exports[`SelectField > matches snapshot for large size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-1byfezt-MuiFormControl-root-MuiTextField-root"
   style="width: 32rem;"
 >
   <div
@@ -67,7 +67,7 @@ exports[`SelectField > matches snapshot for large size 1`] = `
 
 exports[`SelectField > matches snapshot for medium size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-1byfezt-MuiFormControl-root-MuiTextField-root"
   style="width: 20rem;"
 >
   <div
@@ -132,24 +132,24 @@ exports[`SelectField > matches snapshot for medium size 1`] = `
 
 exports[`SelectField > matches snapshot for small size 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+  class="MuiFormControl-root MuiTextField-root css-1byfezt-MuiFormControl-root-MuiTextField-root"
   style="width: 12rem;"
 >
   <div
-    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1kfabtt-MuiFormLabel-root-MuiInputLabel-root"
     data-shrink="false"
     id="_r_9_-label"
   >
     Sort by
   </div>
   <div
-    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall MuiSelect-root css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
   >
     <div
       aria-expanded="false"
       aria-haspopup="listbox"
       aria-labelledby="_r_9_-label"
-      class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+      class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-trm6af-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
       id="_r_9_"
       role="combobox"
       tabindex="0"
