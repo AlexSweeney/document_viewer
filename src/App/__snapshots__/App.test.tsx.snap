@@ -60,7 +60,7 @@ exports[`App > matches snapshot 1`] = `
       </button>
     </div>
   </header>
-  <div
+  <main
     style="display: flex; flex: 1 1 0%; min-height: 0px; width: 100%; padding: 1rem; box-sizing: border-box;"
   >
     <div
@@ -464,6 +464,6 @@ exports[`App > matches snapshot 1`] = `
         </div>
       </section>
     </div>
-  </div>
+  </main>
 </div>
 `;

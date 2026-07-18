@@ -128,7 +128,7 @@ const App = () => {
         title={title}
         onClickBreadCrumb={handleBreadCrumbClick}
       />
-      <div style={panelWrapperStyles}>
+      <main style={panelWrapperStyles}>
         <div style={panelContentStyles}>
           <DocumentPanel
             sortOptions={sortOptions}
@@ -156,7 +156,7 @@ const App = () => {
             ))}
           </DocumentPanel>
         </div>
-      </div>
+      </main>
     </div>
   );
 };
