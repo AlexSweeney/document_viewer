@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { DocumentPanel } from "./components/organisms/DocumentPanel";
 import { DocumentItem } from "./components/molecules/DocumentItem";
 import { Header } from "./components/organisms/Header";
@@ -22,8 +23,27 @@ const sortOptions = [
   { value: "type", label: "File type" },
 ] as const;
 
+const normalizeForFilter = (value: string) =>
+  value.toLowerCase().replace(/\s+/g, "");
+
 const App = () => {
   const { data: documentItems, isLoading } = useDocuments();
+  const [filterValue, setFilterValue] = useState("");
+
+  const filteredDocumentItems = useMemo(() => {
+    if (!documentItems) {
+      return [];
+    }
+
+    const query = normalizeForFilter(filterValue);
+    if (!query) {
+      return documentItems;
+    }
+
+    return documentItems.filter((item) =>
+      normalizeForFilter(item.name).includes(query),
+    );
+  }, [documentItems, filterValue]);
 
   return (
     <div style={appStyles}>
@@ -34,8 +54,13 @@ const App = () => {
       />
       <div style={panelWrapperStyles}>
         <div style={panelContentStyles}>
-          <DocumentPanel sortOptions={sortOptions} isLoading={isLoading}>
-            {documentItems?.map((item, index) => (
+          <DocumentPanel
+            sortOptions={sortOptions}
+            isLoading={isLoading}
+            filterValue={filterValue}
+            onFilterChange={setFilterValue}
+          >
+            {filteredDocumentItems.map((item, index) => (
               <DocumentItem key={`${item.name}-${index}`} item={item} />
             ))}
           </DocumentPanel>
