@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { fn } from "storybook/test";
 import { SortDirectionButton, sortDirections } from ".";
 
 const meta = {
@@ -14,6 +15,7 @@ const meta = {
   args: {
     defaultDirection: "asc",
     ariaLabel: "Sort by name",
+    onClick: fn(),
   },
 } satisfies Meta<typeof SortDirectionButton>;
 

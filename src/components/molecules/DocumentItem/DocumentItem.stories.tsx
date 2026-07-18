@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { fn } from "storybook/test";
 import type { DocumentItemType } from "../../../types/document";
 import { DocumentItem } from ".";
 
@@ -19,6 +20,7 @@ const meta = {
     name: "Employee Handbook",
     type: "pdf",
     dateCreated: "2017-01-06",
+    onClick: fn(),
   },
 } satisfies Meta<typeof DocumentItem>;
 
@@ -37,6 +39,7 @@ export const AllItemTypes: Story = {
           name={`Sample ${type}`}
           type={type}
           dateCreated="2017-01-06"
+          onClick={fn()}
         />
       ))}
     </div>
