@@ -40,6 +40,25 @@ describe("DocumentItem", () => {
     expect(onClick).toHaveBeenCalledOnce();
   });
 
+  it("is reachable via Tab and activates with Enter", async () => {
+    const user = userEvent.setup();
+    const onClick = vi.fn();
+    render(<DocumentItem item={defaultItem} onClick={onClick} />);
+
+    await user.tab();
+
+    expect(
+      screen.getByRole("button", { name: "Open Employee Handbook" }),
+    ).toHaveFocus();
+    expect(
+      screen.getByRole("button", { name: "Open Employee Handbook" }),
+    ).toHaveAttribute("tabindex", "0");
+
+    await user.keyboard("{Enter}");
+
+    expect(onClick).toHaveBeenCalledOnce();
+  });
+
   it("renders a folder icon for folder items", () => {
     render(
       <DocumentItem item={{ name: "Documents", type: "folder", files: [] }} />,

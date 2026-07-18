@@ -3,7 +3,7 @@
 exports[`DocumentItem > matches snapshot 1`] = `
 <button
   aria-label="Open Employee Handbook"
-  class="MuiButtonBase-root css-1sqr4it-MuiButtonBase-root"
+  class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
   tabindex="0"
   type="button"
 >

@@ -23,6 +23,7 @@ export const DocumentItem = ({ item, onClick }: DocumentItemProps) => {
       disableRipple
       onClick={onClick}
       sx={containerStyles}
+      tabIndex={0}
     >
       <div className="document-item-icon" style={iconStyles}>
         <Icon name={item.type} size={ICON_SIZE} />

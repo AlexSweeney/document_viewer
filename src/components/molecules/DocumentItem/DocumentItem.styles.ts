@@ -22,9 +22,15 @@ export const containerStyles: SxProps<Theme> = (theme) => ({
   "&:active": {
     backgroundColor: "transparent",
   },
-  "&.Mui-focusVisible": {
+  "&.Mui-focusVisible, &:focus-visible": {
     backgroundColor: "transparent",
+    outline: `2px solid ${theme.palette.primary.main}`,
+    outlineOffset: "2px",
   },
+  "&.Mui-focusVisible .document-item-icon, &:focus-visible .document-item-icon, &.Mui-focusVisible .document-item-text, &:focus-visible .document-item-text":
+    {
+      color: theme.palette.primary.main,
+    },
   "& .document-item-icon": {
     color: theme.palette.primary.dark,
     cursor: "pointer",
