@@ -1,4 +1,4 @@
-import type { SxProps, Theme } from "@mui/material/styles";
+import type { Theme } from "@mui/material/styles";
 import type { CSSProperties } from "react";
 
 export const getContainerStyles = (theme: Theme): CSSProperties => ({
@@ -9,14 +9,6 @@ export const getContainerStyles = (theme: Theme): CSSProperties => ({
   backgroundColor: theme.palette.primary.main,
   color: theme.palette.primary.contrastText,
   padding: "0.75rem 1rem",
-});
-
-export const headerBreadCrumbsStyles: SxProps<Theme> = (theme) => ({
-  "& .MuiButtonBase-root.Mui-focusVisible, & .MuiButtonBase-root:focus-visible":
-    {
-      outline: `2px solid ${theme.palette.primary.contrastText}`,
-      outlineOffset: "2px",
-    },
 });
 
 export const titleAreaStyles: CSSProperties = {

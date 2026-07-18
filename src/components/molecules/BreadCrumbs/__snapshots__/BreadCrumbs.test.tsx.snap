@@ -3,7 +3,7 @@
 exports[`BreadCrumbs > matches snapshot 1`] = `
 <nav
   aria-label="bread crumbs navigation"
-  class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-lsd52w-MuiTypography-root-MuiBreadcrumbs-root"
+  class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-1tchx6e-MuiTypography-root-MuiBreadcrumbs-root"
 >
   <ol
     class="MuiBreadcrumbs-ol css-1uwp4ue-MuiBreadcrumbs-ol"
