@@ -1,22 +1,22 @@
 import { useMemo, useState } from "react";
-import { DocumentPanel } from "./components/organisms/DocumentPanel";
-import { DocumentItem } from "./components/molecules/DocumentItem";
-import { Header } from "./components/organisms/Header";
-import type { SortDirection } from "./components/atoms/SortDirectionButton";
-import { useDocuments } from "./hooks/useDocuments";
-import type { DocumentItem as DocumentItemData } from "./types/document";
+import { DocumentPanel } from "../components/organisms/DocumentPanel";
+import { DocumentItem } from "../components/molecules/DocumentItem";
+import { Header } from "../components/organisms/Header";
+import type { SortDirection } from "../components/atoms/SortDirectionButton";
+import { useDocuments } from "../hooks/useDocuments";
+import type { DocumentItem as DocumentItemData } from "../types/document";
 import {
   filterDocumentItemsByName,
   getBreadcrumbItems,
   getDocumentItemsAtPath,
   sortDocumentItems,
   type SortField,
-} from "./utils/documents";
+} from "../utils/documents";
 import {
   appStyles,
   panelContentStyles,
   panelWrapperStyles,
-} from "./App.styles";
+} from "../App/App.styles";
 
 const title = "Document viewer";
 
