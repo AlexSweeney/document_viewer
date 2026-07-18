@@ -13,7 +13,7 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "audit:a11y": "playwright test e2e/a11y.spec.ts",
-    "audit:lighthouse": "mkdir -p lighthouse-reports && lighthouse http://localhost:5173 --output=json,html --output-path=./lighthouse-reports/report --chrome-flags=\"--headless --no-sandbox\" --quiet",
+    "audit:lighthouse": "mkdir -p lighthouse-reports && vite build && vite preview --port 4173 --strictPort & PREVIEW_PID=$!; sleep 2; lighthouse http://localhost:4173 --output=json,html --output-path=./lighthouse-reports/report --chrome-flags=\"--headless --no-sandbox\" --quiet; kill $PREVIEW_PID 2>/dev/null || true",
     "preview": "vite preview",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
