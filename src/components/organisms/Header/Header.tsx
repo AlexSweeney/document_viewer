@@ -3,7 +3,11 @@ import MuiTypography from "@mui/material/Typography";
 import type { BreadCrumbItem } from "../../atoms/BreadCrumb";
 import { ThemeModeToggle } from "../../atoms/ThemeModeToggle";
 import { BreadCrumbs } from "../../molecules/BreadCrumbs";
-import { getContainerStyles, titleAreaStyles } from "./Header.styles";
+import {
+  getHeaderStyles,
+  breadCrumbsAreaStyles,
+  titleAreaStyles,
+} from "./Header.styles";
 
 type HeaderProps = {
   breadCrumbItems: readonly BreadCrumbItem[];
@@ -23,8 +27,10 @@ export const Header = ({
   }));
 
   return (
-    <header style={getContainerStyles(theme)}>
-      <BreadCrumbs items={clickableBreadCrumbItems} />
+    <header style={getHeaderStyles(theme)}>
+      <div style={breadCrumbsAreaStyles}>
+        <BreadCrumbs items={clickableBreadCrumbItems} />
+      </div>
       <div style={titleAreaStyles}>
         <MuiTypography variant="h3" component="h1" color="inherit">
           {title}

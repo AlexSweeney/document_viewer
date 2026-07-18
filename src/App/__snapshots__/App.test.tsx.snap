@@ -2,38 +2,42 @@
 
 exports[`App > matches snapshot 1`] = `
 <div
-  style="display: flex; flex-direction: column; width: 100%; max-width: 100%; height: 100vh; overflow: hidden;"
+  style="width: 100%; max-width: 100%; height: 100vh; overflow: hidden; display: flex; flex-direction: column;"
 >
   <header
-    style="display: flex; align-items: center; justify-content: space-between; min-width: 100%; background-color: rgb(25, 118, 210); color: rgb(255, 255, 255); padding: 0.75rem 1rem;"
+    style="width: 100%; display: flex; flex-shrink: 0; align-items: center; justify-content: space-between; box-sizing: border-box; background-color: rgb(25, 118, 210); color: rgb(255, 255, 255); padding: 0.75rem 1rem;"
   >
-    <nav
-      aria-label="bread crumbs navigation"
-      class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-ew5kxy-MuiTypography-root-MuiBreadcrumbs-root"
-    >
-      <ol
-        class="MuiBreadcrumbs-ol css-1uwp4ue-MuiBreadcrumbs-ol"
-      >
-        <li
-          class="MuiBreadcrumbs-li"
-        >
-          <button
-            aria-label="Navigate to Home"
-            class="MuiButtonBase-root css-14wtwx-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
-          >
-            <span
-              class="MuiTypography-root MuiTypography-h6 css-1miy0lu-MuiTypography-root"
-            >
-              Home
-            </span>
-          </button>
-        </li>
-      </ol>
-    </nav>
     <div
-      style="display: flex; align-items: center; gap: 0.25rem; white-space: nowrap;"
+      style="flex-shrink: 0;"
+    >
+      <nav
+        aria-label="bread crumbs navigation"
+        class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-ew5kxy-MuiTypography-root-MuiBreadcrumbs-root"
+      >
+        <ol
+          class="MuiBreadcrumbs-ol css-1uwp4ue-MuiBreadcrumbs-ol"
+        >
+          <li
+            class="MuiBreadcrumbs-li"
+          >
+            <button
+              aria-label="Navigate to Home"
+              class="MuiButtonBase-root css-14wtwx-MuiButtonBase-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-h6 css-1miy0lu-MuiTypography-root"
+              >
+                Home
+              </span>
+            </button>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div
+      style="display: flex; flex-shrink: 0; align-items: center; gap: 0.25rem; white-space: nowrap;"
     >
       <h1
         class="MuiTypography-root MuiTypography-h3 css-13msox4-MuiTypography-root"
@@ -61,147 +65,143 @@ exports[`App > matches snapshot 1`] = `
     </div>
   </header>
   <main
-    style="display: flex; flex: 1 1 0%; min-height: 0px; min-width: 0px; width: 100%; padding: 1rem; box-sizing: border-box;"
+    style="display: flex; flex: 1 1 0%; min-height: 0px; min-width: 0px; width: 100%; padding: 1rem; box-sizing: border-box; overflow: auto;"
   >
     <section
-      style="display: flex; flex-direction: column; flex: 1 1 0%; align-self: stretch; min-height: 0px; min-width: 0px; width: 100%; border-radius: 0.5rem; overflow: hidden;"
+      style="min-width: min-content; height: 100%; display: flex; flex-direction: column; width: 100%;"
     >
       <div
-        style="display: flex; flex-shrink: 0; align-items: center; justify-content: flex-start; width: 100%; min-width: 0px; overflow-x: auto; background-color: rgb(71, 145, 219); color: rgb(255, 255, 255); padding: 0.5rem 1rem; box-sizing: border-box;"
+        style="display: flex; flex-wrap: nowrap; flex-shrink: 0; align-items: center; gap: 0.5rem; width: max-content; min-width: 100%; background-color: rgb(71, 145, 219); color: rgb(255, 255, 255); padding: 0.5rem 1rem; box-sizing: border-box; border-radius: 0.5rem 0.5rem 0 0;"
       >
-        <div
-          style="display: flex; flex-wrap: nowrap; flex-shrink: 0; align-items: center; gap: 0.5rem; width: max-content;"
+        <button
+          aria-label="Go back"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
+          disabled=""
+          tabindex="-1"
+          type="button"
         >
-          <button
-            aria-label="Go back"
-            class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
-            disabled=""
-            tabindex="-1"
-            type="button"
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+            data-testid="ChevronLeftIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
           >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-              data-testid="ChevronLeftIcon"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="Go forward"
-            class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
-            disabled=""
-            tabindex="-1"
-            type="button"
+            <path
+              d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Go forward"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+            data-testid="ChevronRightIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
           >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-              data-testid="ChevronRightIcon"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-              />
-            </svg>
-          </button>
+            <path
+              d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+            />
+          </svg>
+        </button>
+        <div
+          class="MuiFormControl-root MuiTextField-root css-7mopvj-MuiFormControl-root-MuiTextField-root"
+          style="width: 12rem;"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="_r_4e_"
+            id="_r_4e_-label"
+          >
+            filter by name
+          </label>
           <div
-            class="MuiFormControl-root MuiTextField-root css-7mopvj-MuiFormControl-root-MuiTextField-root"
-            style="width: 12rem;"
+            class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
           >
-            <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
-              data-shrink="false"
-              for="_r_4e_"
-              id="_r_4e_-label"
-            >
-              filter by name
-            </label>
-            <div
-              class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
-            >
-              <input
-                aria-invalid="false"
-                class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
-                id="_r_4e_"
-                type="text"
-                value=""
-              />
-            </div>
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
+              id="_r_4e_"
+              type="text"
+              value=""
+            />
           </div>
-          <div
-            class="MuiFormControl-root MuiTextField-root css-1k07txu-MuiFormControl-root-MuiTextField-root"
-            style="width: 12rem;"
-          >
-            <div
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled css-eok8s2-MuiFormLabel-root-MuiInputLabel-root"
-              data-shrink="true"
-              id="_r_4f_-label"
-            >
-              sort by
-            </div>
-            <div
-              class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
-            >
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-labelledby="_r_4f_-label"
-                class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1ott0zw-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
-                id="_r_4f_"
-                role="combobox"
-                tabindex="0"
-              >
-                Name
-              </div>
-              <input
-                aria-hidden="true"
-                aria-invalid="false"
-                class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                id="_r_4h_"
-                tabindex="-1"
-                value="name"
-              />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
-                data-testid="ArrowDropDownIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M7 10l5 5 5-5z"
-                />
-              </svg>
-            </div>
-          </div>
-          <button
-            aria-label="Toggle sort direction"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
-            tabindex="0"
-            type="button"
-          >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-              data-testid="ArrowUpwardIcon"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"
-              />
-            </svg>
-          </button>
         </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1k07txu-MuiFormControl-root-MuiTextField-root"
+          style="width: 12rem;"
+        >
+          <div
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled css-eok8s2-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            id="_r_4f_-label"
+          >
+            sort by
+          </div>
+          <div
+            class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="_r_4f_-label"
+              class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1ott0zw-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
+              id="_r_4f_"
+              role="combobox"
+              tabindex="0"
+            >
+              Name
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="false"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+              id="_r_4h_"
+              tabindex="-1"
+              value="name"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <button
+          aria-label="Toggle sort direction"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+            data-testid="ArrowUpwardIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"
+            />
+          </svg>
+        </button>
       </div>
       <div
-        style="display: flex; flex: 1 1 0%; min-height: 0px; min-width: 0px; width: 100%; overflow-y: auto; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 2rem; padding: 1.5rem 1rem; background-color: rgb(245, 245, 245); box-sizing: border-box;"
+        style="display: flex; flex: 1 1 0%; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 2rem; width: 100%; min-width: 0px; min-height: 0px; overflow-x: hidden; overflow-y: auto; padding: 1.5rem 1rem; background-color: rgb(245, 245, 245); box-sizing: border-box;"
       >
         <button
           aria-label="Open Cost centres"
