@@ -10,11 +10,18 @@ exports[`BreadCrumbs > matches snapshot 1`] = `
     <li
       class="MuiBreadcrumbs-li"
     >
-      <p
-        class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+      <button
+        aria-label="Navigate to Home"
+        class="MuiButtonBase-root css-1a04c1h-MuiButtonBase-root"
+        tabindex="0"
+        type="button"
       >
-        Home
-      </p>
+        <span
+          class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+        >
+          Home
+        </span>
+      </button>
     </li>
     <li
       aria-hidden="true"
@@ -35,11 +42,18 @@ exports[`BreadCrumbs > matches snapshot 1`] = `
     <li
       class="MuiBreadcrumbs-li"
     >
-      <p
-        class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+      <button
+        aria-label="Navigate to Expenses"
+        class="MuiButtonBase-root css-1a04c1h-MuiButtonBase-root"
+        tabindex="0"
+        type="button"
       >
-        Expenses
-      </p>
+        <span
+          class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+        >
+          Expenses
+        </span>
+      </button>
     </li>
     <li
       aria-hidden="true"
@@ -60,11 +74,18 @@ exports[`BreadCrumbs > matches snapshot 1`] = `
     <li
       class="MuiBreadcrumbs-li"
     >
-      <p
-        class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+      <button
+        aria-label="Navigate to Travel"
+        class="MuiButtonBase-root css-1a04c1h-MuiButtonBase-root"
+        tabindex="0"
+        type="button"
       >
-        Travel
-      </p>
+        <span
+          class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+        >
+          Travel
+        </span>
+      </button>
     </li>
   </ol>
 </nav>

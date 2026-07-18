@@ -4,6 +4,7 @@ import { Icon } from "../../atoms/Icon";
 
 type BreadCrumbItem = {
   label: string;
+  onClick: () => void;
 };
 
 type BreadCrumbsProps = {
@@ -14,7 +15,11 @@ export const BreadCrumbs = ({ items }: BreadCrumbsProps) => {
   return (
     <MuiBreadcrumbs separator={<Icon name="rightChevron" />}>
       {items.map((item, index) => (
-        <BreadCrumb key={`${item.label}-${index}`} label={item.label} />
+        <BreadCrumb
+          key={`${item.label}-${index}`}
+          label={item.label}
+          onClick={item.onClick}
+        />
       ))}
     </MuiBreadcrumbs>
   );

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { fn } from "storybook/test";
 import { BreadCrumb } from ".";
 
 const meta = {
@@ -7,6 +8,7 @@ const meta = {
   tags: ["autodocs"],
   args: {
     label: "Expenses",
+    onClick: fn(),
   },
 } satisfies Meta<typeof BreadCrumb>;
 
