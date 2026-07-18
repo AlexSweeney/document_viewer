@@ -29,70 +29,6 @@ exports[`App > matches snapshot 1`] = `
             </span>
           </button>
         </li>
-        <li
-          aria-hidden="true"
-          class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
-            data-testid="ChevronRightIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-            />
-          </svg>
-        </li>
-        <li
-          class="MuiBreadcrumbs-li"
-        >
-          <button
-            aria-label="Navigate to Expenses"
-            class="MuiButtonBase-root css-1a04c1h-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
-          >
-            <span
-              class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-            >
-              Expenses
-            </span>
-          </button>
-        </li>
-        <li
-          aria-hidden="true"
-          class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
-            data-testid="ChevronRightIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-            />
-          </svg>
-        </li>
-        <li
-          class="MuiBreadcrumbs-li"
-        >
-          <button
-            aria-label="Navigate to Travel"
-            class="MuiButtonBase-root css-1a04c1h-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
-          >
-            <span
-              class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-            >
-              Travel
-            </span>
-          </button>
-        </li>
       </ol>
     </nav>
     <div
@@ -163,8 +99,8 @@ exports[`App > matches snapshot 1`] = `
               <label
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
-                for="_r_1u_"
-                id="_r_1u_-label"
+                for="_r_2e_"
+                id="_r_2e_-label"
               >
                 filter by name
               </label>
@@ -174,7 +110,7 @@ exports[`App > matches snapshot 1`] = `
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
-                  id="_r_1u_"
+                  id="_r_2e_"
                   type="text"
                   value=""
                 />
@@ -187,7 +123,7 @@ exports[`App > matches snapshot 1`] = `
               <div
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled css-eok8s2-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="true"
-                id="_r_1v_-label"
+                id="_r_2f_-label"
               >
                 sort by
               </div>
@@ -197,9 +133,9 @@ exports[`App > matches snapshot 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-labelledby="_r_1v_-label"
+                  aria-labelledby="_r_2f_-label"
                   class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1y2qbti-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
-                  id="_r_1v_"
+                  id="_r_2f_"
                   role="combobox"
                   tabindex="0"
                 >
@@ -209,7 +145,7 @@ exports[`App > matches snapshot 1`] = `
                   aria-hidden="true"
                   aria-invalid="false"
                   class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                  id="_r_21_"
+                  id="_r_2h_"
                   tabindex="-1"
                   value="name"
                 />

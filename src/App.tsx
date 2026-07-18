@@ -4,8 +4,10 @@ import { DocumentItem } from "./components/molecules/DocumentItem";
 import { Header } from "./components/organisms/Header";
 import type { SortDirection } from "./components/atoms/SortDirectionButton";
 import { useDocuments } from "./hooks/useDocuments";
+import type { DocumentItem as DocumentItemData } from "./types/document";
 import {
   filterDocumentItemsByName,
+  getDocumentItemsAtPath,
   sortDocumentItems,
   type SortField,
 } from "./utils/documents";
@@ -17,11 +19,7 @@ import {
 
 const title = "Document viewer";
 
-const breadcrumbItems = [
-  { label: "Home" },
-  { label: "Expenses" },
-  { label: "Travel" },
-];
+const breadcrumbItems = [{ label: "Home" }];
 
 const sortOptions = [
   { value: "name", label: "Name" },
@@ -31,19 +29,32 @@ const sortOptions = [
 
 const App = () => {
   const { data: documentItems, isLoading } = useDocuments();
+  // array of folder names that the user has navigated to
+  const [folderPath, setFolderPath] = useState<string[]>([]);
   const [filterValue, setFilterValue] = useState("");
   const [sortBy, setSortBy] = useState<SortField>("name");
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
 
+  const currentDocumentItems = useMemo(
+    () => getDocumentItemsAtPath(documentItems ?? [], folderPath),
+    [documentItems, folderPath],
+  );
+
   const filteredDocumentItems = useMemo(
-    () => filterDocumentItemsByName(documentItems ?? [], filterValue),
-    [documentItems, filterValue],
+    () => filterDocumentItemsByName(currentDocumentItems, filterValue),
+    [currentDocumentItems, filterValue],
   );
 
   const sortedDocuments = useMemo(
     () => sortDocumentItems(filteredDocumentItems, sortBy, sortDirection),
     [filteredDocumentItems, sortBy, sortDirection],
   );
+
+  const handleItemClick = (item: DocumentItemData) => {
+    if (item.type === "folder") {
+      setFolderPath((prevFolderPath) => [...prevFolderPath, item.name]);
+    }
+  };
 
   return (
     <div style={appStyles}>
@@ -64,7 +75,15 @@ const App = () => {
             onSortDirectionClick={setSortDirection}
           >
             {sortedDocuments.map((item, index) => (
-              <DocumentItem key={`${item.name}-${index}`} item={item} />
+              <DocumentItem
+                key={`${item.name}-${index}`}
+                item={item}
+                onClick={
+                  item.type === "folder"
+                    ? () => handleItemClick(item)
+                    : undefined
+                }
+              />
             ))}
           </DocumentPanel>
         </div>

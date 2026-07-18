@@ -3,6 +3,7 @@ import type { DocumentItem } from "../types/document";
 import {
   compareDocumentItems,
   filterDocumentItemsByName,
+  getDocumentItemsAtPath,
   normalizeForFilter,
   sortDocumentItems,
 } from "./documents";
@@ -10,9 +11,50 @@ import {
 const items: DocumentItem[] = [
   { name: "Employee Handbook", type: "pdf", added: "2017-01-06" },
   { name: "Public Holiday policy", type: "pdf", added: "2016-12-06" },
-  { name: "Expenses", type: "folder", files: [] },
+  {
+    name: "Expenses",
+    type: "folder",
+    files: [
+      { name: "Expenses claim form", type: "doc", added: "2017-05-02" },
+      {
+        name: "Travel",
+        type: "folder",
+        files: [
+          {
+            name: "International travel policy",
+            type: "pdf",
+            added: "2017-06-01",
+          },
+        ],
+      },
+    ],
+  },
   { name: "Cost centres", type: "csv", added: "2016-08-12" },
 ];
+
+describe("getDocumentItemsAtPath", () => {
+  it("returns root items for an empty folder path", () => {
+    expect(getDocumentItemsAtPath(items, [])).toEqual(items);
+  });
+
+  it("returns folder contents for a single-segment folder path", () => {
+    expect(
+      getDocumentItemsAtPath(items, ["Expenses"]).map((item) => item.name),
+    ).toEqual(["Expenses claim form", "Travel"]);
+  });
+
+  it("returns nested folder contents", () => {
+    expect(
+      getDocumentItemsAtPath(items, ["Expenses", "Travel"]).map(
+        (item) => item.name,
+      ),
+    ).toEqual(["International travel policy"]);
+  });
+
+  it("returns an empty array for an invalid folder path", () => {
+    expect(getDocumentItemsAtPath(items, ["Missing"])).toEqual([]);
+  });
+});
 
 describe("normalizeForFilter", () => {
   it("lowercases and removes whitespace", () => {

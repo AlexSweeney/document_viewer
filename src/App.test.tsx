@@ -21,9 +21,12 @@ describe("App", () => {
     expect(
       screen.getByRole("heading", { name: "Document viewer" }),
     ).toBeInTheDocument();
-    expect(screen.getByText("Home")).toBeInTheDocument();
-    expect(screen.getByText("Expenses")).toBeInTheDocument();
-    expect(screen.getByText("Travel")).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: "Navigate to Home" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: "Navigate to Expenses" }),
+    ).not.toBeInTheDocument();
   });
 
   it("renders the document panel", async () => {
@@ -121,6 +124,49 @@ describe("App", () => {
       "Misc",
       "HR",
     ]);
+  });
+
+  it("opens a folder when clicked", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(
+          screen.getByRole("button", { name: "Open Expenses" }),
+        ).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
+
+    await user.click(screen.getByRole("button", { name: "Open Expenses" }));
+
+    expect(screen.getByText("Expenses claim form")).toBeInTheDocument();
+    expect(screen.getByText("Fuel allowances")).toBeInTheDocument();
+    expect(screen.getByText("Travel")).toBeInTheDocument();
+    expect(screen.queryByText("Employee Handbook")).not.toBeInTheDocument();
+  });
+
+  it("opens nested folders when clicked", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(
+          screen.getByRole("button", { name: "Open Expenses" }),
+        ).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
+
+    await user.click(screen.getByRole("button", { name: "Open Expenses" }));
+    await user.click(screen.getByRole("button", { name: "Open Travel" }));
+
+    expect(screen.getByText("International travel policy")).toBeInTheDocument();
+    expect(screen.getByText("Mileage log template")).toBeInTheDocument();
+    expect(screen.getByText("2024")).toBeInTheDocument();
+    expect(screen.queryByText("Expenses claim form")).not.toBeInTheDocument();
   });
 
   it("reverses sort direction when toggled", async () => {

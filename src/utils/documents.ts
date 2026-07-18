@@ -1,7 +1,29 @@
 import type { SortDirection } from "../components/atoms/SortDirectionButton";
-import type { DocumentItem } from "../types/document";
+import type { DocumentFolder, DocumentItem } from "../types/document";
 
 export type SortField = "name" | "date" | "type";
+
+export const getDocumentItemsAtPath = (
+  items: DocumentItem[],
+  folderPath: string[],
+): DocumentItem[] => {
+  let currentItems = items;
+
+  for (const folderName of folderPath) {
+    const folder = currentItems.find(
+      (item): item is DocumentFolder =>
+        item.type === "folder" && item.name === folderName,
+    );
+
+    if (!folder) {
+      return [];
+    }
+
+    currentItems = folder.files;
+  }
+
+  return currentItems;
+};
 
 export const normalizeForFilter = (value: string) =>
   value.toLowerCase().replace(/\s+/g, "");
