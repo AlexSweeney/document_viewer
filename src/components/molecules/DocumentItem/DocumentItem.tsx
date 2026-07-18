@@ -25,13 +25,14 @@ export const DocumentItem = ({
   return (
     <ButtonBase
       aria-label={`Open ${name}`}
+      disableRipple
       onClick={onClick}
       sx={containerStyles}
     >
-      <div style={iconStyles}>
+      <div className="document-item-icon" style={iconStyles}>
         <Icon name={type} size={ICON_SIZE} />
       </div>
-      <div style={textContainerStyles}>
+      <div className="document-item-text" style={textContainerStyles}>
         <Typography variant="body2">
           <strong>{name}</strong>
         </Typography>

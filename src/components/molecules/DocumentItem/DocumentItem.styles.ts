@@ -1,27 +1,51 @@
 import type { SxProps, Theme } from "@mui/material/styles";
 import type { CSSProperties } from "react";
+import { theme } from "../../../theme";
 import type { IconSize } from "../../atoms/Icon";
+import { iconSizeMap } from "../../atoms/Icon/iconSizes";
 
 export const containerStyles: SxProps<Theme> = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+  alignSelf: "flex-start",
+  justifyContent: "flex-start",
   gap: "0.25rem",
   textAlign: "center",
   width: "8rem",
-  backgroundColor: "#f5f5f5",
-  borderRadius: "0.5rem",
+  backgroundColor: "transparent",
   padding: "0.5rem",
   cursor: "pointer",
   "&:hover": {
-    backgroundColor: "#eeeeee",
+    backgroundColor: "transparent",
+  },
+  "&:active": {
+    backgroundColor: "transparent",
+  },
+  "&.Mui-focusVisible": {
+    backgroundColor: "transparent",
+  },
+  "& .document-item-icon": {
+    color: theme.palette.primary.dark,
+  },
+  "&:hover .document-item-icon, &:hover .document-item-text": {
+    color: theme.palette.primary.main,
+  },
+  "&:active .document-item-icon, &:active .document-item-text": {
+    color: theme.palette.primary.darker,
   },
 };
 
 export const ICON_SIZE: IconSize = "medium";
 
 export const iconStyles: CSSProperties = {
-  color: "#1565c0",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: iconSizeMap[ICON_SIZE],
+  width: "100%",
+  flexShrink: 0,
+  transition: "color 0.2s",
 };
 
 export const textContainerStyles: CSSProperties = {
@@ -32,4 +56,5 @@ export const textContainerStyles: CSSProperties = {
   textAlign: "center",
   gap: 0,
   lineHeight: 1.2,
+  transition: "color 0.2s",
 };
