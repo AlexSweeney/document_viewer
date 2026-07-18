@@ -10,7 +10,7 @@ type SelectFieldOption = {
 
 type SelectFieldProps = {
   label: string;
-  options: SelectFieldOption[];
+  options: readonly SelectFieldOption[];
   size?: SelectFieldSize;
   onChange?: (value: string) => void;
 };
