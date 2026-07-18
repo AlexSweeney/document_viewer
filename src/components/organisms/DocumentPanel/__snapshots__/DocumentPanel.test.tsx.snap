@@ -53,8 +53,8 @@ exports[`DocumentPanel > matches snapshot 1`] = `
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          for="_r_13_"
-          id="_r_13_-label"
+          for="_r_1j_"
+          id="_r_1j_-label"
         >
           filter by name
         </label>
@@ -64,7 +64,7 @@ exports[`DocumentPanel > matches snapshot 1`] = `
           <input
             aria-invalid="false"
             class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
-            id="_r_13_"
+            id="_r_1j_"
             type="text"
           />
         </div>
@@ -76,7 +76,7 @@ exports[`DocumentPanel > matches snapshot 1`] = `
         <div
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          id="_r_14_-label"
+          id="_r_1k_-label"
         >
           sort by
         </div>
@@ -86,9 +86,9 @@ exports[`DocumentPanel > matches snapshot 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="_r_14_-label"
+            aria-labelledby="_r_1k_-label"
             class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1y2qbti-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
-            id="_r_14_"
+            id="_r_1k_"
             role="combobox"
             tabindex="0"
           >
@@ -103,7 +103,7 @@ exports[`DocumentPanel > matches snapshot 1`] = `
             aria-hidden="true"
             aria-invalid="false"
             class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-            id="_r_16_"
+            id="_r_1m_"
             tabindex="-1"
           />
           <svg

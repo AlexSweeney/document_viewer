@@ -27,13 +27,25 @@ const sortOptions = [
   { value: "type", label: "File type" },
 ] as const;
 
+type FolderNavigationState = {
+  history: string[][];
+  index: number;
+};
+
+const initialFolderNavigation: FolderNavigationState = {
+  history: [[]],
+  index: 0,
+};
+
 const App = () => {
   const { data: documentItems, isLoading } = useDocuments();
-  // array of folder names that the user has navigated to
-  const [folderPath, setFolderPath] = useState<string[]>([]);
+  const [folderNavigation, setFolderNavigation] =
+    useState<FolderNavigationState>(initialFolderNavigation);
   const [filterValue, setFilterValue] = useState("");
   const [sortBy, setSortBy] = useState<SortField>("name");
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
+
+  const folderPath = folderNavigation.history[folderNavigation.index];
 
   const currentDocumentItems = useMemo(
     () => getDocumentItemsAtPath(documentItems ?? [], folderPath),
@@ -52,9 +64,37 @@ const App = () => {
 
   const handleItemClick = (item: DocumentItemData) => {
     if (item.type === "folder") {
-      setFolderPath((prevFolderPath) => [...prevFolderPath, item.name]);
+      setFolderNavigation(({ history, index }) => {
+        // Path after opening the clicked folder.
+        const nextFolderPath = [...history[index], item.name];
+        // Drop any forward history and append the new path.
+        const nextHistory = [...history.slice(0, index + 1), nextFolderPath];
+
+        return {
+          history: nextHistory,
+          index: index + 1,
+        };
+      });
     }
   };
+
+  const handleBackClick = () => {
+    setFolderNavigation(({ history, index }) => ({
+      history,
+      index: index - 1,
+    }));
+  };
+
+  const handleForwardClick = () => {
+    setFolderNavigation(({ history, index }) => ({
+      history,
+      index: index + 1,
+    }));
+  };
+
+  const isBackDisabled = folderNavigation.index === 0;
+  const isForwardDisabled =
+    folderNavigation.index === folderNavigation.history.length - 1;
 
   return (
     <div style={appStyles}>
@@ -73,6 +113,10 @@ const App = () => {
             onFilterChange={setFilterValue}
             onSortChange={(value) => setSortBy(value as SortField)}
             onSortDirectionClick={setSortDirection}
+            onBackClick={handleBackClick}
+            onForwardClick={handleForwardClick}
+            isBackDisabled={isBackDisabled}
+            isForwardDisabled={isForwardDisabled}
           >
             {sortedDocuments.map((item, index) => (
               <DocumentItem

@@ -56,6 +56,26 @@ describe("DocumentPanel", () => {
     expect(screen.getByText("Documents")).toBeInTheDocument();
   });
 
+  it("disables the back button when isBackDisabled is true", () => {
+    render(
+      <DocumentPanel sortOptions={sortOptions} isBackDisabled>
+        {panelChildren}
+      </DocumentPanel>,
+    );
+
+    expect(screen.getByRole("button", { name: "Go back" })).toBeDisabled();
+  });
+
+  it("disables the forward button when isForwardDisabled is true", () => {
+    render(
+      <DocumentPanel sortOptions={sortOptions} isForwardDisabled>
+        {panelChildren}
+      </DocumentPanel>,
+    );
+
+    expect(screen.getByRole("button", { name: "Go forward" })).toBeDisabled();
+  });
+
   it("calls toolbar handlers when clicked", async () => {
     const user = userEvent.setup();
     const onBackClick = vi.fn();

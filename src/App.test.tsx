@@ -40,6 +40,8 @@ describe("App", () => {
     );
 
     expect(screen.getByRole("button", { name: "Go back" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Go back" })).toBeDisabled();
+    expect(screen.getByRole("button", { name: "Go forward" })).toBeDisabled();
     expect(screen.getByLabelText("filter by name")).toBeInTheDocument();
     expect(screen.getByText("Public Holiday policy")).toBeInTheDocument();
     expect(screen.getByText("Cost centres")).toBeInTheDocument();
@@ -167,6 +169,76 @@ describe("App", () => {
     expect(screen.getByText("Mileage log template")).toBeInTheDocument();
     expect(screen.getByText("2024")).toBeInTheDocument();
     expect(screen.queryByText("Expenses claim form")).not.toBeInTheDocument();
+  });
+
+  it("navigates back to the parent folder", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(
+          screen.getByRole("button", { name: "Open Expenses" }),
+        ).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
+
+    await user.click(screen.getByRole("button", { name: "Open Expenses" }));
+
+    expect(screen.getByRole("button", { name: "Go back" })).toBeEnabled();
+
+    await user.click(screen.getByRole("button", { name: "Go back" }));
+
+    expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
+    expect(screen.queryByText("Expenses claim form")).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Go back" })).toBeDisabled();
+    expect(screen.getByRole("button", { name: "Go forward" })).toBeEnabled();
+  });
+
+  it("navigates forward to a previously visited folder", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(
+          screen.getByRole("button", { name: "Open Expenses" }),
+        ).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
+
+    await user.click(screen.getByRole("button", { name: "Open Expenses" }));
+    await user.click(screen.getByRole("button", { name: "Go back" }));
+    await user.click(screen.getByRole("button", { name: "Go forward" }));
+
+    expect(screen.getByText("Expenses claim form")).toBeInTheDocument();
+    expect(screen.queryByText("Employee Handbook")).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Go back" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "Go forward" })).toBeDisabled();
+  });
+
+  it("clears forward history when navigating to a new folder", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await waitFor(
+      () => {
+        expect(
+          screen.getByRole("button", { name: "Open Expenses" }),
+        ).toBeInTheDocument();
+      },
+      { timeout: 3000 },
+    );
+
+    await user.click(screen.getByRole("button", { name: "Open Expenses" }));
+    await user.click(screen.getByRole("button", { name: "Go back" }));
+    await user.click(screen.getByRole("button", { name: "Open HR" }));
+
+    expect(screen.getByText("Policies")).toBeInTheDocument();
+    expect(screen.getByText("Onboarding")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Go forward" })).toBeDisabled();
   });
 
   it("reverses sort direction when toggled", async () => {

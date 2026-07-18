@@ -4,12 +4,18 @@ import { Icon, type IconName } from "../Icon";
 type IconButtonProps = {
   ariaLabel: string;
   icon: IconName;
+  disabled?: boolean;
   onClick?: () => void;
 };
 
-export const IconButton = ({ ariaLabel, icon, onClick }: IconButtonProps) => {
+export const IconButton = ({
+  ariaLabel,
+  icon,
+  disabled,
+  onClick,
+}: IconButtonProps) => {
   return (
-    <MuiIconButton aria-label={ariaLabel} onClick={onClick}>
+    <MuiIconButton aria-label={ariaLabel} disabled={disabled} onClick={onClick}>
       <Icon name={icon} />
     </MuiIconButton>
   );

@@ -23,6 +23,8 @@ type DocumentPanelProps = {
   sortValue?: string;
   onBackClick?: () => void;
   onForwardClick?: () => void;
+  isBackDisabled?: boolean;
+  isForwardDisabled?: boolean;
   onFilterChange?: (value: string) => void;
   onSortChange?: (value: string) => void;
   onSortDirectionClick?: (direction: SortDirection) => void;
@@ -36,6 +38,8 @@ export const DocumentPanel = ({
   sortValue,
   onBackClick,
   onForwardClick,
+  isBackDisabled = false,
+  isForwardDisabled = false,
   onFilterChange,
   onSortChange,
   onSortDirectionClick,
@@ -50,11 +54,13 @@ export const DocumentPanel = ({
           <IconButton
             ariaLabel="Go back"
             icon="leftChevron"
+            disabled={isBackDisabled}
             onClick={onBackClick}
           />
           <IconButton
             ariaLabel="Go forward"
             icon="rightChevron"
+            disabled={isForwardDisabled}
             onClick={onForwardClick}
           />
           <TextField
