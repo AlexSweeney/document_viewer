@@ -2,7 +2,7 @@
 
 exports[`App > matches snapshot 1`] = `
 <div
-  style="display: flex; flex-direction: column; height: 100vh; min-width: 100vw;"
+  style="display: flex; flex-direction: column; width: 100%; max-width: 100%; height: 100vh; overflow: hidden;"
 >
   <header
     style="display: flex; align-items: center; justify-content: space-between; min-width: 100%; background-color: rgb(25, 118, 210); color: rgb(255, 255, 255); padding: 0.75rem 1rem;"
@@ -61,409 +61,405 @@ exports[`App > matches snapshot 1`] = `
     </div>
   </header>
   <main
-    style="display: flex; flex: 1 1 0%; min-height: 0px; width: 100%; padding: 1rem; box-sizing: border-box;"
+    style="display: flex; flex: 1 1 0%; min-height: 0px; min-width: 0px; width: 100%; padding: 1rem; box-sizing: border-box;"
   >
-    <div
-      style="flex: 1 1 0%; min-height: 0px; width: 100%; height: 100%;"
+    <section
+      style="display: flex; flex-direction: column; flex: 1 1 0%; align-self: stretch; min-height: 0px; min-width: 0px; width: 100%; border-radius: 0.5rem; overflow: hidden;"
     >
-      <section
-        style="display: flex; flex-direction: column; width: 100%; height: 100%; border-radius: 0.5rem; overflow: hidden;"
+      <div
+        style="display: flex; flex-shrink: 0; align-items: center; justify-content: flex-start; width: 100%; min-width: 0px; overflow-x: auto; background-color: rgb(71, 145, 219); color: rgb(255, 255, 255); padding: 0.5rem 1rem; box-sizing: border-box;"
       >
         <div
-          style="display: flex; align-items: center; justify-content: flex-start; background-color: rgb(71, 145, 219); color: rgb(255, 255, 255); padding: 0.5rem 1rem;"
+          style="display: flex; flex-wrap: nowrap; flex-shrink: 0; align-items: center; gap: 0.5rem; width: max-content;"
+        >
+          <button
+            aria-label="Go back"
+            class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+              data-testid="ChevronLeftIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Go forward"
+            class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+              data-testid="ChevronRightIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+              />
+            </svg>
+          </button>
+          <div
+            class="MuiFormControl-root MuiTextField-root css-7mopvj-MuiFormControl-root-MuiTextField-root"
+            style="width: 12rem;"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+              for="_r_4e_"
+              id="_r_4e_-label"
+            >
+              filter by name
+            </label>
+            <div
+              class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
+                id="_r_4e_"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root css-1k07txu-MuiFormControl-root-MuiTextField-root"
+            style="width: 12rem;"
+          >
+            <div
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled css-eok8s2-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="true"
+              id="_r_4f_-label"
+            >
+              sort by
+            </div>
+            <div
+              class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
+            >
+              <div
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="_r_4f_-label"
+                class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1ott0zw-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
+                id="_r_4f_"
+                role="combobox"
+                tabindex="0"
+              >
+                Name
+              </div>
+              <input
+                aria-hidden="true"
+                aria-invalid="false"
+                class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                id="_r_4h_"
+                tabindex="-1"
+                value="name"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                data-testid="ArrowDropDownIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <button
+            aria-label="Toggle sort direction"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+              data-testid="ArrowUpwardIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        style="display: flex; flex: 1 1 0%; min-height: 0px; min-width: 0px; width: 100%; overflow-y: auto; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 2rem; padding: 1.5rem 1rem; background-color: rgb(245, 245, 245); box-sizing: border-box;"
+      >
+        <button
+          aria-label="Open Cost centres"
+          class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
+          tabindex="0"
+          type="button"
         >
           <div
-            style="display: flex; align-items: center; gap: 0.5rem;"
+            class="document-item-icon"
+            style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
           >
-            <button
-              aria-label="Go back"
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
-              disabled=""
-              tabindex="-1"
-              type="button"
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+              data-testid="TableChartIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-                data-testid="ChevronLeftIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                />
-              </svg>
-            </button>
-            <button
-              aria-label="Go forward"
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
-              disabled=""
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-                data-testid="ChevronRightIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                />
-              </svg>
-            </button>
-            <div
-              class="MuiFormControl-root MuiTextField-root css-7mopvj-MuiFormControl-root-MuiTextField-root"
-              style="width: 12rem;"
-            >
-              <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
-                data-shrink="false"
-                for="_r_4e_"
-                id="_r_4e_-label"
-              >
-                filter by name
-              </label>
-              <div
-                class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
-                  id="_r_4e_"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-            <div
-              class="MuiFormControl-root MuiTextField-root css-1k07txu-MuiFormControl-root-MuiTextField-root"
-              style="width: 12rem;"
-            >
-              <div
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled css-eok8s2-MuiFormLabel-root-MuiInputLabel-root"
-                data-shrink="true"
-                id="_r_4f_-label"
-              >
-                sort by
-              </div>
-              <div
-                class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-jdpu6s-MuiInputBase-root-MuiFilledInput-root"
-              >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  aria-labelledby="_r_4f_-label"
-                  class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1ott0zw-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
-                  id="_r_4f_"
-                  role="combobox"
-                  tabindex="0"
-                >
-                  Name
-                </div>
-                <input
-                  aria-hidden="true"
-                  aria-invalid="false"
-                  class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                  id="_r_4h_"
-                  tabindex="-1"
-                  value="name"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
-                  data-testid="ArrowDropDownIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M7 10l5 5 5-5z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <button
-              aria-label="Toggle sort direction"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-h7cjts-MuiButtonBase-root-MuiIconButton-root"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-                data-testid="ArrowUpwardIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"
-                />
-              </svg>
-            </button>
+              <path
+                d="M10 10.02h5V21h-5zM17 21h3c1.1 0 2-.9 2-2v-9h-5zm3-18H5c-1.1 0-2 .9-2 2v3h19V5c0-1.1-.9-2-2-2M3 19c0 1.1.9 2 2 2h3V10H3z"
+              />
+            </svg>
           </div>
-        </div>
-        <div
-          style="display: flex; flex: 1 1 0%; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 2rem; padding: 1.5rem 1rem; background-color: rgb(245, 245, 245);"
+          <div
+            class="document-item-text"
+            style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+            >
+              <strong>
+                Cost centres
+              </strong>
+            </p>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+            >
+              csv
+            </span>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+            >
+              2016-08-12
+            </span>
+          </div>
+        </button>
+        <button
+          aria-label="Open Employee Handbook"
+          class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
+          tabindex="0"
+          type="button"
         >
-          <button
-            aria-label="Open Cost centres"
-            class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
+          <div
+            class="document-item-icon"
+            style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
           >
-            <div
-              class="document-item-icon"
-              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+              data-testid="PictureAsPdfIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-                data-testid="TableChartIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M10 10.02h5V21h-5zM17 21h3c1.1 0 2-.9 2-2v-9h-5zm3-18H5c-1.1 0-2 .9-2 2v3h19V5c0-1.1-.9-2-2-2M3 19c0 1.1.9 2 2 2h3V10H3z"
-                />
-              </svg>
-            </div>
-            <div
-              class="document-item-text"
-              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-              >
-                <strong>
-                  Cost centres
-                </strong>
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                csv
-              </span>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                2016-08-12
-              </span>
-            </div>
-          </button>
-          <button
-            aria-label="Open Employee Handbook"
-            class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
+              <path
+                d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5zm4-3H19v1h1.5V11H19v2h-1.5V7h3zM9 9.5h1v-1H9zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm10 5.5h1v-3h-1z"
+              />
+            </svg>
+          </div>
+          <div
+            class="document-item-text"
+            style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
           >
-            <div
-              class="document-item-icon"
-              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
             >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-                data-testid="PictureAsPdfIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5zm4-3H19v1h1.5V11H19v2h-1.5V7h3zM9 9.5h1v-1H9zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm10 5.5h1v-3h-1z"
-                />
-              </svg>
-            </div>
-            <div
-              class="document-item-text"
-              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
+              <strong>
+                Employee Handbook
+              </strong>
+            </p>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-              >
-                <strong>
-                  Employee Handbook
-                </strong>
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                pdf
-              </span>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                2017-01-06
-              </span>
-            </div>
-          </button>
-          <button
-            aria-label="Open Expenses"
-            class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
+              pdf
+            </span>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+            >
+              2017-01-06
+            </span>
+          </div>
+        </button>
+        <button
+          aria-label="Open Expenses"
+          class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
+          tabindex="0"
+          type="button"
+        >
+          <div
+            class="document-item-icon"
+            style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
           >
-            <div
-              class="document-item-icon"
-              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+              data-testid="FolderIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-                data-testid="FolderIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8z"
-                />
-              </svg>
-            </div>
-            <div
-              class="document-item-text"
-              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-              >
-                <strong>
-                  Expenses
-                </strong>
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                folder
-              </span>
-            </div>
-          </button>
-          <button
-            aria-label="Open HR"
-            class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
+              <path
+                d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8z"
+              />
+            </svg>
+          </div>
+          <div
+            class="document-item-text"
+            style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
           >
-            <div
-              class="document-item-icon"
-              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
             >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-                data-testid="FolderIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8z"
-                />
-              </svg>
-            </div>
-            <div
-              class="document-item-text"
-              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
+              <strong>
+                Expenses
+              </strong>
+            </p>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-              >
-                <strong>
-                  HR
-                </strong>
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                folder
-              </span>
-            </div>
-          </button>
-          <button
-            aria-label="Open Misc"
-            class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
+              folder
+            </span>
+          </div>
+        </button>
+        <button
+          aria-label="Open HR"
+          class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
+          tabindex="0"
+          type="button"
+        >
+          <div
+            class="document-item-icon"
+            style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
           >
-            <div
-              class="document-item-icon"
-              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+              data-testid="FolderIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-                data-testid="FolderIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8z"
-                />
-              </svg>
-            </div>
-            <div
-              class="document-item-text"
-              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-              >
-                <strong>
-                  Misc
-                </strong>
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                folder
-              </span>
-            </div>
-          </button>
-          <button
-            aria-label="Open Public Holiday policy"
-            class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
-            tabindex="0"
-            type="button"
+              <path
+                d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8z"
+              />
+            </svg>
+          </div>
+          <div
+            class="document-item-text"
+            style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
           >
-            <div
-              class="document-item-icon"
-              style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
             >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
-                data-testid="PictureAsPdfIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5zm4-3H19v1h1.5V11H19v2h-1.5V7h3zM9 9.5h1v-1H9zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm10 5.5h1v-3h-1z"
-                />
-              </svg>
-            </div>
-            <div
-              class="document-item-text"
-              style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
+              <strong>
+                HR
+              </strong>
+            </p>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-              >
-                <strong>
-                  Public Holiday policy
-                </strong>
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                pdf
-              </span>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
-              >
-                2016-12-06
-              </span>
-            </div>
-          </button>
-        </div>
-      </section>
-    </div>
+              folder
+            </span>
+          </div>
+        </button>
+        <button
+          aria-label="Open Misc"
+          class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
+          tabindex="0"
+          type="button"
+        >
+          <div
+            class="document-item-icon"
+            style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+              data-testid="FolderIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8z"
+              />
+            </svg>
+          </div>
+          <div
+            class="document-item-text"
+            style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+            >
+              <strong>
+                Misc
+              </strong>
+            </p>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+            >
+              folder
+            </span>
+          </div>
+        </button>
+        <button
+          aria-label="Open Public Holiday policy"
+          class="MuiButtonBase-root css-10iep8c-MuiButtonBase-root"
+          tabindex="0"
+          type="button"
+        >
+          <div
+            class="document-item-icon"
+            style="display: flex; align-items: center; justify-content: center; height: 2rem; width: 100%; flex-shrink: 0; cursor: pointer; transition: color 0.2s;"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-by6kcm-MuiSvgIcon-root"
+              data-testid="PictureAsPdfIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5zm4-3H19v1h1.5V11H19v2h-1.5V7h3zM9 9.5h1v-1H9zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm10 5.5h1v-3h-1z"
+              />
+            </svg>
+          </div>
+          <div
+            class="document-item-text"
+            style="display: flex; flex-direction: column; align-items: center; align-self: stretch; text-align: center; gap: 0px; line-height: 1.2; cursor: pointer; transition: color 0.2s;"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+            >
+              <strong>
+                Public Holiday policy
+              </strong>
+            </p>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+            >
+              pdf
+            </span>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-mpaqru-MuiTypography-root"
+            >
+              2016-12-06
+            </span>
+          </div>
+        </button>
+      </div>
+    </section>
   </main>
 </div>
 `;
