@@ -4,6 +4,7 @@ export const appStyles: CSSProperties = {
   display: "flex",
   flexDirection: "column",
   height: "100vh",
+  minWidth: "100vw",
 };
 
 export const panelWrapperStyles: CSSProperties = {

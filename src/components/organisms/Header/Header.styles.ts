@@ -5,7 +5,7 @@ export const getContainerStyles = (theme: Theme): CSSProperties => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  width: "100%",
+  minWidth: "100%",
   backgroundColor: theme.palette.primary.main,
   color: theme.palette.primary.contrastText,
   padding: "0.75rem 1rem",
