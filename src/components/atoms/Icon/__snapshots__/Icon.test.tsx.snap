@@ -3,7 +3,7 @@
 exports[`Icon > matches snapshot for csv icon 1`] = `
 <svg
   aria-hidden="true"
-  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
   data-testid="TableChartIcon"
   focusable="false"
   viewBox="0 0 24 24"
@@ -17,7 +17,7 @@ exports[`Icon > matches snapshot for csv icon 1`] = `
 exports[`Icon > matches snapshot for doc icon 1`] = `
 <svg
   aria-hidden="true"
-  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
   data-testid="DescriptionIcon"
   focusable="false"
   viewBox="0 0 24 24"
@@ -31,7 +31,7 @@ exports[`Icon > matches snapshot for doc icon 1`] = `
 exports[`Icon > matches snapshot for downArrow icon 1`] = `
 <svg
   aria-hidden="true"
-  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
   data-testid="ArrowDownwardIcon"
   focusable="false"
   viewBox="0 0 24 24"
@@ -45,7 +45,7 @@ exports[`Icon > matches snapshot for downArrow icon 1`] = `
 exports[`Icon > matches snapshot for leftChevron icon 1`] = `
 <svg
   aria-hidden="true"
-  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
   data-testid="ChevronLeftIcon"
   focusable="false"
   viewBox="0 0 24 24"
@@ -59,7 +59,7 @@ exports[`Icon > matches snapshot for leftChevron icon 1`] = `
 exports[`Icon > matches snapshot for mov icon 1`] = `
 <svg
   aria-hidden="true"
-  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
   data-testid="MovieIcon"
   focusable="false"
   viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ exports[`Icon > matches snapshot for mov icon 1`] = `
 exports[`Icon > matches snapshot for pdf icon 1`] = `
 <svg
   aria-hidden="true"
-  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
   data-testid="PictureAsPdfIcon"
   focusable="false"
   viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ exports[`Icon > matches snapshot for pdf icon 1`] = `
 exports[`Icon > matches snapshot for rightChevron icon 1`] = `
 <svg
   aria-hidden="true"
-  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
   data-testid="ChevronRightIcon"
   focusable="false"
   viewBox="0 0 24 24"
@@ -101,7 +101,7 @@ exports[`Icon > matches snapshot for rightChevron icon 1`] = `
 exports[`Icon > matches snapshot for upArrow icon 1`] = `
 <svg
   aria-hidden="true"
-  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
   data-testid="ArrowUpwardIcon"
   focusable="false"
   viewBox="0 0 24 24"
@@ -115,7 +115,7 @@ exports[`Icon > matches snapshot for upArrow icon 1`] = `
 exports[`Icon > matches snapshot for xlsx icon 1`] = `
 <svg
   aria-hidden="true"
-  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
   data-testid="TableViewIcon"
   focusable="false"
   viewBox="0 0 24 24"

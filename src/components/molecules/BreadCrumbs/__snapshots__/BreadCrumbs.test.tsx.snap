@@ -22,7 +22,7 @@ exports[`BreadCrumbs > matches snapshot 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
         data-testid="ChevronRightIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -47,7 +47,7 @@ exports[`BreadCrumbs > matches snapshot 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
         data-testid="ChevronRightIcon"
         focusable="false"
         viewBox="0 0 24 24"

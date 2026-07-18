@@ -9,6 +9,7 @@ import TableChartIcon from "@mui/icons-material/TableChart";
 import TableViewIcon from "@mui/icons-material/TableView";
 import type { SvgIconProps } from "@mui/material/SvgIcon";
 import type { DocumentFileType } from "../../../types/document";
+import { iconSizeMap, type IconSize } from "./iconSizes";
 
 export type IconName =
   "leftChevron" | "rightChevron" | "upArrow" | "downArrow" | DocumentFileType;
@@ -27,9 +28,11 @@ const iconMap = {
 
 export type IconProps = {
   name: IconName;
+  size?: IconSize;
 };
 
-export const Icon = ({ name }: IconProps) => {
+export const Icon = ({ name, size = "medium" }: IconProps) => {
   const IconComponent = iconMap[name];
-  return <IconComponent />;
+
+  return <IconComponent sx={{ fontSize: iconSizeMap[size] }} />;
 };

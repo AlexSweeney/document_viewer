@@ -9,7 +9,7 @@ exports[`SortDirectionButton > matches snapshot for asc defaultDirection 1`] = `
 >
   <svg
     aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
     data-testid="ArrowUpwardIcon"
     focusable="false"
     viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ exports[`SortDirectionButton > matches snapshot for desc defaultDirection 1`] = 
 >
   <svg
     aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-r0vxuw-MuiSvgIcon-root"
     data-testid="ArrowDownwardIcon"
     focusable="false"
     viewBox="0 0 24 24"
