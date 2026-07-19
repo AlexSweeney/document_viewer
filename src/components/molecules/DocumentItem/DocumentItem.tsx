@@ -1,4 +1,5 @@
 import ButtonBase from "@mui/material/ButtonBase";
+import type { MouseEvent } from "react";
 import type { DocumentItem as DocumentItemData } from "../../../types/document";
 import { Icon } from "../../atoms/Icon";
 import { Typography } from "../../atoms/Typography";
@@ -11,7 +12,7 @@ import {
 
 type DocumentItemProps = {
   item: DocumentItemData;
-  onClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 };
 
 export const DocumentItem = ({ item, onClick }: DocumentItemProps) => {

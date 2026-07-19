@@ -1,11 +1,12 @@
 import MuiIconButton from "@mui/material/IconButton";
+import type { MouseEvent } from "react";
 import { Icon, type IconName } from "../Icon";
 
 type IconButtonProps = {
   ariaLabel: string;
   icon: IconName;
   disabled?: boolean;
-  onClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 };
 
 export const IconButton = ({

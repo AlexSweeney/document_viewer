@@ -1,4 +1,5 @@
 import ButtonBase from "@mui/material/ButtonBase";
+import type { MouseEvent } from "react";
 import { Typography } from "../Typography";
 import { breadCrumbStyles } from "./BreadCrumb.styles";
 
@@ -8,7 +9,7 @@ export type BreadCrumbItem = {
 
 export type BreadCrumbProps = {
   label: string;
-  onClick: () => void;
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
 };
 
 export const BreadCrumb = ({ label, onClick }: BreadCrumbProps) => {
