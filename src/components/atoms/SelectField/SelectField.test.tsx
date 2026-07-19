@@ -34,7 +34,7 @@ describe("SelectField", () => {
     const dateOption = screen.getByRole("option", { name: "Date" });
     await user.click(dateOption);
 
-    expect(onChange).toHaveBeenCalledWith("date");
+    expect(onChange.mock.lastCall?.[0].target.value).toBe("date");
   });
 
   it.each(selectFieldSizes)("matches snapshot for %s size", (size) => {

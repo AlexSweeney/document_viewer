@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import type { ChangeEvent } from "react";
 import { DocumentPanel } from "../components/organisms/DocumentPanel";
 import { DocumentItem } from "../components/molecules/DocumentItem";
 import { Header } from "../components/organisms/Header";
@@ -124,8 +125,14 @@ const App = () => {
   const isForwardDisabled =
     folderNavigation.index === folderNavigation.history.length - 1;
 
-  const sortChangeHandler = (value: string) => {
-    const sortOption = sortOptions.find((option) => option.value === value);
+  const filterChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    setFilterValue(event.target.value);
+  };
+
+  const sortChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    const sortOption = sortOptions.find(
+      (option) => option.value === event.target.value,
+    );
 
     if (sortOption) {
       setSortBy(sortOption.value);
@@ -145,7 +152,7 @@ const App = () => {
           sortValue={sortBy}
           isLoading={isLoading}
           filterValue={filterValue}
-          onFilterChange={setFilterValue}
+          onFilterChange={filterChangeHandler}
           onSortChange={sortChangeHandler}
           onSortDirectionClick={setSortDirection}
           onBackClick={handleBackClick}

@@ -14,7 +14,7 @@ type SelectFieldProps = {
   options: readonly SelectFieldOption[];
   value?: string;
   size?: SelectFieldSize;
-  onChange?: (value: string) => void;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const SelectField = ({
@@ -25,7 +25,7 @@ export const SelectField = ({
   onChange,
 }: SelectFieldProps) => {
   const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-    onChange?.(event.target.value);
+    onChange?.(event);
   };
 
   return (

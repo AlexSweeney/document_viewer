@@ -7,7 +7,7 @@ type TextFieldProps = {
   label: string;
   value?: string;
   size?: TextFieldSize;
-  onChange?: (value: string) => void;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const TextField = ({
@@ -17,7 +17,7 @@ export const TextField = ({
   onChange,
 }: TextFieldProps) => {
   const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-    onChange?.(event.target.value);
+    onChange?.(event);
   };
 
   return (

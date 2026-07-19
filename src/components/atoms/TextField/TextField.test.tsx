@@ -30,7 +30,7 @@ describe("TextField", () => {
     const searchInput = within(container).getByLabelText("Search documents");
     await user.type(searchInput, "pdf");
 
-    expect(onChange).toHaveBeenLastCalledWith("pdf");
+    expect(onChange.mock.lastCall?.[0].target.value).toBe("pdf");
   });
 
   it.each(textFieldSizes)("matches snapshot for %s size", (size) => {

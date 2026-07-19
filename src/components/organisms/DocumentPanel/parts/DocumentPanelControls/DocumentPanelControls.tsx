@@ -1,4 +1,5 @@
 import { useTheme } from "@mui/material/styles";
+import type { ChangeEvent } from "react";
 import { IconButton } from "../../../../atoms/IconButton";
 import {
   SelectField,
@@ -19,8 +20,8 @@ type DocumentPanelControlsProps = {
   onForwardClick?: () => void;
   isBackDisabled?: boolean;
   isForwardDisabled?: boolean;
-  onFilterChange?: (value: string) => void;
-  onSortChange?: (value: string) => void;
+  onFilterChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  onSortChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   onSortDirectionClick?: (direction: SortDirection) => void;
 };
 
