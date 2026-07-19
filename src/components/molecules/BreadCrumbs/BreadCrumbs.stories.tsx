@@ -11,6 +11,9 @@ const meta = {
   title: "Molecules/BreadCrumbs",
   component: BreadCrumbs,
   tags: ["autodocs"],
+  parameters: {
+    appSurface: "header",
+  },
   args: {
     items: [
       breadCrumbItem("Home"),

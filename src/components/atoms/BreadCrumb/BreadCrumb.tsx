@@ -18,13 +18,16 @@ export const BreadCrumb = ({ label, onClick }: BreadCrumbProps) => {
   return (
     <ButtonBase
       aria-label={ariaLabel}
+      disableRipple
       onClick={onClick}
       sx={breadCrumbStyles}
       tabIndex={0}
     >
-      <Typography variant="h6" component="span">
-        {label}
-      </Typography>
+      <span className="breadcrumb-text">
+        <Typography variant="h6" component="span">
+          {label}
+        </Typography>
+      </span>
     </ButtonBase>
   );
 };

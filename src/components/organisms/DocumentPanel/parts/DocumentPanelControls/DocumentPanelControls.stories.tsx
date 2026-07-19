@@ -12,6 +12,9 @@ const meta = {
   title: "Organisms/DocumentPanel/parts/Controls",
   component: DocumentPanelControls,
   tags: ["autodocs"],
+  parameters: {
+    appSurface: "panelWrapper",
+  },
   args: {
     filterValue: "",
     sortOptions,

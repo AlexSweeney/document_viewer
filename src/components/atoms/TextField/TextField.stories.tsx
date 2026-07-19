@@ -5,6 +5,9 @@ const meta = {
   title: "Atoms/TextField",
   component: TextField,
   tags: ["autodocs"],
+  parameters: {
+    appSurface: "controls",
+  },
   argTypes: {
     size: {
       control: "select",

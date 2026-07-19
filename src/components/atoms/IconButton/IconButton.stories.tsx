@@ -6,6 +6,9 @@ const meta = {
   title: "Atoms/IconButton",
   component: IconButton,
   tags: ["autodocs"],
+  parameters: {
+    appSurface: "controls",
+  },
   args: {
     ariaLabel: "Go back",
     icon: "leftChevron",

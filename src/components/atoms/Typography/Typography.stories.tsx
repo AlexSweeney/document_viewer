@@ -5,6 +5,9 @@ const meta = {
   title: "Atoms/Typography",
   component: Typography,
   tags: ["autodocs"],
+  parameters: {
+    appSurface: "panel",
+  },
   argTypes: {
     variant: {
       control: "select",

@@ -3,7 +3,7 @@
 exports[`BreadCrumbs > matches snapshot 1`] = `
 <nav
   aria-label="bread crumbs navigation"
-  class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-ew5kxy-MuiTypography-root-MuiBreadcrumbs-root"
+  class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-1172nos-MuiTypography-root-MuiBreadcrumbs-root"
 >
   <ol
     class="MuiBreadcrumbs-ol css-1uwp4ue-MuiBreadcrumbs-ol"
@@ -13,14 +13,18 @@ exports[`BreadCrumbs > matches snapshot 1`] = `
     >
       <button
         aria-label="Navigate to Home"
-        class="MuiButtonBase-root css-14wtwx-MuiButtonBase-root"
+        class="MuiButtonBase-root css-t8zazl-MuiButtonBase-root"
         tabindex="0"
         type="button"
       >
         <span
-          class="MuiTypography-root MuiTypography-h6 css-1miy0lu-MuiTypography-root"
+          class="breadcrumb-text"
         >
-          Home
+          <span
+            class="MuiTypography-root MuiTypography-h6 css-1miy0lu-MuiTypography-root"
+          >
+            Home
+          </span>
         </span>
       </button>
     </li>
@@ -45,14 +49,18 @@ exports[`BreadCrumbs > matches snapshot 1`] = `
     >
       <button
         aria-label="Navigate to Expenses"
-        class="MuiButtonBase-root css-14wtwx-MuiButtonBase-root"
+        class="MuiButtonBase-root css-t8zazl-MuiButtonBase-root"
         tabindex="0"
         type="button"
       >
         <span
-          class="MuiTypography-root MuiTypography-h6 css-1miy0lu-MuiTypography-root"
+          class="breadcrumb-text"
         >
-          Expenses
+          <span
+            class="MuiTypography-root MuiTypography-h6 css-1miy0lu-MuiTypography-root"
+          >
+            Expenses
+          </span>
         </span>
       </button>
     </li>
@@ -77,14 +85,18 @@ exports[`BreadCrumbs > matches snapshot 1`] = `
     >
       <button
         aria-label="Navigate to Travel"
-        class="MuiButtonBase-root css-14wtwx-MuiButtonBase-root"
+        class="MuiButtonBase-root css-t8zazl-MuiButtonBase-root"
         tabindex="0"
         type="button"
       >
         <span
-          class="MuiTypography-root MuiTypography-h6 css-1miy0lu-MuiTypography-root"
+          class="breadcrumb-text"
         >
-          Travel
+          <span
+            class="MuiTypography-root MuiTypography-h6 css-1miy0lu-MuiTypography-root"
+          >
+            Travel
+          </span>
         </span>
       </button>
     </li>

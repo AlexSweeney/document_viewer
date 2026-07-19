@@ -11,6 +11,9 @@ const meta = {
   title: "Atoms/SelectField",
   component: SelectField,
   tags: ["autodocs"],
+  parameters: {
+    appSurface: "controls",
+  },
   argTypes: {
     size: {
       control: "select",

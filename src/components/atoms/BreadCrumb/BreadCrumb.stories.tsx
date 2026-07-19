@@ -6,6 +6,9 @@ const meta = {
   title: "Atoms/BreadCrumb",
   component: BreadCrumb,
   tags: ["autodocs"],
+  parameters: {
+    appSurface: "header",
+  },
   args: {
     label: "Expenses",
     onClick: fn(),

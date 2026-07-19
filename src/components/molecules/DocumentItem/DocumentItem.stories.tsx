@@ -24,6 +24,9 @@ const meta = {
   title: "Molecules/DocumentItem",
   component: DocumentItem,
   tags: ["autodocs"],
+  parameters: {
+    appSurface: "panel",
+  },
   args: {
     item: {
       name: "Employee Handbook",

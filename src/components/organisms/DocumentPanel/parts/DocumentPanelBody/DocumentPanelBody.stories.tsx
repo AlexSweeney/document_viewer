@@ -16,6 +16,9 @@ const meta = {
   title: "Organisms/DocumentPanel/parts/Body",
   component: DocumentPanelBody,
   tags: ["autodocs"],
+  parameters: {
+    appSurface: "panelWrapper",
+  },
   decorators: [
     (Story) => (
       <div style={{ display: "flex", height: "24rem", width: "100%" }}>

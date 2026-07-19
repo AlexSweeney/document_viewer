@@ -1,14 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { CSSProperties } from "react";
+import { titleAreaStyles } from "../../organisms/Header/Header.styles";
 import { ThemeModeToggle } from ".";
 
-const storyStyles = {
-  alignItems: "center",
-  backgroundColor: "#d9d9d9",
-  display: "flex",
-  justifyContent: "flex-end",
-  paddingRight: "2rem",
-  minHeight: "7.5rem",
+const toggleAreaStyles: CSSProperties = {
+  ...titleAreaStyles,
   width: "100%",
+  justifyContent: "flex-end",
 };
 
 const meta = {
@@ -16,11 +14,11 @@ const meta = {
   component: ThemeModeToggle,
   tags: ["autodocs"],
   parameters: {
-    layout: "fullscreen",
+    appSurface: "header",
   },
   decorators: [
     (Story) => (
-      <div style={storyStyles}>
+      <div style={toggleAreaStyles}>
         <Story />
       </div>
     ),

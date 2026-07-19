@@ -6,6 +6,9 @@ const meta = {
   title: "Atoms/SortDirectionButton",
   component: SortDirectionButton,
   tags: ["autodocs"],
+  parameters: {
+    appSurface: "controls",
+  },
   argTypes: {
     defaultDirection: {
       control: "select",

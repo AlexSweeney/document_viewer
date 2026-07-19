@@ -27,6 +27,7 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
+    appSurface: "panelWrapper",
   },
   decorators: [
     (Story) => (
@@ -34,9 +35,9 @@ const meta = {
         style={{
           display: "flex",
           flexDirection: "column",
-          height: "100vh",
+          flex: 1,
+          minHeight: 0,
           width: "100%",
-          padding: 40,
         }}
       >
         <Story />
