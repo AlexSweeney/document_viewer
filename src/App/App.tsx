@@ -16,11 +16,16 @@ import { appStyles, panelWrapperStyles } from "../App/App.styles";
 
 const title = "Document viewer";
 
-const sortOptions = [
+type SortOption = {
+  value: SortField;
+  label: string;
+};
+
+const sortOptions: SortOption[] = [
   { value: "name", label: "Name" },
   { value: "date", label: "Date created" },
   { value: "type", label: "File type" },
-] as const;
+];
 
 type FolderNavigationState = {
   history: string[][];
@@ -119,6 +124,14 @@ const App = () => {
   const isForwardDisabled =
     folderNavigation.index === folderNavigation.history.length - 1;
 
+  const sortChangeHandler = (value: string) => {
+    const sortOption = sortOptions.find((option) => option.value === value);
+
+    if (sortOption) {
+      setSortBy(sortOption.value);
+    }
+  };
+
   return (
     <div style={appStyles}>
       <Header
@@ -133,20 +146,21 @@ const App = () => {
           isLoading={isLoading}
           filterValue={filterValue}
           onFilterChange={setFilterValue}
-          onSortChange={(value) => setSortBy(value as SortField)}
+          onSortChange={sortChangeHandler}
           onSortDirectionClick={setSortDirection}
           onBackClick={handleBackClick}
           onForwardClick={handleForwardClick}
           isBackDisabled={isBackDisabled}
           isForwardDisabled={isForwardDisabled}
         >
-          {sortedDocuments.map((item, index) => (
-            <DocumentItem
-              key={`${item.name}-${index}`}
-              item={item}
-              onClick={() => handleDocumentItemClick(item)}
-            />
-          ))}
+          {sortedDocuments.map((item, index) => {
+            const key = `${item.name}-${index}`;
+            const clickHandler = () => handleDocumentItemClick(item);
+
+            return (
+              <DocumentItem key={key} item={item} onClick={clickHandler} />
+            );
+          })}
         </DocumentPanel>
       </main>
     </div>

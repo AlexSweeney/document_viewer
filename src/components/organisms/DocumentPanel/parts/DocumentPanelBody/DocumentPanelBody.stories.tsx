@@ -25,9 +25,11 @@ const meta = {
   ],
   render: (args) => (
     <DocumentPanelBody {...args}>
-      {sampleItems.map((item, index) => (
-        <DocumentItem key={`${item.name}-${index}`} item={item} />
-      ))}
+      {sampleItems.map((item, index) => {
+        const key = `${item.name}-${index}`;
+
+        return <DocumentItem key={key} item={item} />;
+      })}
     </DocumentPanelBody>
   ),
 } satisfies Meta<typeof DocumentPanelBody>;

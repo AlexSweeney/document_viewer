@@ -46,20 +46,24 @@ export const AllNames: Story = {
         justifyItems: "center",
       }}
     >
-      {names.map((name) => (
-        <div
-          key={name}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "0.5rem",
-          }}
-        >
-          <Icon name={name} />
-          <span>{name}</span>
-        </div>
-      ))}
+      {names.map((name) => {
+        const key = name;
+
+        return (
+          <div
+            key={key}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "0.5rem",
+            }}
+          >
+            <Icon name={name} />
+            <span>{name}</span>
+          </div>
+        );
+      })}
     </div>
   ),
 };

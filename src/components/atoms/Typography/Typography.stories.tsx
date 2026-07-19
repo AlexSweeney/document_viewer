@@ -26,11 +26,16 @@ export const Default: Story = {};
 export const AllVariants: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-      {typographyVariants.map((variant) => (
-        <Typography key={variant} variant={variant}>
-          {variant}: The quick brown fox jumps over the lazy dog.
-        </Typography>
-      ))}
+      {typographyVariants.map((variant) => {
+        const key = variant;
+        const content = `${variant}: The quick brown fox jumps over the lazy dog.`;
+
+        return (
+          <Typography key={key} variant={variant}>
+            {content}
+          </Typography>
+        );
+      })}
     </div>
   ),
 };

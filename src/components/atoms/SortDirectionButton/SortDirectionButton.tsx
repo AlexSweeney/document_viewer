@@ -21,14 +21,14 @@ export const SortDirectionButton = ({
 }: SortDirectionButtonProps) => {
   const [direction, setDirection] = useState(defaultDirection);
 
-  const handleClick = () => {
+  const clickHandler = () => {
     const nextDirection = direction === "asc" ? "desc" : "asc";
     setDirection(nextDirection);
     onClick?.(nextDirection);
   };
 
   return (
-    <IconButton aria-label={ariaLabel} color="inherit" onClick={handleClick}>
+    <IconButton aria-label={ariaLabel} color="inherit" onClick={clickHandler}>
       <Icon name={iconMap[direction]} />
     </IconButton>
   );

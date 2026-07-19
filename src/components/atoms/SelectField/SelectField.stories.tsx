@@ -33,14 +33,19 @@ export const Default: Story = {};
 export const AllSizes: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-      {selectFieldSizes.map((size) => (
-        <SelectField
-          key={size}
-          label={`${size} SelectField`}
-          options={sortOptions}
-          size={size}
-        />
-      ))}
+      {selectFieldSizes.map((size) => {
+        const key = size;
+        const label = `${size} SelectField`;
+
+        return (
+          <SelectField
+            key={key}
+            label={label}
+            options={sortOptions}
+            size={size}
+          />
+        );
+      })}
     </div>
   ),
 };

@@ -17,10 +17,11 @@ type DocumentItemProps = {
 
 export const DocumentItem = ({ item, onClick }: DocumentItemProps) => {
   const added = item.type === "folder" ? undefined : item.added;
+  const ariaLabel = `Open ${item.name}`;
 
   return (
     <ButtonBase
-      aria-label={`Open ${item.name}`}
+      aria-label={ariaLabel}
       disableRipple
       onClick={onClick}
       sx={containerStyles}

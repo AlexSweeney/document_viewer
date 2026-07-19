@@ -1,4 +1,5 @@
 import MuiTextField from "@mui/material/TextField";
+import type { ChangeEvent } from "react";
 import type { TextFieldSize } from "./textFieldSizes";
 import { getTextFieldStyles, textFieldStyles } from "./TextField.styles";
 
@@ -15,6 +16,10 @@ export const TextField = ({
   size = "medium",
   onChange,
 }: TextFieldProps) => {
+  const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    onChange?.(event.target.value);
+  };
+
   return (
     <MuiTextField
       label={label}
@@ -22,7 +27,7 @@ export const TextField = ({
       variant="filled"
       sx={textFieldStyles}
       style={getTextFieldStyles(size)}
-      onChange={(event) => onChange?.(event.target.value)}
+      onChange={changeHandler}
     />
   );
 };

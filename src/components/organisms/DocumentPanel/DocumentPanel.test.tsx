@@ -13,9 +13,11 @@ const items = [
   { name: "Documents", type: "folder" as const, files: [] },
 ];
 
-const panelChildren = items.map((item, index) => (
-  <DocumentItem key={`${item.name}-${index}`} item={item} />
-));
+const panelChildren = items.map((item, index) => {
+  const key = `${item.name}-${index}`;
+
+  return <DocumentItem key={key} item={item} />;
+});
 
 afterEach(() => {
   cleanup();

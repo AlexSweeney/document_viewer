@@ -21,10 +21,14 @@ export const Header = ({
   title,
 }: HeaderProps) => {
   const theme = useTheme();
-  const clickableBreadCrumbItems = breadCrumbItems.map((item, index) => ({
-    label: item.label,
-    onClick: () => onClickBreadCrumb(index, item),
-  }));
+  const clickableBreadCrumbItems = breadCrumbItems.map((item, index) => {
+    const clickHandler = () => onClickBreadCrumb(index, item);
+
+    return {
+      label: item.label,
+      onClick: clickHandler,
+    };
+  });
 
   return (
     <header style={getHeaderStyles(theme)}>

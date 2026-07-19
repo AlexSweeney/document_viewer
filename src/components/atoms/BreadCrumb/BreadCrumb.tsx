@@ -13,9 +13,11 @@ export type BreadCrumbProps = {
 };
 
 export const BreadCrumb = ({ label, onClick }: BreadCrumbProps) => {
+  const ariaLabel = `Navigate to ${label}`;
+
   return (
     <ButtonBase
-      aria-label={`Navigate to ${label}`}
+      aria-label={ariaLabel}
       onClick={onClick}
       sx={breadCrumbStyles}
       tabIndex={0}

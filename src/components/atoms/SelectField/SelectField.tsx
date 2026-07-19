@@ -1,5 +1,6 @@
 import MenuItem from "@mui/material/MenuItem";
 import MuiTextField from "@mui/material/TextField";
+import type { ChangeEvent } from "react";
 import type { SelectFieldSize } from "./selectFieldSizes";
 import { getSelectFieldStyles, selectFieldStyles } from "./SelectField.styles";
 
@@ -23,6 +24,10 @@ export const SelectField = ({
   size = "medium",
   onChange,
 }: SelectFieldProps) => {
+  const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    onChange?.(event.target.value);
+  };
+
   return (
     <MuiTextField
       select
@@ -31,13 +36,17 @@ export const SelectField = ({
       variant="filled"
       sx={selectFieldStyles}
       style={getSelectFieldStyles(size)}
-      onChange={(event) => onChange?.(event.target.value)}
+      onChange={changeHandler}
     >
-      {options.map((option) => (
-        <MenuItem key={option.value} value={option.value}>
-          {option.label}
-        </MenuItem>
-      ))}
+      {options.map((option) => {
+        const key = option.value;
+
+        return (
+          <MenuItem key={key} value={option.value}>
+            {option.label}
+          </MenuItem>
+        );
+      })}
     </MuiTextField>
   );
 };

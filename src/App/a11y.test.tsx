@@ -54,9 +54,11 @@ const renderHeader = (themeMode: ThemeMode) =>
 const renderDocumentPanel = (themeMode: ThemeMode) =>
   render(
     <DocumentPanel sortOptions={sortOptions}>
-      {panelItems.map((item, index) => (
-        <DocumentItem key={`${item.name}-${index}`} item={item} />
-      ))}
+      {panelItems.map((item, index) => {
+        const key = `${item.name}-${index}`;
+
+        return <DocumentItem key={key} item={item} />;
+      })}
     </DocumentPanel>,
     { themeMode },
   );

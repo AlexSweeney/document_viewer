@@ -26,9 +26,12 @@ export const Default: Story = {};
 export const AllSizes: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-      {textFieldSizes.map((size) => (
-        <TextField key={size} label={`${size} TextField`} size={size} />
-      ))}
+      {textFieldSizes.map((size) => {
+        const key = size;
+        const label = `${size} TextField`;
+
+        return <TextField key={key} label={label} size={size} />;
+      })}
     </div>
   ),
 };

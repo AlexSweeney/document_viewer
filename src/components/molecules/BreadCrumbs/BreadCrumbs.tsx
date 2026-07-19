@@ -20,13 +20,13 @@ export const BreadCrumbs = ({ items }: BreadCrumbsProps) => {
       separator={<Icon name="rightChevron" />}
       sx={breadCrumbsStyles}
     >
-      {items.map((item, index) => (
-        <BreadCrumb
-          key={`${item.label}-${index}`}
-          label={item.label}
-          onClick={item.onClick}
-        />
-      ))}
+      {items.map((item, index) => {
+        const key = `${item.label}-${index}`;
+
+        return (
+          <BreadCrumb key={key} label={item.label} onClick={item.onClick} />
+        );
+      })}
     </MuiBreadcrumbs>
   );
 };

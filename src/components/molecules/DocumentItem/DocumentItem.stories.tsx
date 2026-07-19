@@ -43,9 +43,13 @@ export const Default: Story = {};
 export const AllItemTypes: Story = {
   render: () => (
     <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
-      {itemTypes.map((type) => (
-        <DocumentItem key={type} item={createSampleItem(type)} onClick={fn()} />
-      ))}
+      {itemTypes.map((type) => {
+        const key = type;
+        const item = createSampleItem(type);
+        const clickHandler = fn();
+
+        return <DocumentItem key={key} item={item} onClick={clickHandler} />;
+      })}
     </div>
   ),
 };
