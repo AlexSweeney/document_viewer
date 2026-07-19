@@ -15,7 +15,10 @@ import {
 } from "../utils/documents";
 import { appStyles, panelWrapperStyles } from "../App/App.styles";
 
-const title = "Document viewer";
+const APP_TITLE = "Document viewer";
+
+const DOCUMENTS_ERROR_MESSAGE =
+  "Failed to load documents. Please refresh the page.";
 
 type SortOption = {
   value: SortField;
@@ -39,7 +42,7 @@ const initialFolderNavigation: FolderNavigationState = {
 };
 
 const App = () => {
-  const { data: documentItems, isLoading } = useDocuments();
+  const { data: documentItems, isError, isLoading } = useDocuments();
   const [folderNavigation, setFolderNavigation] =
     useState<FolderNavigationState>(initialFolderNavigation);
   const [filterValue, setFilterValue] = useState("");
@@ -150,14 +153,16 @@ const App = () => {
     <div style={appStyles}>
       <Header
         breadCrumbItems={breadCrumbItems}
-        title={title}
+        title={APP_TITLE}
         onClickBreadCrumb={handleBreadCrumbClick}
       />
       <main style={panelWrapperStyles}>
         <DocumentPanel
           sortOptions={sortOptions}
           sortValue={sortBy}
+          isError={isError}
           isLoading={isLoading}
+          errorMessage={DOCUMENTS_ERROR_MESSAGE}
           filterValue={filterValue}
           onFilterChange={filterChangeHandler}
           onSortChange={sortChangeHandler}

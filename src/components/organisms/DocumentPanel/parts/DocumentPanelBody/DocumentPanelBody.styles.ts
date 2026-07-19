@@ -24,3 +24,8 @@ export const getLoadingContentStyles = (theme: Theme): CSSProperties => ({
   alignItems: "center",
   justifyContent: "center",
 });
+
+export const getErrorMessageStyles = (theme: Theme): CSSProperties => ({
+  color: theme.palette.error.main,
+  textAlign: "center",
+});

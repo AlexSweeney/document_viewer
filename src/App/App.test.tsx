@@ -1,10 +1,12 @@
 import { waitFor } from "@testing-library/react";
 import { cleanup, render, screen, userEvent } from "../test/testUtils";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import * as documentsApi from "../api/documents";
 import App from "./App";
 
 afterEach(() => {
   cleanup();
+  vi.restoreAllMocks();
 });
 
 const getDocumentNames = () =>
@@ -61,6 +63,23 @@ describe("App", () => {
     expect(costCentres).toBeInTheDocument();
     expect(misc).toBeInTheDocument();
     expect(hr).toBeInTheDocument();
+  });
+
+  it("shows an error state when documents fail to load", async () => {
+    vi.spyOn(documentsApi, "fetchDocuments").mockRejectedValueOnce(
+      new Error("Failed to load documents"),
+    );
+
+    render(<App />);
+
+    await waitFor(() => {
+      expect(screen.getByRole("alert")).toHaveTextContent(
+        "Failed to load documents. Please refresh the page.",
+      );
+    });
+
+    const employeeHandbook = screen.queryByText("Employee Handbook");
+    expect(employeeHandbook).not.toBeInTheDocument();
   });
 
   it("filters documents by name", async () => {

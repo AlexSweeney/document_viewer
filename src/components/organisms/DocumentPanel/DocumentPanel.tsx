@@ -20,6 +20,8 @@ type DocumentPanelProps = {
     direction: SortDirection,
   ) => void;
   isLoading?: boolean;
+  isError?: boolean;
+  errorMessage?: string;
 };
 
 export const DocumentPanel = ({
@@ -35,6 +37,8 @@ export const DocumentPanel = ({
   onSortChange,
   onSortDirectionClick,
   isLoading = false,
+  isError = false,
+  errorMessage,
 }: DocumentPanelProps) => {
   return (
     <section style={containerStyles}>
@@ -50,7 +54,13 @@ export const DocumentPanel = ({
         onSortChange={onSortChange}
         onSortDirectionClick={onSortDirectionClick}
       />
-      <DocumentPanelBody isLoading={isLoading}>{children}</DocumentPanelBody>
+      <DocumentPanelBody
+        errorMessage={errorMessage}
+        isError={isError}
+        isLoading={isLoading}
+      >
+        {children}
+      </DocumentPanelBody>
     </section>
   );
 };

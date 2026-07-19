@@ -134,6 +134,26 @@ describe("DocumentPanel", () => {
     expect(employeeHandbook).not.toBeInTheDocument();
   });
 
+  it("shows an error message when isError is true", () => {
+    render(
+      <DocumentPanel
+        sortOptions={sortOptions}
+        isError
+        errorMessage="Failed to load documents. Please refresh the page."
+      >
+        {panelChildren}
+      </DocumentPanel>,
+    );
+
+    const errorMessage = screen.getByRole("alert");
+    const employeeHandbook = screen.queryByText("Employee Handbook");
+
+    expect(errorMessage).toHaveTextContent(
+      "Failed to load documents. Please refresh the page.",
+    );
+    expect(employeeHandbook).not.toBeInTheDocument();
+  });
+
   it("matches snapshot", () => {
     const { container } = render(
       <DocumentPanel sortOptions={sortOptions}>{panelChildren}</DocumentPanel>,

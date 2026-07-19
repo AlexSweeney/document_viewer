@@ -122,8 +122,8 @@ exports[`App > matches snapshot 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled css-1u43uf3-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for="_r_4e_"
-            id="_r_4e_-label"
+            for="_r_4n_"
+            id="_r_4n_-label"
           >
             filter by name
           </label>
@@ -133,7 +133,7 @@ exports[`App > matches snapshot 1`] = `
             <input
               aria-invalid="false"
               class="MuiInputBase-input MuiFilledInput-input css-voecp4-MuiInputBase-input-MuiFilledInput-input"
-              id="_r_4e_"
+              id="_r_4n_"
               type="text"
               value=""
             />
@@ -146,7 +146,7 @@ exports[`App > matches snapshot 1`] = `
           <div
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled css-eok8s2-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            id="_r_4f_-label"
+            id="_r_4o_-label"
           >
             sort by
           </div>
@@ -156,9 +156,9 @@ exports[`App > matches snapshot 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-labelledby="_r_4f_-label"
+              aria-labelledby="_r_4o_-label"
               class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-1ott0zw-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
-              id="_r_4f_"
+              id="_r_4o_"
               role="combobox"
               tabindex="0"
             >
@@ -168,7 +168,7 @@ exports[`App > matches snapshot 1`] = `
               aria-hidden="true"
               aria-invalid="false"
               class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-              id="_r_4h_"
+              id="_r_4q_"
               tabindex="-1"
               value="name"
             />

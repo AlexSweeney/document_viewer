@@ -80,3 +80,10 @@ export const Loading: Story = {
     isLoading: true,
   },
 };
+
+export const Error: Story = {
+  args: {
+    isError: true,
+    errorMessage: "Failed to load documents. Please refresh the page.",
+  },
+};
