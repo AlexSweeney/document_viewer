@@ -17,17 +17,22 @@ describe("DocumentItem", () => {
   it("renders the file details", () => {
     render(<DocumentItem item={defaultItem} />);
 
-    expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
-    expect(screen.getByText("pdf")).toBeInTheDocument();
-    expect(screen.getByText("2017-01-06")).toBeInTheDocument();
+    const name = screen.getByText("Employee Handbook");
+    const type = screen.getByText("pdf");
+    const added = screen.getByText("2017-01-06");
+
+    expect(name).toBeInTheDocument();
+    expect(type).toBeInTheDocument();
+    expect(added).toBeInTheDocument();
   });
 
   it("renders a clickable button", () => {
     render(<DocumentItem item={defaultItem} />);
 
-    expect(
-      screen.getByRole("button", { name: "Open Employee Handbook" }),
-    ).toBeInTheDocument();
+    const openButton = screen.getByRole("button", {
+      name: "Open Employee Handbook",
+    });
+    expect(openButton).toBeInTheDocument();
   });
 
   it("calls onClick when the container is clicked", async () => {
@@ -35,7 +40,8 @@ describe("DocumentItem", () => {
     const onClick = vi.fn();
     render(<DocumentItem item={defaultItem} onClick={onClick} />);
 
-    await user.click(screen.getByText("Employee Handbook"));
+    const name = screen.getByText("Employee Handbook");
+    await user.click(name);
 
     expect(onClick).toHaveBeenCalledOnce();
   });
@@ -45,14 +51,14 @@ describe("DocumentItem", () => {
     const onClick = vi.fn();
     render(<DocumentItem item={defaultItem} onClick={onClick} />);
 
+    const openButton = screen.getByRole("button", {
+      name: "Open Employee Handbook",
+    });
+
     await user.tab();
 
-    expect(
-      screen.getByRole("button", { name: "Open Employee Handbook" }),
-    ).toHaveFocus();
-    expect(
-      screen.getByRole("button", { name: "Open Employee Handbook" }),
-    ).toHaveAttribute("tabindex", "0");
+    expect(openButton).toHaveFocus();
+    expect(openButton).toHaveAttribute("tabindex", "0");
 
     await user.keyboard("{Enter}");
 
@@ -64,13 +70,17 @@ describe("DocumentItem", () => {
       <DocumentItem item={{ name: "Documents", type: "folder", files: [] }} />,
     );
 
-    expect(screen.getByTestId("FolderIcon")).toBeInTheDocument();
-    expect(screen.getByText("folder")).toBeInTheDocument();
+    const folderIcon = screen.getByTestId("FolderIcon");
+    const type = screen.getByText("folder");
+
+    expect(folderIcon).toBeInTheDocument();
+    expect(type).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
     const { container } = render(<DocumentItem item={defaultItem} />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    const documentItem = container.firstChild;
+    expect(documentItem).toMatchSnapshot();
   });
 });

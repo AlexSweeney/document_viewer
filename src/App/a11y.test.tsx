@@ -115,9 +115,10 @@ describe("accessibility", () => {
     it("ThemeModeToggle has no accessibility violations", async () => {
       const { container } = renderThemeModeToggle("light");
 
-      expect(
-        screen.getByRole("button", { name: themeModeToggleLabel.light }),
-      ).toBeInTheDocument();
+      const themeModeToggle = screen.getByRole("button", {
+        name: themeModeToggleLabel.light,
+      });
+      expect(themeModeToggle).toBeInTheDocument();
       await expectNoA11yViolations(container);
     });
   });
@@ -151,9 +152,10 @@ describe("accessibility", () => {
     it("ThemeModeToggle has no accessibility violations", async () => {
       const { container } = renderThemeModeToggle("dark");
 
-      expect(
-        screen.getByRole("button", { name: themeModeToggleLabel.dark }),
-      ).toBeInTheDocument();
+      const themeModeToggle = screen.getByRole("button", {
+        name: themeModeToggleLabel.dark,
+      });
+      expect(themeModeToggle).toBeInTheDocument();
       await expectNoA11yViolations(container);
     });
   });

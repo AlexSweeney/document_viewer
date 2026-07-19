@@ -8,7 +8,8 @@ describe("Typography", () => {
       <Typography variant={variant}>Sample text</Typography>,
     );
 
-    expect(container.firstChild).toBeInTheDocument();
+    const typography = container.firstChild;
+    expect(typography).toBeInTheDocument();
   });
 
   it.each(typographyVariants)("matches snapshot for %s variant", (variant) => {
@@ -16,6 +17,7 @@ describe("Typography", () => {
       <Typography variant={variant}>Sample text</Typography>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    const typography = container.firstChild;
+    expect(typography).toMatchSnapshot();
   });
 });

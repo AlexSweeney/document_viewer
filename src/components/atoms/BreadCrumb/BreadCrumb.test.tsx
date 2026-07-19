@@ -10,7 +10,8 @@ describe("BreadCrumb", () => {
   it("renders the label", () => {
     render(<BreadCrumb label="Expenses" onClick={vi.fn()} />);
 
-    expect(screen.getByText("Expenses")).toBeInTheDocument();
+    const label = screen.getByText("Expenses");
+    expect(label).toBeInTheDocument();
   });
 
   it("calls onClick when clicked", async () => {
@@ -18,9 +19,10 @@ describe("BreadCrumb", () => {
     const onClick = vi.fn();
     render(<BreadCrumb label="Expenses" onClick={onClick} />);
 
-    await user.click(
-      screen.getByRole("button", { name: "Navigate to Expenses" }),
-    );
+    const breadcrumbButton = screen.getByRole("button", {
+      name: "Navigate to Expenses",
+    });
+    await user.click(breadcrumbButton);
 
     expect(onClick).toHaveBeenCalledOnce();
   });
@@ -30,14 +32,14 @@ describe("BreadCrumb", () => {
     const onClick = vi.fn();
     render(<BreadCrumb label="Expenses" onClick={onClick} />);
 
+    const breadcrumbButton = screen.getByRole("button", {
+      name: "Navigate to Expenses",
+    });
+
     await user.tab();
 
-    expect(
-      screen.getByRole("button", { name: "Navigate to Expenses" }),
-    ).toHaveFocus();
-    expect(
-      screen.getByRole("button", { name: "Navigate to Expenses" }),
-    ).toHaveAttribute("tabindex", "0");
+    expect(breadcrumbButton).toHaveFocus();
+    expect(breadcrumbButton).toHaveAttribute("tabindex", "0");
 
     await user.keyboard("{Enter}");
 
@@ -49,6 +51,7 @@ describe("BreadCrumb", () => {
       <BreadCrumb label="Expenses" onClick={vi.fn()} />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    const breadCrumb = container.firstChild;
+    expect(breadCrumb).toMatchSnapshot();
   });
 });

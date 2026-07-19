@@ -16,9 +16,13 @@ describe("BreadCrumbs", () => {
 
     render(<BreadCrumbs items={items} />);
 
-    expect(screen.getByText("Home")).toBeInTheDocument();
-    expect(screen.getByText("Expenses")).toBeInTheDocument();
-    expect(screen.getByText("Travel")).toBeInTheDocument();
+    const homeLabel = screen.getByText("Home");
+    const expensesLabel = screen.getByText("Expenses");
+    const travelLabel = screen.getByText("Travel");
+
+    expect(homeLabel).toBeInTheDocument();
+    expect(expensesLabel).toBeInTheDocument();
+    expect(travelLabel).toBeInTheDocument();
   });
 
   it("calls onClick when an item is clicked", async () => {
@@ -34,7 +38,10 @@ describe("BreadCrumbs", () => {
       />,
     );
 
-    await user.click(screen.getByRole("button", { name: "Navigate to Home" }));
+    const homeBreadcrumb = screen.getByRole("button", {
+      name: "Navigate to Home",
+    });
+    await user.click(homeBreadcrumb);
 
     expect(onHomeClick).toHaveBeenCalledOnce();
   });
@@ -52,20 +59,24 @@ describe("BreadCrumbs", () => {
       />,
     );
 
-    await user.tab();
-    expect(
-      screen.getByRole("button", { name: "Navigate to Home" }),
-    ).toHaveFocus();
+    const homeBreadcrumb = screen.getByRole("button", {
+      name: "Navigate to Home",
+    });
+    const expensesBreadcrumb = screen.getByRole("button", {
+      name: "Navigate to Expenses",
+    });
+    const travelBreadcrumb = screen.getByRole("button", {
+      name: "Navigate to Travel",
+    });
 
     await user.tab();
-    expect(
-      screen.getByRole("button", { name: "Navigate to Expenses" }),
-    ).toHaveFocus();
+    expect(homeBreadcrumb).toHaveFocus();
 
     await user.tab();
-    expect(
-      screen.getByRole("button", { name: "Navigate to Travel" }),
-    ).toHaveFocus();
+    expect(expensesBreadcrumb).toHaveFocus();
+
+    await user.tab();
+    expect(travelBreadcrumb).toHaveFocus();
 
     await user.keyboard("{Enter}");
 
@@ -80,6 +91,7 @@ describe("BreadCrumbs", () => {
     ];
     const { container } = render(<BreadCrumbs items={items} />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    const breadCrumbs = container.firstChild;
+    expect(breadCrumbs).toMatchSnapshot();
   });
 });

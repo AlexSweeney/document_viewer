@@ -10,27 +10,31 @@ describe("ThemeModeToggle", () => {
   it("renders a switch to dark mode button in light mode", () => {
     render(<ThemeModeToggle />);
 
-    expect(
-      screen.getByRole("button", { name: "Switch to dark mode" }),
-    ).toBeInTheDocument();
+    const darkModeButton = screen.getByRole("button", {
+      name: "Switch to dark mode",
+    });
+    expect(darkModeButton).toBeInTheDocument();
   });
 
   it("toggles to dark mode when clicked", async () => {
     const user = userEvent.setup();
     render(<ThemeModeToggle />);
 
-    await user.click(
-      screen.getByRole("button", { name: "Switch to dark mode" }),
-    );
+    const darkModeButton = screen.getByRole("button", {
+      name: "Switch to dark mode",
+    });
+    await user.click(darkModeButton);
 
-    expect(
-      screen.getByRole("button", { name: "Switch to light mode" }),
-    ).toBeInTheDocument();
+    const lightModeButton = screen.getByRole("button", {
+      name: "Switch to light mode",
+    });
+    expect(lightModeButton).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
     const { container } = render(<ThemeModeToggle />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    const themeModeToggle = container.firstChild;
+    expect(themeModeToggle).toMatchSnapshot();
   });
 });

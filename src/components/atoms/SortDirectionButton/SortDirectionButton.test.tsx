@@ -18,12 +18,11 @@ describe("SortDirectionButton", () => {
       <SortDirectionButton ariaLabel="Sort by name" />,
     );
 
-    expect(
-      screen.getByRole("button", { name: "Sort by name" }),
-    ).toBeInTheDocument();
-    expect(
-      within(container).getByTestId("ArrowUpwardIcon"),
-    ).toBeInTheDocument();
+    const sortButton = screen.getByRole("button", { name: "Sort by name" });
+    const upwardIcon = within(container).getByTestId("ArrowUpwardIcon");
+
+    expect(sortButton).toBeInTheDocument();
+    expect(upwardIcon).toBeInTheDocument();
   });
 
   it.each(sortDirections)(
@@ -38,7 +37,9 @@ describe("SortDirectionButton", () => {
 
       const iconName =
         defaultDirection === "asc" ? "ArrowUpwardIcon" : "ArrowDownwardIcon";
-      expect(within(container).getByTestId(iconName)).toBeInTheDocument();
+      const directionIcon = within(container).getByTestId(iconName);
+
+      expect(directionIcon).toBeInTheDocument();
     },
   );
 
@@ -47,18 +48,18 @@ describe("SortDirectionButton", () => {
     const { container } = render(
       <SortDirectionButton ariaLabel="Sort by name" />,
     );
-    const button = screen.getByRole("button", { name: "Sort by name" });
+    const sortButton = screen.getByRole("button", { name: "Sort by name" });
 
     expect(
       within(container).getByTestId("ArrowUpwardIcon"),
     ).toBeInTheDocument();
 
-    await user.click(button);
+    await user.click(sortButton);
     expect(
       within(container).getByTestId("ArrowDownwardIcon"),
     ).toBeInTheDocument();
 
-    await user.click(button);
+    await user.click(sortButton);
     expect(
       within(container).getByTestId("ArrowUpwardIcon"),
     ).toBeInTheDocument();
@@ -69,8 +70,9 @@ describe("SortDirectionButton", () => {
     const onClick = vi.fn();
     render(<SortDirectionButton ariaLabel="Sort by name" onClick={onClick} />);
 
-    await user.click(screen.getByRole("button", { name: "Sort by name" }));
-    await user.click(screen.getByRole("button", { name: "Sort by name" }));
+    const sortButton = screen.getByRole("button", { name: "Sort by name" });
+    await user.click(sortButton);
+    await user.click(sortButton);
 
     expect(onClick).toHaveBeenNthCalledWith(1, "desc");
     expect(onClick).toHaveBeenNthCalledWith(2, "asc");
@@ -86,7 +88,8 @@ describe("SortDirectionButton", () => {
         />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      const sortDirectionButton = container.firstChild;
+      expect(sortDirectionButton).toMatchSnapshot();
     },
   );
 });

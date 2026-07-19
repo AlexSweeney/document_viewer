@@ -33,17 +33,19 @@ describe("DocumentPanel", () => {
       <DocumentPanel sortOptions={sortOptions}>{panelChildren}</DocumentPanel>,
     );
 
-    expect(screen.getByRole("button", { name: "Go back" })).toBeInTheDocument();
-    expect(
-      screen.getByRole("button", { name: "Go forward" }),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("button", { name: "Toggle sort direction" }),
-    ).toBeInTheDocument();
-    expect(screen.getByLabelText("filter by name")).toBeInTheDocument();
-    expect(
-      screen.getByRole("combobox", { name: "sort by" }),
-    ).toBeInTheDocument();
+    const backButton = screen.getByRole("button", { name: "Go back" });
+    const forwardButton = screen.getByRole("button", { name: "Go forward" });
+    const sortDirectionButton = screen.getByRole("button", {
+      name: "Toggle sort direction",
+    });
+    const filterInput = screen.getByLabelText("filter by name");
+    const sortSelect = screen.getByRole("combobox", { name: "sort by" });
+
+    expect(backButton).toBeInTheDocument();
+    expect(forwardButton).toBeInTheDocument();
+    expect(sortDirectionButton).toBeInTheDocument();
+    expect(filterInput).toBeInTheDocument();
+    expect(sortSelect).toBeInTheDocument();
   });
 
   it("renders children", () => {
@@ -51,9 +53,13 @@ describe("DocumentPanel", () => {
       <DocumentPanel sortOptions={sortOptions}>{panelChildren}</DocumentPanel>,
     );
 
-    expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
-    expect(screen.getByText("Q4 Report")).toBeInTheDocument();
-    expect(screen.getByText("Documents")).toBeInTheDocument();
+    const employeeHandbook = screen.getByText("Employee Handbook");
+    const q4Report = screen.getByText("Q4 Report");
+    const documents = screen.getByText("Documents");
+
+    expect(employeeHandbook).toBeInTheDocument();
+    expect(q4Report).toBeInTheDocument();
+    expect(documents).toBeInTheDocument();
   });
 
   it("disables the back button when isBackDisabled is true", () => {
@@ -63,7 +69,8 @@ describe("DocumentPanel", () => {
       </DocumentPanel>,
     );
 
-    expect(screen.getByRole("button", { name: "Go back" })).toBeDisabled();
+    const backButton = screen.getByRole("button", { name: "Go back" });
+    expect(backButton).toBeDisabled();
   });
 
   it("disables the forward button when isForwardDisabled is true", () => {
@@ -73,7 +80,8 @@ describe("DocumentPanel", () => {
       </DocumentPanel>,
     );
 
-    expect(screen.getByRole("button", { name: "Go forward" })).toBeDisabled();
+    const forwardButton = screen.getByRole("button", { name: "Go forward" });
+    expect(forwardButton).toBeDisabled();
   });
 
   it("calls toolbar handlers when clicked", async () => {
@@ -92,11 +100,15 @@ describe("DocumentPanel", () => {
       </DocumentPanel>,
     );
 
-    await user.click(screen.getByRole("button", { name: "Go back" }));
-    await user.click(screen.getByRole("button", { name: "Go forward" }));
-    await user.click(
-      screen.getByRole("button", { name: "Toggle sort direction" }),
-    );
+    const backButton = screen.getByRole("button", { name: "Go back" });
+    const forwardButton = screen.getByRole("button", { name: "Go forward" });
+    const sortDirectionButton = screen.getByRole("button", {
+      name: "Toggle sort direction",
+    });
+
+    await user.click(backButton);
+    await user.click(forwardButton);
+    await user.click(sortDirectionButton);
 
     expect(onBackClick).toHaveBeenCalledOnce();
     expect(onForwardClick).toHaveBeenCalledOnce();
@@ -110,8 +122,11 @@ describe("DocumentPanel", () => {
       </DocumentPanel>,
     );
 
-    expect(screen.getByRole("progressbar")).toBeInTheDocument();
-    expect(screen.queryByText("Employee Handbook")).not.toBeInTheDocument();
+    const loadingSpinner = screen.getByRole("progressbar");
+    const employeeHandbook = screen.queryByText("Employee Handbook");
+
+    expect(loadingSpinner).toBeInTheDocument();
+    expect(employeeHandbook).not.toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
@@ -119,6 +134,7 @@ describe("DocumentPanel", () => {
       <DocumentPanel sortOptions={sortOptions}>{panelChildren}</DocumentPanel>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    const documentPanel = container.firstChild;
+    expect(documentPanel).toMatchSnapshot();
   });
 });

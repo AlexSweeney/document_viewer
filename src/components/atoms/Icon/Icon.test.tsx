@@ -21,12 +21,14 @@ describe("Icon", () => {
   it.each(names)("renders the %s icon", (name) => {
     const { container } = render(<Icon name={name} />);
 
-    expect(container.firstChild).toBeInTheDocument();
+    const icon = container.firstChild;
+    expect(icon).toBeInTheDocument();
   });
 
   it.each(names)("matches snapshot for %s icon", (name) => {
     const { container } = render(<Icon name={name} />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    const icon = container.firstChild;
+    expect(icon).toMatchSnapshot();
   });
 });

@@ -22,9 +22,13 @@ describe("Header", () => {
       />,
     );
 
-    expect(screen.getByText("Home")).toBeInTheDocument();
-    expect(screen.getByText("Expenses")).toBeInTheDocument();
-    expect(screen.getByText("Travel")).toBeInTheDocument();
+    const homeLabel = screen.getByText("Home");
+    const expensesLabel = screen.getByText("Expenses");
+    const travelLabel = screen.getByText("Travel");
+
+    expect(homeLabel).toBeInTheDocument();
+    expect(expensesLabel).toBeInTheDocument();
+    expect(travelLabel).toBeInTheDocument();
   });
 
   it("renders title", () => {
@@ -36,12 +40,16 @@ describe("Header", () => {
       />,
     );
 
-    expect(
-      screen.getByRole("heading", { level: 1, name: "12 documents" }),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("button", { name: "Switch to dark mode" }),
-    ).toBeInTheDocument();
+    const title = screen.getByRole("heading", {
+      level: 1,
+      name: "12 documents",
+    });
+    const themeModeToggle = screen.getByRole("button", {
+      name: "Switch to dark mode",
+    });
+
+    expect(title).toBeInTheDocument();
+    expect(themeModeToggle).toBeInTheDocument();
   });
 
   it("calls onClickBreadCrumb with the item index and item when a breadcrumb is clicked", async () => {
@@ -55,9 +63,10 @@ describe("Header", () => {
       />,
     );
 
-    await user.click(
-      screen.getByRole("button", { name: "Navigate to Expenses" }),
-    );
+    const expensesBreadcrumb = screen.getByRole("button", {
+      name: "Navigate to Expenses",
+    });
+    await user.click(expensesBreadcrumb);
 
     expect(onClickBreadCrumb).toHaveBeenCalledOnce();
     expect(onClickBreadCrumb).toHaveBeenCalledWith(1, { label: "Expenses" });
@@ -72,6 +81,7 @@ describe("Header", () => {
       />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    const header = container.firstChild;
+    expect(header).toMatchSnapshot();
   });
 });

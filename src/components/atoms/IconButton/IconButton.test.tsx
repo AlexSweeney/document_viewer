@@ -10,7 +10,8 @@ describe("IconButton", () => {
   it("renders with an accessible label", () => {
     render(<IconButton ariaLabel="Go back" icon="leftChevron" />);
 
-    expect(screen.getByRole("button", { name: "Go back" })).toBeInTheDocument();
+    const goBackButton = screen.getByRole("button", { name: "Go back" });
+    expect(goBackButton).toBeInTheDocument();
   });
 
   it("calls onClick when clicked", async () => {
@@ -31,6 +32,7 @@ describe("IconButton", () => {
       <IconButton ariaLabel="Go back" icon="leftChevron" />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    const iconButton = container.firstChild;
+    expect(iconButton).toMatchSnapshot();
   });
 });

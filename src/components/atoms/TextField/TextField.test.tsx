@@ -16,7 +16,8 @@ describe("TextField", () => {
   it("renders the label", () => {
     render(<TextField label="Search documents" />);
 
-    expect(screen.getByLabelText("Search documents")).toBeInTheDocument();
+    const searchInput = screen.getByLabelText("Search documents");
+    expect(searchInput).toBeInTheDocument();
   });
 
   it("calls onChange with the input value", async () => {
@@ -26,10 +27,8 @@ describe("TextField", () => {
       <TextField label="Search documents" onChange={onChange} />,
     );
 
-    await user.type(
-      within(container).getByLabelText("Search documents"),
-      "pdf",
-    );
+    const searchInput = within(container).getByLabelText("Search documents");
+    await user.type(searchInput, "pdf");
 
     expect(onChange).toHaveBeenLastCalledWith("pdf");
   });
@@ -39,6 +38,7 @@ describe("TextField", () => {
       <TextField label="Search documents" size={size} />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    const textField = container.firstChild;
+    expect(textField).toMatchSnapshot();
   });
 });

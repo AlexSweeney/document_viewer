@@ -16,7 +16,8 @@ describe("SelectField", () => {
   it("renders the label", () => {
     render(<SelectField label="Sort by" options={options} />);
 
-    expect(screen.getByLabelText("Sort by")).toBeInTheDocument();
+    const sortSelect = screen.getByLabelText("Sort by");
+    expect(sortSelect).toBeInTheDocument();
   });
 
   it("calls onChange with the option value when an option is selected", async () => {
@@ -26,8 +27,12 @@ describe("SelectField", () => {
       <SelectField label="Sort by" options={options} onChange={onChange} />,
     );
 
-    await user.click(screen.getByRole("combobox", { name: "Sort by" }));
-    await user.click(screen.getByRole("option", { name: "Date" }));
+    const sortSelect = screen.getByRole("combobox", { name: "Sort by" });
+
+    await user.click(sortSelect);
+
+    const dateOption = screen.getByRole("option", { name: "Date" });
+    await user.click(dateOption);
 
     expect(onChange).toHaveBeenCalledWith("date");
   });
@@ -37,6 +42,7 @@ describe("SelectField", () => {
       <SelectField label="Sort by" options={options} size={size} />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    const selectField = container.firstChild;
+    expect(selectField).toMatchSnapshot();
   });
 });
