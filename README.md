@@ -1,6 +1,6 @@
 # Document Viewer
 
-A single-page React application for browsing documents and folders uploaded by an administrator. Built as a technical task for BrightHR.
+A single-page React application for browsing documents and folders uploaded by an administrator. Built as a technical task for BrightHR. See the [project plan] here (https://docs.google.com/document/d/1OKY2SFIzzr9dyd--mtm8aq_5n4TQGqCQKV5m3umkMu0/edit?tab=t.0).
 
 The UI is inspired by macOS folder navigation: a breadcrumb trail, back/forward controls, and a main panel listing the current folder's contents.
 
