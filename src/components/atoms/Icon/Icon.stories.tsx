@@ -2,8 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useTheme } from "@mui/material/styles";
 import type { CSSProperties } from "react";
 import { panelWrapperStyles } from "../../../App/App.styles";
-import { getContentStyles } from "../../organisms/DocumentPanel/parts/DocumentPanelBody/DocumentPanelBody.styles";
-import { getControlsStyles } from "../../organisms/DocumentPanel/parts/DocumentPanelControls/DocumentPanelControls.styles";
+import { getContentStyles, getControlsStyles } from "../..";
 import { Icon, type IconName, type IconProps } from ".";
 
 const navigationIconNames: IconName[] = [

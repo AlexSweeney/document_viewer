@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { CSSProperties } from "react";
-import { titleAreaStyles } from "../../organisms/Header/Header.styles";
+import { titleAreaStyles } from "../..";
 import { ThemeModeToggle } from ".";
 
 const toggleAreaStyles: CSSProperties = {

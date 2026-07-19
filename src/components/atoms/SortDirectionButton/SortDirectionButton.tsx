@@ -1,6 +1,6 @@
 import IconButton from "@mui/material/IconButton";
 import { useState, type MouseEvent } from "react";
-import { Icon, type IconName } from "../Icon";
+import { Icon, type IconName } from "../..";
 import type { SortDirection } from "./sortDirections";
 
 type SortDirectionButtonProps = {

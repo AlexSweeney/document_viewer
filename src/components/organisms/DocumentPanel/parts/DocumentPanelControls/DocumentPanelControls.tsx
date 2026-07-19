@@ -1,15 +1,13 @@
 import { useTheme } from "@mui/material/styles";
 import type { ChangeEvent, MouseEvent } from "react";
-import { IconButton } from "../../../../atoms/IconButton";
 import {
+  IconButton,
   SelectField,
   type SelectFieldOption,
-} from "../../../../atoms/SelectField";
-import {
   SortDirectionButton,
   type SortDirection,
-} from "../../../../atoms/SortDirectionButton";
-import { TextField } from "../../../../atoms/TextField";
+  TextField,
+} from "../../../..";
 import { getControlsStyles } from "./DocumentPanelControls.styles";
 
 type DocumentPanelControlsProps = {

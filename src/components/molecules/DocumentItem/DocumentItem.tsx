@@ -1,8 +1,7 @@
 import ButtonBase from "@mui/material/ButtonBase";
 import type { MouseEvent } from "react";
 import type { DocumentItem as DocumentItemData } from "../../../types/document";
-import { Icon } from "../../atoms/Icon";
-import { Typography } from "../../atoms/Typography";
+import { Icon, Typography } from "../..";
 import {
   containerStyles,
   ICON_SIZE,

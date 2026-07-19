@@ -1,6 +1,6 @@
 import MuiIconButton from "@mui/material/IconButton";
 import type { MouseEvent } from "react";
-import { Icon, type IconName } from "../Icon";
+import { Icon, type IconName } from "../..";
 
 type IconButtonProps = {
   ariaLabel: string;

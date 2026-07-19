@@ -1,6 +1,6 @@
 import { cleanup, render, screen, userEvent } from "../../../test/testUtils";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { DocumentItem } from "../../molecules/DocumentItem";
+import { DocumentItem } from "../..";
 import { DocumentPanel } from ".";
 
 const items = [

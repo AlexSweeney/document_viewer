@@ -1,5 +1,5 @@
 import MuiIconButton from "@mui/material/IconButton";
-import { Icon, type IconName } from "../Icon";
+import { Icon, type IconName } from "../..";
 import { useThemeMode } from "../../../theme";
 
 const toggleConfig = {

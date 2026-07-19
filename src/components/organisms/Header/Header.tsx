@@ -1,8 +1,7 @@
 import { useTheme } from "@mui/material/styles";
 import MuiTypography from "@mui/material/Typography";
-import type { BreadCrumbItem } from "../../atoms/BreadCrumb";
-import { ThemeModeToggle } from "../../atoms/ThemeModeToggle";
-import { BreadCrumbs } from "../../molecules/BreadCrumbs";
+import type { BreadCrumbItem } from "../..";
+import { BreadCrumbs, ThemeModeToggle } from "../..";
 import {
   getHeaderStyles,
   breadCrumbsAreaStyles,

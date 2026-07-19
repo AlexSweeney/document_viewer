@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { useTheme } from "@mui/material/styles";
 import CircularProgress from "@mui/material/CircularProgress";
-import { Typography } from "../../../../atoms/Typography";
+import { Typography } from "../../../..";
 import {
   getContentStyles,
   getErrorMessageStyles,

@@ -1,6 +1,6 @@
 import ButtonBase from "@mui/material/ButtonBase";
 import type { MouseEvent } from "react";
-import { Typography } from "../Typography";
+import { Typography } from "../..";
 import { breadCrumbStyles } from "./BreadCrumb.styles";
 
 export type BreadCrumbItem = {

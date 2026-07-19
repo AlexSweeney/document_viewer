@@ -1,6 +1,5 @@
 import type { ChangeEvent, MouseEvent, ReactNode } from "react";
-import type { SelectFieldOption } from "../../atoms/SelectField";
-import type { SortDirection } from "../../atoms/SortDirectionButton";
+import type { SelectFieldOption, SortDirection } from "../..";
 import { containerStyles } from "./DocumentPanel.styles";
 import { DocumentPanelBody, DocumentPanelControls } from "./parts";
 

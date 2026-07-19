@@ -1,7 +1,6 @@
 import type { SxProps, Theme } from "@mui/material/styles";
 import type { CSSProperties } from "react";
-import type { IconSize } from "../../atoms/Icon";
-import { iconSizeMap } from "../../atoms/Icon/iconSizes";
+import { iconSizeMap, type IconSize } from "../..";
 
 export const containerStyles: SxProps<Theme> = (theme) => ({
   display: "flex",

@@ -1,5 +1,4 @@
-import type { BreadCrumbItem } from "../components/atoms/BreadCrumb";
-import type { SortDirection } from "../components/atoms/SortDirectionButton";
+import type { BreadCrumbItem, SortDirection } from "../components";
 import type { DocumentFolder, DocumentItem } from "../types/document";
 
 export type SortField = "name" | "date" | "type";

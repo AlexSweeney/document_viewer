@@ -1,7 +1,7 @@
 import type { Theme } from "@mui/material/styles";
 import type { CSSProperties } from "react";
 import { panelWrapperStyles } from "../src/App/App.styles";
-import { getContentStyles } from "../src/components/organisms/DocumentPanel/parts/DocumentPanelBody/DocumentPanelBody.styles";
+import { getContentStyles } from "../src/components";
 
 export type AppSurface =
   "header" | "controls" | "panel" | "panelWrapper" | "none";

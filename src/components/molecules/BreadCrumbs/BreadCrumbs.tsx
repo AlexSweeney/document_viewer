@@ -1,7 +1,6 @@
 import MuiBreadcrumbs from "@mui/material/Breadcrumbs";
 import type { MouseEvent } from "react";
-import { BreadCrumb } from "../../atoms/BreadCrumb";
-import { Icon } from "../../atoms/Icon";
+import { BreadCrumb, Icon } from "../..";
 import { breadCrumbsStyles } from "./BreadCrumbs.styles";
 
 type BreadCrumbItem = {

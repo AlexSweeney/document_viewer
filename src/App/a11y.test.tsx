@@ -1,10 +1,12 @@
 import { waitFor } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import App from "../App";
-import { ThemeModeToggle } from "../components/atoms/ThemeModeToggle";
-import { DocumentItem } from "../components/molecules/DocumentItem";
-import { DocumentPanel } from "../components/organisms/DocumentPanel";
-import { Header } from "../components/organisms/Header";
+import {
+  DocumentItem,
+  DocumentPanel,
+  Header,
+  ThemeModeToggle,
+} from "../components";
 import type { ThemeMode } from "../theme/colors";
 import { expectNoA11yViolations } from "../test/a11yUtils";
 import { cleanup, render, screen } from "../test/testUtils";

@@ -1,7 +1,6 @@
 import { useTheme } from "@mui/material/styles";
 import type { ReactNode } from "react";
-import { getControlsStyles } from "../src/components/organisms/DocumentPanel/parts/DocumentPanelControls/DocumentPanelControls.styles";
-import { getHeaderStyles } from "../src/components/organisms/Header/Header.styles";
+import { getControlsStyles, getHeaderStyles } from "../src/components";
 import type { AppSurface } from "./storybookSurfaceStyles";
 import {
   getStoryPanelBodyStyles,

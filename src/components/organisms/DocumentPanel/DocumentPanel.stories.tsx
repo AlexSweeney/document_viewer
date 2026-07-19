@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { fn } from "storybook/test";
 import type { DocumentItem as DocumentItemData } from "../../../types/document";
-import { DocumentItem } from "../../molecules/DocumentItem";
+import { DocumentItem } from "../..";
 import { DocumentPanel } from ".";
 
 const sortOptions = [
