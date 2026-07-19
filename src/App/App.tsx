@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import type { ChangeEvent } from "react";
+import type { ChangeEvent, MouseEvent } from "react";
 import { DocumentPanel } from "../components/organisms/DocumentPanel";
 import { DocumentItem } from "../components/molecules/DocumentItem";
 import { Header } from "../components/organisms/Header";
@@ -139,6 +139,13 @@ const App = () => {
     }
   };
 
+  const sortDirectionClickHandler = (
+    _event: MouseEvent<HTMLButtonElement>,
+    direction: SortDirection,
+  ) => {
+    setSortDirection(direction);
+  };
+
   return (
     <div style={appStyles}>
       <Header
@@ -154,7 +161,7 @@ const App = () => {
           filterValue={filterValue}
           onFilterChange={filterChangeHandler}
           onSortChange={sortChangeHandler}
-          onSortDirectionClick={setSortDirection}
+          onSortDirectionClick={sortDirectionClickHandler}
           onBackClick={handleBackClick}
           onForwardClick={handleForwardClick}
           isBackDisabled={isBackDisabled}

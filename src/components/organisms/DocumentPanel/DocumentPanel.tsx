@@ -1,4 +1,4 @@
-import type { ChangeEvent, ReactNode } from "react";
+import type { ChangeEvent, MouseEvent, ReactNode } from "react";
 import type { SelectFieldOption } from "../../atoms/SelectField";
 import type { SortDirection } from "../../atoms/SortDirectionButton";
 import { containerStyles } from "./DocumentPanel.styles";
@@ -15,7 +15,10 @@ type DocumentPanelProps = {
   isForwardDisabled?: boolean;
   onFilterChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   onSortChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-  onSortDirectionClick?: (direction: SortDirection) => void;
+  onSortDirectionClick?: (
+    event: MouseEvent<HTMLButtonElement>,
+    direction: SortDirection,
+  ) => void;
   isLoading?: boolean;
 };
 

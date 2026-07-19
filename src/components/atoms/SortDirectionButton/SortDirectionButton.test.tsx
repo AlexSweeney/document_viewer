@@ -74,8 +74,8 @@ describe("SortDirectionButton", () => {
     await user.click(sortButton);
     await user.click(sortButton);
 
-    expect(onClick).toHaveBeenNthCalledWith(1, "desc");
-    expect(onClick).toHaveBeenNthCalledWith(2, "asc");
+    expect(onClick).toHaveBeenNthCalledWith(1, expect.any(Object), "desc");
+    expect(onClick).toHaveBeenNthCalledWith(2, expect.any(Object), "asc");
   });
 
   it.each(sortDirections)(

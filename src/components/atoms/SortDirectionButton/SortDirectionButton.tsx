@@ -1,12 +1,15 @@
 import IconButton from "@mui/material/IconButton";
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import { Icon, type IconName } from "../Icon";
 import type { SortDirection } from "./sortDirections";
 
 type SortDirectionButtonProps = {
   defaultDirection?: SortDirection;
   ariaLabel: string;
-  onClick?: (direction: SortDirection) => void;
+  onClick?: (
+    event: MouseEvent<HTMLButtonElement>,
+    direction: SortDirection,
+  ) => void;
 };
 
 const iconMap: Record<SortDirection, IconName> = {
@@ -21,10 +24,10 @@ export const SortDirectionButton = ({
 }: SortDirectionButtonProps) => {
   const [direction, setDirection] = useState(defaultDirection);
 
-  const clickHandler = () => {
+  const clickHandler = (event: MouseEvent<HTMLButtonElement>) => {
     const nextDirection = direction === "asc" ? "desc" : "asc";
     setDirection(nextDirection);
-    onClick?.(nextDirection);
+    onClick?.(event, nextDirection);
   };
 
   return (

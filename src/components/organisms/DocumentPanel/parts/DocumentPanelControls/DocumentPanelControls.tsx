@@ -1,5 +1,5 @@
 import { useTheme } from "@mui/material/styles";
-import type { ChangeEvent } from "react";
+import type { ChangeEvent, MouseEvent } from "react";
 import { IconButton } from "../../../../atoms/IconButton";
 import {
   SelectField,
@@ -22,7 +22,10 @@ type DocumentPanelControlsProps = {
   isForwardDisabled?: boolean;
   onFilterChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   onSortChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-  onSortDirectionClick?: (direction: SortDirection) => void;
+  onSortDirectionClick?: (
+    event: MouseEvent<HTMLButtonElement>,
+    direction: SortDirection,
+  ) => void;
 };
 
 export const DocumentPanelControls = ({

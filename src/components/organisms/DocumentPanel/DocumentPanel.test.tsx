@@ -114,7 +114,10 @@ describe("DocumentPanel", () => {
 
     expect(onBackClick).toHaveBeenCalledOnce();
     expect(onForwardClick).toHaveBeenCalledOnce();
-    expect(onSortDirectionClick).toHaveBeenCalledWith("desc");
+    expect(onSortDirectionClick).toHaveBeenCalledWith(
+      expect.any(Object),
+      "desc",
+    );
   });
 
   it("shows a spinner when loading", () => {
