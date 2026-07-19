@@ -81,7 +81,7 @@ const App = () => {
     setFolderNavigation(({ history, index }) => {
       // Path after opening the clicked folder.
       const nextFolderPath = [...history[index], item.name];
-      // Drop any forward history and append the new path.
+      // Drop any existing forward history and append the new path.
       const nextHistory = [...history.slice(0, index + 1), nextFolderPath];
 
       return {
@@ -116,7 +116,7 @@ const App = () => {
         return { history, index: currentIndex };
       }
 
-      // Drop any forward history and append the target path.
+      // Drop any existing forward history and append the target path.
       const nextHistory = [...history.slice(0, currentIndex + 1), targetPath];
 
       return {

@@ -83,7 +83,8 @@ const renderThemeModeToggle = (themeMode: ThemeMode) =>
 const waitForAppToLoad = async () => {
   await waitFor(
     () => {
-      expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
+      const employeeHandbook = screen.getByText("Employee Handbook");
+      expect(employeeHandbook).toBeInTheDocument();
     },
     { timeout: 3000 },
   );

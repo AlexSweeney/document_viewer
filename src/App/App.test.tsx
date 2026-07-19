@@ -16,6 +16,26 @@ const getDocumentNames = () =>
     .filter((label): label is string => label?.startsWith("Open ") ?? false)
     .map((label) => label.replace("Open ", ""));
 
+const waitForDocumentsToLoad = () =>
+  waitFor(
+    () => {
+      const employeeHandbook = screen.getByText("Employee Handbook");
+      expect(employeeHandbook).toBeInTheDocument();
+    },
+    { timeout: 3000 },
+  );
+
+const waitForExpensesFolder = () =>
+  waitFor(
+    () => {
+      const expensesFolder = screen.getByRole("button", {
+        name: "Open Expenses",
+      });
+      expect(expensesFolder).toBeInTheDocument();
+    },
+    { timeout: 3000 },
+  );
+
 describe("App", () => {
   it("renders the header", async () => {
     render(<App />);
@@ -40,12 +60,7 @@ describe("App", () => {
   it("renders the document panel", async () => {
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForDocumentsToLoad();
 
     const backButton = screen.getByRole("button", { name: "Go back" });
     const forwardButton = screen.getByRole("button", { name: "Go forward" });
@@ -73,7 +88,8 @@ describe("App", () => {
     render(<App />);
 
     await waitFor(() => {
-      expect(screen.getByRole("alert")).toHaveTextContent(
+      const errorMessage = screen.getByRole("alert");
+      expect(errorMessage).toHaveTextContent(
         "Failed to load documents. Please refresh the page.",
       );
     });
@@ -86,12 +102,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForDocumentsToLoad();
 
     const filterInput = screen.getByLabelText("filter by name");
     await user.type(filterInput, "handbook");
@@ -109,12 +120,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForDocumentsToLoad();
 
     const filterInput = screen.getByLabelText("filter by name");
     await user.type(filterInput, "hand  book");
@@ -131,7 +137,8 @@ describe("App", () => {
 
     await waitFor(
       () => {
-        expect(getDocumentNames()[0]).toBe("Cost centres");
+        const firstDocumentName = getDocumentNames()[0];
+        expect(firstDocumentName).toBe("Cost centres");
       },
       { timeout: 3000 },
     );
@@ -150,12 +157,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForDocumentsToLoad();
 
     const sortSelect = screen.getByRole("combobox", { name: "sort by" });
 
@@ -180,14 +182,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(
-          screen.getByRole("button", { name: "Open Expenses" }),
-        ).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForExpensesFolder();
 
     const expensesFolder = screen.getByRole("button", {
       name: "Open Expenses",
@@ -213,14 +208,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(
-          screen.getByRole("button", { name: "Open Expenses" }),
-        ).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForExpensesFolder();
 
     const expensesFolder = screen.getByRole("button", {
       name: "Open Expenses",
@@ -252,14 +240,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(
-          screen.getByRole("button", { name: "Open Expenses" }),
-        ).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForExpensesFolder();
 
     const expensesFolder = screen.getByRole("button", {
       name: "Open Expenses",
@@ -285,14 +266,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(
-          screen.getByRole("button", { name: "Open Expenses" }),
-        ).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForExpensesFolder();
 
     const expensesFolder = screen.getByRole("button", {
       name: "Open Expenses",
@@ -317,21 +291,16 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(
-          screen.getByRole("button", { name: "Open Expenses" }),
-        ).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForExpensesFolder();
 
     const expensesFolder = screen.getByRole("button", {
       name: "Open Expenses",
     });
 
     await user.click(expensesFolder);
-    await user.click(screen.getByRole("button", { name: "Go back" }));
+
+    const backButton = screen.getByRole("button", { name: "Go back" });
+    await user.click(backButton);
 
     const hrFolder = screen.getByRole("button", { name: "Open HR" });
     await user.click(hrFolder);
@@ -349,12 +318,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForDocumentsToLoad();
 
     const homeBreadcrumb = screen.getByRole("button", {
       name: "Navigate to Home",
@@ -369,9 +333,10 @@ describe("App", () => {
     await user.click(expensesFolder);
 
     await waitFor(() => {
-      expect(
-        screen.getByRole("button", { name: "Navigate to Expenses" }),
-      ).toBeInTheDocument();
+      const expensesBreadcrumb = screen.getByRole("button", {
+        name: "Navigate to Expenses",
+      });
+      expect(expensesBreadcrumb).toBeInTheDocument();
     });
 
     await user.tab();
@@ -392,14 +357,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(
-          screen.getByRole("button", { name: "Open Expenses" }),
-        ).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForExpensesFolder();
 
     const expensesFolder = screen.getByRole("button", {
       name: "Open Expenses",
@@ -431,14 +389,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
 
-    await waitFor(
-      () => {
-        expect(
-          screen.getByRole("button", { name: "Open Expenses" }),
-        ).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForExpensesFolder();
 
     const expensesFolder = screen.getByRole("button", {
       name: "Open Expenses",
@@ -473,7 +424,8 @@ describe("App", () => {
 
     await waitFor(
       () => {
-        expect(getDocumentNames()[0]).toBe("Cost centres");
+        const firstDocumentName = getDocumentNames()[0];
+        expect(firstDocumentName).toBe("Cost centres");
       },
       { timeout: 3000 },
     );
@@ -483,19 +435,17 @@ describe("App", () => {
     });
     await user.click(sortDirectionButton);
 
-    expect(getDocumentNames()[0]).toBe("Public Holiday policy");
-    expect(getDocumentNames().at(-1)).toBe("Cost centres");
+    const firstDocumentName = getDocumentNames()[0];
+    const lastDocumentName = getDocumentNames().at(-1);
+
+    expect(firstDocumentName).toBe("Public Holiday policy");
+    expect(lastDocumentName).toBe("Cost centres");
   });
 
   it("matches snapshot", async () => {
     const { container } = render(<App />);
 
-    await waitFor(
-      () => {
-        expect(screen.getByText("Employee Handbook")).toBeInTheDocument();
-      },
-      { timeout: 3000 },
-    );
+    await waitForDocumentsToLoad();
 
     const app = container.firstChild;
     expect(app).toMatchSnapshot();
