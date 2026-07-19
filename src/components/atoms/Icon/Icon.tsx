@@ -1,15 +1,17 @@
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import DescriptionIcon from "@mui/icons-material/Description";
-import FolderIcon from "@mui/icons-material/Folder";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import MovieIcon from "@mui/icons-material/Movie";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
-import TableChartIcon from "@mui/icons-material/TableChart";
-import TableViewIcon from "@mui/icons-material/TableView";
+import {
+  ArrowDownward as ArrowDownwardIcon,
+  ArrowUpward as ArrowUpwardIcon,
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+  DarkMode as DarkModeIcon,
+  Description as DescriptionIcon,
+  Folder as FolderIcon,
+  LightMode as LightModeIcon,
+  Movie as MovieIcon,
+  PictureAsPdf as PictureAsPdfIcon,
+  TableChart as TableChartIcon,
+  TableView as TableViewIcon,
+} from "@mui/icons-material";
 import type { ElementType } from "react";
 import type { SvgIconProps } from "@mui/material/SvgIcon";
 import type { DocumentItemType } from "../../../types/document";
